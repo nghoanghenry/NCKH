@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"name": "Dong_Vat_chim",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32648" } },
+"features": [
+{ "type": "Feature", "properties": { "ID": 1.0, "VT": "UMH5", "X": 496393.0, "Y": 1019601.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 496393.0, 1019601.0 ] } },
+{ "type": "Feature", "properties": { "ID": 2.0, "VT": "UMH6", "X": 494474.0, "Y": 1019648.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494474.0, 1019648.0 ] } },
+{ "type": "Feature", "properties": { "ID": 3.0, "VT": "UMH9", "X": 494382.0, "Y": 1021337.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Species", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494382.0, 1021337.0 ] } },
+{ "type": "Feature", "properties": { "ID": 4.0, "VT": "UMH2", "X": 493512.0, "Y": 1017888.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Bìm bịp lớn", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 493512.0, 1017888.0 ] } },
+{ "type": "Feature", "properties": { "ID": 5.0, "VT": "UMH6", "X": 494474.0, "Y": 1019648.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Bông lau mày trắng", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494474.0, 1019648.0 ] } },
+{ "type": "Feature", "properties": { "ID": 6.0, "VT": "UMH8", "X": 494813.0, "Y": 1021334.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Cú muỗi đuôi dài", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494813.0, 1021334.0 ] } },
+{ "type": "Feature", "properties": { "ID": 7.0, "VT": "UMH12", "X": 493031.0, "Y": 1021346.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Cuốc ngực nâu", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 493031.0, 1021346.0 ] } },
+{ "type": "Feature", "properties": { "ID": 8.0, "VT": "UMH9", "X": 494382.0, "Y": 1021337.0, "Species": "Bìm bịp lớn", "Type": "Chim", "F7": null, "F8": "Cuốc ngực trắng", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494382.0, 1021337.0 ] } },
+{ "type": "Feature", "properties": { "ID": 9.0, "VT": "UMH10", "X": 492481.0, "Y": 1019682.0, "Species": "Bông lau mày trắng", "Type": "Chim", "F7": null, "F8": "Chèo bẻo đuôi chẻ", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 492481.0, 1019682.0 ] } },
+{ "type": "Feature", "properties": { "ID": 10.0, "VT": "UMH4", "X": 497742.0, "Y": 1019571.0, "Species": "Cú muỗi đuôi dài", "Type": "Chim", "F7": null, "F8": "Rẻ quạt Java", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 497742.0, 1019571.0 ] } },
+{ "type": "Feature", "properties": { "ID": 11.0, "VT": "UMH3", "X": 497107.0, "Y": 1017918.0, "Species": "Cú muỗi đuôi dài", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 497107.0, 1017918.0 ] } },
+{ "type": "Feature", "properties": { "ID": 12.0, "VT": "UMH4", "X": 497742.0, "Y": 1019571.0, "Species": "Cú muỗi đuôi dài", "Type": "Chim", "F7": null, "F8": "Tọa độ điểm chim: 7 loài", "F9": null }, "geometry": { "type": "Point", "coordinates": [ 497742.0, 1019571.0 ] } },
+{ "type": "Feature", "properties": { "ID": 13.0, "VT": "UMH5", "X": 496393.0, "Y": 1019601.0, "Species": "Cú muỗi đuôi dài", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 496393.0, 1019601.0 ] } },
+{ "type": "Feature", "properties": { "ID": 14.0, "VT": "UMH14", "X": 495896.0, "Y": 1023821.0, "Species": "Cú muỗi đuôi dài", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 495896.0, 1023821.0 ] } },
+{ "type": "Feature", "properties": { "ID": 15.0, "VT": "UMH13", "X": 497418.0, "Y": 1023879.0, "Species": "Cuốc ngực nâu", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 497418.0, 1023879.0 ] } },
+{ "type": "Feature", "properties": { "ID": 16.0, "VT": "UMH3", "X": 497107.0, "Y": 1017918.0, "Species": "Cuốc ngực trắng", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 497107.0, 1017918.0 ] } },
+{ "type": "Feature", "properties": { "ID": 17.0, "VT": "UMH9", "X": 494382.0, "Y": 1021337.0, "Species": "Cuốc ngực trắng", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494382.0, 1021337.0 ] } },
+{ "type": "Feature", "properties": { "ID": 18.0, "VT": "UMH10", "X": 492481.0, "Y": 1019682.0, "Species": "Cuốc ngực trắng", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 492481.0, 1019682.0 ] } },
+{ "type": "Feature", "properties": { "ID": 19.0, "VT": "UMH14", "X": 495896.0, "Y": 1023821.0, "Species": "Cuốc ngực trắng", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 495896.0, 1023821.0 ] } },
+{ "type": "Feature", "properties": { "ID": 20.0, "VT": "UMH9", "X": 494382.0, "Y": 1021337.0, "Species": "Chèo bẻo đuôi chẻ", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494382.0, 1021337.0 ] } },
+{ "type": "Feature", "properties": { "ID": 21.0, "VT": "UMH8", "X": 494813.0, "Y": 1021334.0, "Species": "Rẻ quạt Java", "Type": "Chim", "F7": null, "F8": null, "F9": null }, "geometry": { "type": "Point", "coordinates": [ 494813.0, 1021334.0 ] } }
+]
+}

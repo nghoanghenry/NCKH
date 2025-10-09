@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "Dong_Vat_Luongcu",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32648" } },
+"features": [
+{ "type": "Feature", "properties": { "X1": 495545.0, "Y1": 1016760.0, "X2": 495453.0, "Y2": 1021327.0, "ID": 1.0, "Tuyen": "TT (Cong-DoiCÐ)", "Species": "Ếch giun Koh Tao", "Type": "Luo~ng cu", "ORIG_FID": 0 }, "geometry": { "type": "Point", "coordinates": [ 495498.999721080996096, 1019043.499994381330907 ] } },
+{ "type": "Feature", "properties": { "X1": 498768.0, "Y1": 1017932.0, "X2": 491108.0, "Y2": 1017873.0, "ID": 2.0, "Tuyen": "T1200 (KÐ-MH)", "Species": "Ếch cây", "Type": "Luo~ng cu", "ORIG_FID": 1 }, "geometry": { "type": "Point", "coordinates": [ 494938.000919163576327, 1017902.500014158664271 ] } },
+{ "type": "Feature", "properties": { "X1": 492356.0, "Y1": 1021413.0, "X2": 492448.0, "Y2": 1027264.0, "ID": 3.0, "Tuyen": "T93 (T21-T27)", "Species": "Chàng hiu", "Type": "Luo~ng cu", "ORIG_FID": 2 }, "geometry": { "type": "Point", "coordinates": [ 492401.999195200216491, 1024338.500025317305699 ] } },
+{ "type": "Feature", "properties": { "X1": 495545.0, "Y1": 1016760.0, "X2": 495453.0, "Y2": 1021327.0, "ID": 4.0, "Tuyen": "TT (Cong-DoiCÐ)", "Species": "Cóc nhà", "Type": "Luo~ng cu", "ORIG_FID": 3 }, "geometry": { "type": "Point", "coordinates": [ 495498.999721080996096, 1019043.499994381330907 ] } },
+{ "type": "Feature", "properties": { "X1": 492356.0, "Y1": 1021413.0, "X2": 492448.0, "Y2": 1027264.0, "ID": 5.0, "Tuyen": "T93 (T21-T27)", "Species": "Ếch đồng", "Type": "Luo~ng cu", "ORIG_FID": 4 }, "geometry": { "type": "Point", "coordinates": [ 492401.999195200216491, 1024338.500025317305699 ] } },
+{ "type": "Feature", "properties": { "X1": 495545.0, "Y1": 1016760.0, "X2": 495453.0, "Y2": 1021327.0, "ID": 6.0, "Tuyen": "TT (Cong-DoiCÐ)", "Species": "Cóc nhà", "Type": "Luo~ng cu", "ORIG_FID": 5 }, "geometry": { "type": "Point", "coordinates": [ 495498.999721080996096, 1019043.499994381330907 ] } },
+{ "type": "Feature", "properties": { "X1": 495545.0, "Y1": 1016760.0, "X2": 495453.0, "Y2": 1021327.0, "ID": 7.0, "Tuyen": "TT (Cong-DoiCÐ)", "Species": "Ngóe", "Type": "Luo~ng cu", "ORIG_FID": 6 }, "geometry": { "type": "Point", "coordinates": [ 495498.999721080996096, 1019043.499994381330907 ] } }
+]
+}
