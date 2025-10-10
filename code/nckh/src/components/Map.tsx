@@ -41,46 +41,109 @@ const MapNavigator = ({
   groupedSpecies,
   selectedCategory,
   selectedSpecies,
+  showEnvironment,
+  onToggleEnvironment,
   onCategorySelect,
   onSpeciesSelect,
 }: {
   groupedSpecies: Record<string, string[]>;
   selectedCategory: string | null;
   selectedSpecies: string | null;
+  showEnvironment: boolean;
+  onToggleEnvironment: () => void;
   onCategorySelect: (c: string) => void;
   onSpeciesSelect: (s: string) => void;
 }) => {
-  const colors = [
-    "#4CAF50",
-    "#2196F3",
-    "#FF9800",
-    "#9C27B0",
-    "#E91E63",
-    "#00BCD4",
-    "#8BC34A",
-    "#FF5722",
-  ];
-
   return (
     <div
       style={{
         position: "absolute",
-        bottom: "20px",
+        top: "20px",
         right: "20px",
-        background: "white",
-        borderRadius: "10px",
-        padding: "10px",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+        bottom: "20px",
+        background: "#e9e7e7ff", // nền sáng tổng thể
+        color: "#000000ff",
+        borderRadius: "12px",
+        padding: "14px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.4)",
         zIndex: 1000,
-        maxWidth: "260px",
+        width: "280px",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <h4 style={{ marginBottom: "6px", fontSize: "14px" }}>Chọn nhóm loài:</h4>
+      <h3
+        style={{
+          fontSize: "15px",
+          fontWeight: "bold",
+          marginBottom: "10px",
+          color: "#000",
+        }}
+      >
+        Bộ chọn hiển thị
+      </h3>
+
+      {/* --- Toggle Môi trường --- */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          background: "#555", // ✅ nền xám đậm hơn
+          borderRadius: "8px",
+          padding: "10px 12px", // ✅ padding lớn hơn xíu
+          marginBottom: "12px",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "14px",
+            color: "#ffffff", // ✅ chữ trắng
+            fontWeight: "500",
+          }}
+        >
+          Môi trường (Thực vật)
+        </span>
+        <label style={{ position: "relative" }}>
+          <input
+            type="checkbox"
+            checked={showEnvironment}
+            onChange={onToggleEnvironment}
+            style={{
+              width: "40px",
+              height: "20px",
+              appearance: "none",
+              backgroundColor: showEnvironment ? "#4CAF50" : "#999",
+              borderRadius: "20px",
+              position: "relative",
+              outline: "none",
+              cursor: "pointer",
+              transition: "background-color 0.2s",
+            }}
+          />
+          <span
+            style={{
+              position: "absolute",
+              top: "2px",
+              left: showEnvironment ? "22px" : "2px",
+              width: "16px",
+              height: "16px",
+              borderRadius: "50%",
+              background: "#fff",
+              transition: "left 0.2s",
+            }}
+          ></span>
+        </label>
+      </div>
+
+      {/* --- Chọn nhóm loài --- */}
+      <h4 style={{ marginBottom: "6px", fontSize: "14px", color: "#000" }}>Chọn nhóm loài:</h4>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
           gap: "6px",
+          marginBottom: "10px",
         }}
       >
         {Object.keys(groupedSpecies).map((cat, i) => (
@@ -91,13 +154,14 @@ const MapNavigator = ({
             }
             style={{
               background:
-                selectedCategory === cat ? colors[i % colors.length] : "#ccc",
-              color: "white",
-              border: "none",
+                selectedCategory === cat ? "#dcdcdc" : "#ffffff",
+              color: "#000",
+              border: "1px solid #aaa",
               borderRadius: "6px",
-              padding: "5px 10px",
+              padding: "6px 10px",
               cursor: "pointer",
-              fontSize: "12px",
+              fontSize: "13px",
+              flex: "1 1 45%",
             }}
           >
             {cat}
@@ -105,9 +169,28 @@ const MapNavigator = ({
         ))}
       </div>
 
+      {/* --- Danh sách loài có thể cuộn --- */}
       {selectedCategory && (
-        <div style={{ marginTop: "10px" }}>
-          <h4 style={{ marginBottom: "6px", fontSize: "13px" }}>
+        <div
+          style={{
+            flexGrow: 1,
+            overflowY: "auto",
+            paddingRight: "6px",
+            borderTop: "1px solid #ccc",
+            marginTop: "8px",
+          }}
+        >
+          <h4
+            style={{
+              margin: "10px 0 8px 0",
+              fontSize: "14px",
+              color: "#000",
+              position: "sticky",
+              top: 0,
+              background: "#e9e7e7ff",
+              paddingBottom: "4px",
+            }}
+          >
             Loài ({selectedCategory}):
           </h4>
           <div
@@ -123,15 +206,14 @@ const MapNavigator = ({
                 onClick={() => onSpeciesSelect(s)}
                 style={{
                   background:
-                    selectedSpecies === s
-                      ? colors[i % colors.length]
-                      : "#ddd",
-                  color: "black",
-                  border: "none",
+                    selectedSpecies === s ? "#dcdcdc" : "#ffffff",
+                  color: "#000",
+                  border: "1px solid #aaa",
                   borderRadius: "6px",
                   padding: "5px 8px",
                   cursor: "pointer",
                   fontSize: "12px",
+                  flex: "1 1 45%",
                 }}
               >
                 {s}
@@ -144,6 +226,7 @@ const MapNavigator = ({
   );
 };
 
+
 // --- Component chính ---
 export default function Map() {
   const [points, setPoints] = useState<PointData[]>([]);
@@ -151,6 +234,7 @@ export default function Map() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSpecies, setSelectedSpecies] = useState<string | null>(null);
+  const [showEnvironment, setShowEnvironment] = useState<boolean>(false);
   const mapRef = useRef<L.Map>(null!);
 
   // --- Load dữ liệu Động vật ---
@@ -178,13 +262,11 @@ export default function Map() {
           const converted = data.features.map((f: any) => {
             const coord = f.geometry.coordinates;
             let latlng: [number, number];
-            // Nếu toạ độ quá lớn -> UTM (EPSG:32648)
             if (Math.abs(coord[0]) > 180) {
               latlng = reprojectToWGS84(coord);
             } else {
               latlng = coord.reverse() as [number, number];
             }
-
             return {
               category,
               species: f.properties.Species?.trim() || "Không rõ",
@@ -201,7 +283,6 @@ export default function Map() {
       setPoints(allPoints);
       setLoading(false);
     };
-
     loadAll();
   }, []);
 
@@ -210,7 +291,6 @@ export default function Map() {
     fetch("/Thuc_vat.json")
       .then((r) => r.json())
       .then((geo) => {
-        // Nếu dữ liệu có toạ độ dạng UTM thì convert
         const sample = geo.features[0]?.geometry?.coordinates?.[0]?.[0]?.[0];
         if (sample && Math.abs(sample[0]) > 180) {
           geo.features = geo.features.map((f: any) => {
@@ -241,12 +321,11 @@ export default function Map() {
       groupedSpecies[p.category].push(p.species);
   }
 
-  // Lọc dữ liệu hiển thị
   const displayedPoints = selectedSpecies
     ? points.filter((p) => p.species === selectedSpecies)
     : selectedCategory
     ? points.filter((p) => p.category === selectedCategory)
-    : points;
+    : [];
 
   const uminhBounds: L.LatLngBoundsExpression = [
     [8.9, 104.7],
@@ -287,22 +366,20 @@ export default function Map() {
         ))}
 
         {/* Layer Thực vật */}
-        {thucVatGeoJson && (
+        {showEnvironment && thucVatGeoJson && (
           <GeoJSON
             data={thucVatGeoJson}
             style={() => ({
-              color: "green",
+              color: "#00c853",
               weight: 2,
-              fillOpacity: 0.3,
+              fillOpacity: 0.25,
             })}
             onEachFeature={(feature, layer) => {
               const props = feature.properties || {};
               layer.bindPopup(
-                `<b>Thực vật:</b> ${
-                  props.TVkethop || "Không rõ"
-                }<br/><b>HST:</b> ${
-                  props.HST || "Không rõ"
-                }<br/><b>DT (ha):</b> ${props.DT_ha || 0}`
+                `<b>Thực vật:</b> ${props.TVkethop || "Không rõ"}<br/>
+                 <b>HST:</b> ${props.HST || "Không rõ"}<br/>
+                 <b>DT (ha):</b> ${props.DT_ha || 0}`
               );
             }}
           />
@@ -312,9 +389,9 @@ export default function Map() {
           groupedSpecies={groupedSpecies}
           selectedCategory={selectedCategory}
           selectedSpecies={selectedSpecies}
-          onCategorySelect={(c) =>
-            setSelectedCategory(c === "" ? null : c)
-          }
+          showEnvironment={showEnvironment}
+          onToggleEnvironment={() => setShowEnvironment(!showEnvironment)}
+          onCategorySelect={(c) => setSelectedCategory(c === "" ? null : c)}
           onSpeciesSelect={(s) =>
             setSelectedSpecies(s === selectedSpecies ? null : s)
           }
