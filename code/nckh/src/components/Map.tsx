@@ -21,6 +21,19 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
+function normalizeName(name: string) {
+  return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "d")
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w]/g, "_")
+    .toLowerCase();
+}
+
+
 // --- Hệ VN2000 (UTM Zone 48N) ---
 const EPSG_32648 =
   "+proj=utm +zone=48 +datum=WGS84 +units=m +no_defs";
@@ -35,6 +48,70 @@ interface PointData {
   species: string;
   category: string;
 }
+
+// --- Panel hiển thị thông tin loài ---
+const SpeciesInfoPanel = ({
+  selectedSpecies,
+  selectedCategory,
+  speciesInfo,
+}: {
+  selectedSpecies: string | null;
+  selectedCategory: string | null;
+  speciesInfo: Record<string, any>;
+}) => {
+  if (!selectedSpecies) return null;
+
+  console.log("Selected Species:", selectedSpecies);
+  console.log("Normalized name:", normalizeName(selectedSpecies));
+  console.log("Species Info:", speciesInfo);
+  
+  const info = speciesInfo[normalizeName(selectedSpecies)] || {
+    name: selectedSpecies,
+    category: selectedCategory,
+    description: "Chưa có thông tin chi tiết về loài này.",
+    image: "/images/default.jpg",
+  };
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "20px",
+        left: "20px",
+        bottom: "20px",
+        background: "#f3f3f3",
+        color: "#000",
+        borderRadius: "12px",
+        padding: "16px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.4)",
+        zIndex: 1000,
+        width: "300px",
+        overflowY: "auto",
+      }}
+    >
+      <h3 style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>
+        Thông tin loài
+      </h3>
+      <img
+        src={info.image}
+        alt={info.name}
+        style={{
+          width: "100%",
+          height: "180px",
+          objectFit: "cover",
+          borderRadius: "8px",
+          marginBottom: "10px",
+        }}
+      />
+      <p><b>Tên thường gọi:</b> {info.name}</p>
+      <p><b>Tên khoa học:</b> {info.scientific || "Không rõ"}</p>
+      <p><b>Nhóm:</b> {info.category || selectedCategory}</p>
+      <p><b>Môi trường sống:</b> {info.habitat || "Không rõ"}</p>
+      <p><b>Thức ăn:</b> {info.diet || "Không rõ"}</p>
+      <p><b>Mô tả:</b> {info.description}</p>
+    </div>
+  );
+};
 
 // --- Component menu chọn nhóm & loài ---
 const MapNavigator = ({
@@ -95,36 +172,14 @@ const MapNavigator = ({
         width: "280px",
         display: "flex",
         flexDirection: "column",
-        overflowY: "auto", // ✅ cuộn toàn bộ panel
-        scrollbarWidth: "thin", // Firefox
+        overflowY: "auto",
       }}
     >
-      {/* ✅ Tùy chỉnh thanh cuộn nhỏ, màu trắng */}
-      <style>
-        {`
-          ::-webkit-scrollbar {
-            width: 6px;
-          }
-          ::-webkit-scrollbar-track {
-            background: #ddd;
-            border-radius: 10px;
-          }
-          ::-webkit-scrollbar-thumb {
-            background: #fff;
-            border-radius: 10px;
-          }
-          ::-webkit-scrollbar-thumb:hover {
-            background: #ccc;
-          }
-        `}
-      </style>
-
       <h3 style={{ fontSize: "15px", fontWeight: "bold", marginBottom: "10px" }}>
         Bộ chọn hiển thị
       </h3>
 
-      {/* --- Toggle các lớp dữ liệu --- */}
-      {[
+      {[ 
         { label: "Môi trường (Thực vật)", checked: showEnvironment, onToggle: onToggleEnvironment },
         { label: "Kênh", checked: showKenh, onToggle: onToggleKenh },
         { label: "Kiểm kê rừng", checked: showKiemke, onToggle: onToggleKiemke },
@@ -142,13 +197,7 @@ const MapNavigator = ({
             marginBottom: "8px",
           }}
         >
-          <span
-            style={{
-              fontSize: "14px",
-              color: "#fff",
-              fontWeight: 500,
-            }}
-          >
+          <span style={{ fontSize: "14px", color: "#fff", fontWeight: 500 }}>
             {layer.label}
           </span>
           <label style={{ position: "relative" }}>
@@ -174,19 +223,11 @@ const MapNavigator = ({
         </div>
       ))}
 
-      {/* --- Chọn nhóm loài --- */}
       <h4 style={{ marginBottom: "6px", fontSize: "14px", color: "#000" }}>
         Chọn nhóm loài:
       </h4>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "6px",
-          marginBottom: "10px",
-        }}
-      >
-        {Object.keys(groupedSpecies).map((cat, i) => (
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "10px" }}>
+        {Object.keys(groupedSpecies).map((cat) => (
           <button
             key={cat}
             onClick={() =>
@@ -208,7 +249,6 @@ const MapNavigator = ({
         ))}
       </div>
 
-      {/* --- Danh sách loài --- */}
       {selectedCategory && (
         <div
           style={{
@@ -217,24 +257,10 @@ const MapNavigator = ({
             paddingTop: "8px",
           }}
         >
-          <h4
-            style={{
-              margin: "10px 0 8px 0",
-              fontSize: "14px",
-              color: "#000",
-              background: "#e9e7e7ff",
-              paddingBottom: "4px",
-            }}
-          >
+          <h4 style={{ margin: "10px 0 8px 0", fontSize: "14px", color: "#000" }}>
             Loài ({selectedCategory}):
           </h4>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "6px",
-            }}
-          >
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
             {groupedSpecies[selectedCategory].map((s, i) => (
               <button
                 key={i}
@@ -260,7 +286,6 @@ const MapNavigator = ({
   );
 };
 
-
 // --- Component chính ---
 export default function Map() {
   const [points, setPoints] = useState<PointData[]>([]);
@@ -268,6 +293,7 @@ export default function Map() {
   const [kenhGeoJson, setKenhGeoJson] = useState<any>(null);
   const [kiemkeGeoJson, setKiemkeGeoJson] = useState<any>(null);
   const [rungGeoJson, setRungGeoJson] = useState<any>(null);
+  const [speciesInfo, setSpeciesInfo] = useState<Record<string, any>>({});
 
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -279,60 +305,68 @@ export default function Map() {
 
   const mapRef = useRef<L.Map>(null!);
 
-  // --- Load dữ liệu Động vật ---
-useEffect(() => {
-  const loadAll = async () => {
-    const files = [
-      { file: "Dong_Vat_chim.geojson", category: "Chim" },
-      { file: "Dong_Vat_Chim_bosung.geojson", category: "Chim (bổ sung)" },
-      { file: "Dong_Vat_Thu.geojson", category: "Thú" },
-      { file: "Dong_Vat_Thu_bosung.geojson", category: "Thú (bổ sung)" },
-      { file: "Dong_Vat_Bosat.geojson", category: "Bò sát" },
-      { file: "Dong_Vat_Luongcu.geojson", category: "Lưỡng cư" },
-      { file: "Dong_vat_ca.geojson", category: "Cá" },
-    ];
-
-    const allPoints: PointData[] = [];
-
-    for (const { file, category } of files) {
+  // --- Load thông tin chi tiết các loài ---
+  useEffect(() => {
+    const loadSpeciesInfo = async () => {
       try {
-        console.log("🔄 Đang load:", file);
-        const response = await fetch(`/${file}`);
-        const text = await response.text();
-        if (text.startsWith("<")) {
-          console.warn(`⚠️ File ${file} không hợp lệ (trả về HTML)`);
-          continue;
-        }
-
-        const data = JSON.parse(text);
-        const converted = data.features.map((f: any) => {
-          const coord = f.geometry.coordinates;
-          const latlng =
-            Math.abs(coord[0]) > 180
-              ? reprojectToWGS84(coord)
-              : (coord.reverse() as [number, number]);
-
-          return {
-            category,
-            species: f.properties.Species?.trim() || "Không rõ",
-            position: latlng,
-          };
-        });
-
-        console.log(`✅ ${file} → ${converted.length} điểm`);
-        allPoints.push(...converted);
-      } catch (err) {
-        console.warn(`❌ Không thể đọc file: ${file}`, err);
+        const response = await fetch("/species_info_normalized.json");
+        const data = await response.json();
+        setSpeciesInfo(data);
+      } catch (error) {
+        console.error("Lỗi khi tải thông tin loài:", error);
       }
-    }
+    };
+    loadSpeciesInfo();
+  }, []);
 
-    setPoints(allPoints);
-    setLoading(false);
-  };
+  // --- Load dữ liệu Động vật ---
+  useEffect(() => {
+    const loadAll = async () => {
+      const files = [
+        { file: "Dong_Vat_chim.geojson", category: "Chim" },
+        { file: "Dong_Vat_Chim_bosung.geojson", category: "Chim (bổ sung)" },
+        { file: "Dong_Vat_Thu.geojson", category: "Thú" },
+        { file: "Dong_Vat_Thu_bosung.geojson", category: "Thú (bổ sung)" },
+        { file: "Dong_Vat_Bosat.geojson", category: "Bò sát" },
+        { file: "Dong_Vat_Luongcu.geojson", category: "Lưỡng cư" },
+        { file: "Dong_vat_ca.geojson", category: "Cá" },
+      ];
 
-  loadAll();
-}, []);
+      const allPoints: PointData[] = [];
 
+      for (const { file, category } of files) {
+        try {
+          const response = await fetch(`/${file}`);
+          const text = await response.text();
+          if (text.startsWith("<")) continue;
+
+          const data = JSON.parse(text);
+          const converted = data.features.map((f: any) => {
+            const coord = f.geometry.coordinates;
+            const latlng =
+              Math.abs(coord[0]) > 180
+                ? reprojectToWGS84(coord)
+                : (coord.reverse() as [number, number]);
+
+            return {
+              category,
+              species: f.properties.Species?.trim() || "Không rõ",
+              position: latlng,
+            };
+          });
+
+          allPoints.push(...converted);
+        } catch (err) {
+          console.warn(`❌ Không thể đọc file: ${file}`, err);
+        }
+      }
+
+      setPoints(allPoints);
+      setLoading(false);
+    };
+
+    loadAll();
+  }, []);
 
   // --- Load các GeoJSON ---
   useEffect(() => {
@@ -362,6 +396,14 @@ useEffect(() => {
     loadGeo("/rung.json", setRungGeoJson);
   }, []);
 
+  // --- Load thông tin loài ---
+  useEffect(() => {
+    fetch("/normalize_species.json")
+      .then((res) => res.json())
+      .then((data) => setSpeciesInfo(data))
+      .catch((err) => console.error("Không thể tải species_info.json", err));
+  }, []);
+
   if (loading) return <div>Đang tải dữ liệu...</div>;
 
   // Gom nhóm loài theo category
@@ -386,6 +428,12 @@ useEffect(() => {
 
   return (
     <div style={{ position: "relative", width: "100%", height: "600px" }}>
+      <SpeciesInfoPanel
+        selectedSpecies={selectedSpecies}
+        selectedCategory={selectedCategory}
+        speciesInfo={speciesInfo}
+      />
+
       <MapContainer
         ref={mapRef}
         center={[9.25, 104.95]}
@@ -394,7 +442,6 @@ useEffect(() => {
         maxZoom={16}
         maxBounds={uminhBounds}
         maxBoundsViscosity={1.0}
-        worldCopyJump={false}
         style={{ width: "100%", height: "100%" }}
       >
         <TileLayer
@@ -402,7 +449,6 @@ useEffect(() => {
           attribution="© OpenStreetMap contributors"
         />
 
-        {/* --- Các Layer GeoJSON --- */}
         {showEnvironment && thucVatGeoJson && (
           <GeoJSON data={thucVatGeoJson} style={{ color: "#00c853", weight: 2, fillOpacity: 0.25 }} />
         )}
@@ -416,7 +462,6 @@ useEffect(() => {
           <GeoJSON data={rungGeoJson} style={{ color: "#2e7d32", weight: 2, fillOpacity: 0.4 }} />
         )}
 
-        {/* --- Marker Động vật --- */}
         {displayedPoints.map((p, i) => (
           <Marker key={i} position={p.position}>
             <Popup>

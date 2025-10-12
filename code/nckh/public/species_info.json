@@ -1,0 +1,3147 @@
+{
+  "Diều Ấn Độ": {
+    "name": "Diều Ấn Độ",
+    "scientific": "Butastur indicus",
+    "category": "Ưng",
+    "habitat": "Rừng, đồng cỏ, khu vực nông thôn",
+    "diet": "Côn trùng, chim nhỏ, động vật gặm nhấm",
+    "description": "Loài diều có màu xám nâu, cánh dài, thường săn mồi trên không.",
+    "image": "/images/dieu_an_do.jpg"
+  },
+  "Diều đầu trắng": {
+    "name": "Diều đầu trắng",
+    "scientific": "Circus aeruginosus",
+    "category": "Ưng",
+    "habitat": "Đầm lầy, đồng cỏ ngập nước",
+    "diet": "Chim nhỏ, cá, côn trùng",
+    "description": "Diều đầu trắng có bộ lông nâu, đầu trắng đặc trưng, bay lượn thấp khi săn mồi.",
+    "image": "/images/dieu_dau_trang.jpg"
+  },
+  "Diều trắng": {
+    "name": "Diều trắng",
+    "scientific": "Elanus caeruleus",
+    "category": "Ưng",
+    "habitat": "Đồng cỏ, cánh đồng mở",
+    "diet": "Động vật gặm nhấm nhỏ, côn trùng",
+    "description": "Loài diều nhỏ với bộ lông trắng, mắt đỏ, thường bay lượn để săn mồi.",
+    "image": "/images/dieu_trang.jpg"
+  },
+  "Diều hâu": {
+    "name": "Diều hâu",
+    "scientific": "Milvus migrans",
+    "category": "Ưng",
+    "habitat": "Đô thị, đồng ruộng, rừng",
+    "diet": "Xác thối, cá, côn trùng",
+    "description": "Diều hâu có đuôi chẻ, bay lượn cao, thường sống gần khu dân cư.",
+    "image": "/images/dieu_hau.jpg"
+  },
+  "Diều hoa Miến Điện": {
+    "name": "Diều hoa Miến Điện",
+    "scientific": "Spilornis cheela",
+    "category": "Ưng",
+    "habitat": "Rừng nhiệt đới, rừng rậm",
+    "diet": "Rắn, thằn lằn, chim nhỏ",
+    "description": "Diều lớn với mào trên đầu, chuyên săn rắn và động vật nhỏ.",
+    "image": "/images/dieu_hoa_mien_dien.jpg"
+  },
+  "Bồng chanh": {
+    "name": "Bồng chanh",
+    "scientific": "Alcedo atthis",
+    "category": "Sả",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Chim nhỏ với bộ lông xanh lam rực rỡ, thường đậu trên cành săn cá.",
+    "image": "/images/bong_chanh.jpg"
+  },
+  "Vịt trời": {
+    "name": "Vịt trời",
+    "scientific": "Anas poecilorhyncha",
+    "category": "Ngỗng",
+    "habitat": "Hồ, đầm lầy, đồng lúa",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Vịt có lông nâu xám, mỏ vàng, thường sống theo đàn.",
+    "image": "/images/vit_troi.jpg"
+  },
+  "Le nâu": {
+    "name": "Le nâu",
+    "scientific": "Dendrocygna javanica",
+    "category": "Ngỗng",
+    "habitat": "Đầm lầy, hồ nước",
+    "diet": "Hạt, thực vật thủy sinh",
+    "description": "Loài vịt nhỏ, lông nâu, thường kêu lớn vào ban đêm.",
+    "image": "/images/le_nau.jpg"
+  },
+  "Le khoang cổ": {
+    "name": "Le khoang cổ",
+    "scientific": "Nettapus coromandelianus",
+    "category": "Ngỗng",
+    "habitat": "Hồ, ao, đầm lầy",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Vịt nhỏ với cổ có khoang trắng, sống ở vùng nước nông.",
+    "image": "/images/le_khoang_co.jpg"
+  },
+  "Điêng điểng": {
+    "name": "Điêng điểng",
+    "scientific": "Anhinga melanogaster",
+    "category": "Cổ rắn",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá, động vật giáp xác",
+    "description": "Chim lặn với cổ dài như rắn, thường phơi cánh sau khi lặn.",
+    "image": "/images/dieng_dieng.jpg"
+  },
+  "Diệc lửa": {
+    "name": "Diệc lửa",
+    "scientific": "Ardea purpurea",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng cỏ ngập nước",
+    "diet": "Cá, côn trùng, động vật lưỡng cư",
+    "description": "Diệc lớn với lông tím đỏ, cổ dài, mỏ nhọn.",
+    "image": "/images/diec_lua.jpg"
+  },
+  "Diệc xám": {
+    "name": "Diệc xám",
+    "scientific": "Ardea cinerea",
+    "category": "Bồ nông",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá, côn trùng, động vật nhỏ",
+    "description": "Diệc lớn với lông xám, cổ dài, thường đứng im săn mồi.",
+    "image": "/images/diec_xam.jpg"
+  },
+  "Cò ngàng nhỏ": {
+    "name": "Cò ngàng nhỏ",
+    "scientific": "Ardea intermedia",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng lúa",
+    "diet": "Cá, côn trùng, ếch",
+    "description": "Diệc cỡ trung, lông trắng, mỏ vàng, thường săn mồi ở vùng nước nông.",
+    "image": "/images/co_ngang_nho.jpg"
+  },
+  "Cò bợ": {
+    "name": "Cò bợ",
+    "scientific": "Ardeola bacchus",
+    "category": "Bồ nông",
+    "habitat": "Đồng lúa, đầm lầy",
+    "diet": "Côn trùng, cá nhỏ, ếch",
+    "description": "Cò nhỏ với lông nâu vào mùa đông, trắng vào mùa sinh sản.",
+    "image": "/images/co_bo.jpg"
+  },
+  "Cò bợ Mã Lai": {
+    "name": "Cò bợ Mã Lai",
+    "scientific": "Ardeola speciosa",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng lúa",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cò nhỏ với lông nâu, mỏ vàng, sinh sống ở vùng nhiệt đới.",
+    "image": "/images/co_bo_ma_lai.jpg"
+  },
+  "Cò xanh": {
+    "name": "Cò xanh",
+    "scientific": "Butorides striata",
+    "category": "Bồ nông",
+    "habitat": "Sông, đầm lầy, rừng ngập mặn",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cò nhỏ với lông xanh đen, thường săn mồi gần mặt nước.",
+    "image": "/images/co_xanh.jpg"
+  },
+  "Cò trắng": {
+    "name": "Cò trắng",
+    "scientific": "Egretta garzetta",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng lúa, bờ sông",
+    "diet": "Cá, côn trùng, giáp xác",
+    "description": "Cò trắng nhỏ với chân vàng, thường thấy ở vùng nước nông.",
+    "image": "/images/co_trang.jpg"
+  },
+  "Cò lửa": {
+    "name": "Cò lửa",
+    "scientific": "Ixobrychus cinnamomeus",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng cỏ ngập nước",
+    "diet": "Côn trùng, cá nhỏ, ếch",
+    "description": "Cò nhỏ với lông nâu đỏ, thường ẩn mình trong lau sậy.",
+    "image": "/images/co_lua.jpg"
+  },
+  "Cò hương": {
+    "name": "Cò hương",
+    "scientific": "Ixobrychus flavicollis",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, vùng đất ngập nước",
+    "diet": "Cá, côn trùng, ếch",
+    "description": "Cò lớn hơn cò lửa, lông nâu vàng, sống ẩn dật.",
+    "image": "/images/co_huong.jpg"
+  },
+  "Cò lửa lùn": {
+    "name": "Cò lửa lùn",
+    "scientific": "Ixobrychus sinensis",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, đồng lúa",
+    "diet": "Côn trùng, cá nhỏ",
+    "description": "Cò rất nhỏ, lông nâu vàng, thường khó phát hiện.",
+    "image": "/images/co_lua_lun.jpg"
+  },
+  "Vạc": {
+    "name": "Vạc",
+    "scientific": "Nycticorax nycticorax",
+    "category": "Bồ nông",
+    "habitat": "Đầm lầy, rừng ngập mặn, hồ",
+    "diet": "Cá, côn trùng, động vật nhỏ",
+    "description": "Cò hoạt động về đêm, lông đen xám, mắt đỏ.",
+    "image": "/images/vac.jpg"
+  },
+  "Phường chèo xám lớn": {
+    "name": "Phường chèo xám lớn",
+    "scientific": "Coracina macei",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng, trái cây",
+    "description": "Chim có lông xám, mỏ nhọn, thường săn côn trùng trên cây.",
+    "image": "/images/phuong_cheo_xam_lon.jpg"
+  },
+  "Phường chèo xám nhỏ": {
+    "name": "Phường chèo xám nhỏ",
+    "scientific": "Coracina polioptera",
+    "category": "Sẻ",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Phiên bản nhỏ hơn của phường chèo xám lớn, lông xám nhạt.",
+    "image": "/images/phuong_cheo_xam_nho.jpg"
+  },
+  "Cú muỗi đuôi dài": {
+    "name": "Cú muỗi đuôi dài",
+    "scientific": "Caprimulgus macrurus",
+    "category": "Cú muỗi",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Chim hoạt động về đêm, lông nâu xám, đuôi dài, săn côn trùng khi bay.",
+    "image": "/images/cu_muoi_duoi_dai.jpg"
+  },
+  "Chiền chiện đồng hung": {
+    "name": "Chiền chiện đồng hung",
+    "scientific": "Cisticola juncidis",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, đồng lúa",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với lông nâu hung, thường hát líu lo trên đồng cỏ.",
+    "image": "/images/chien_chien_dong_hung.jpg"
+  },
+  "Chiền chiện bụng hung": {
+    "name": "Chiền chiện bụng hung",
+    "scientific": "Prinia inornata",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, vùng đất ngập nước",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ, lông nâu, bụng hung, sống trong bụi rậm.",
+    "image": "/images/chien_chien_bung_hung.jpg"
+  },
+  "Chiền chiện bụng vàng": {
+    "name": "Chiền chiện bụng vàng",
+    "scientific": "Prinia flaviventris",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, đầm lầy",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với bụng vàng, thường ẩn trong lau sậy.",
+    "image": "/images/chien_chien_bung_vang.jpg"
+  },
+  "Chích bông cánh vàng": {
+    "name": "Chích bông cánh vàng",
+    "scientific": "Orthotomus atrogularis",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với cánh vàng, thường may tổ từ lá cây.",
+    "image": "/images/chich_bong_canh_vang.jpg"
+  },
+  "Chích đuôi dài": {
+    "name": "Chích đuôi dài",
+    "scientific": "Orthotomus sutorius",
+    "category": "Sẻ",
+    "habitat": "Vườn, bụi rậm",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với đuôi dài, lông xanh và nâu, thường may tổ độc đáo.",
+    "image": "/images/chich_duoi_dai.jpg"
+  },
+  "Già đẩy Java": {
+    "name": "Già đẩy Java",
+    "scientific": "Leptoptilos javanicus",
+    "category": "Hạc",
+    "habitat": "Đầm lầy, rừng ngập mặn",
+    "diet": "Cá, xác thối, động vật nhỏ",
+    "description": "Hạc lớn với cổ trụi, mỏ lớn, thường ăn xác thối.",
+    "image": "/images/gia_day_java.jpg"
+  },
+  "Giang sen": {
+    "name": "Giang sen",
+    "scientific": "Mycteria leucocephala",
+    "category": "Hạc",
+    "habitat": "Đầm lầy, hồ nước",
+    "diet": "Cá, động vật giáp xác",
+    "description": "Hạc lớn với mỏ cong, lông trắng, thường săn cá ở vùng nước nông.",
+    "image": "/images/giang_sen.jpg"
+  },
+  "Cu luồng": {
+    "name": "Cu luồng",
+    "scientific": "Chalcophaps indica",
+    "category": "Bồ câu",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Hạt, trái cây",
+    "description": "Bồ câu nhỏ với lông xanh lấp lánh, sống trong rừng.",
+    "image": "/images/cu_luong.jpg"
+  },
+  "Cu vằn": {
+    "name": "Cu vằn",
+    "scientific": "Geopelia striata",
+    "category": "Bồ câu",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Hạt, côn trùng",
+    "description": "Bồ câu nhỏ với lông vằn, thường thấy ở khu vực mở.",
+    "image": "/images/cu_van.jpg"
+  },
+  "Cu gáy": {
+    "name": "Cu gáy",
+    "scientific": "Spilopelia chinensis",
+    "category": "Bồ câu",
+    "habitat": "Đồng ruộng, khu dân cư",
+    "diet": "Hạt, thực vật",
+    "description": "Bồ câu phổ biến với lông nâu xám, cổ có đốm đen.",
+    "image": "/images/cu_gay.jpg"
+  },
+  "Cu ngói": {
+    "name": "Cu ngói",
+    "scientific": "Streptopelia senegalensis",
+    "category": "Bồ câu",
+    "habitat": "Đô thị, đồng cỏ",
+    "diet": "Hạt, thực vật",
+    "description": "Bồ câu nhỏ với lông nâu, sống gần khu dân cư.",
+    "image": "/images/cu_ngoi.jpg"
+  },
+  "Cu xanh đuôi đen": {
+    "name": "Cu xanh đuôi đen",
+    "scientific": "Treron pompadora",
+    "category": "Bồ câu",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Trái cây",
+    "description": "Bồ câu xanh với đuôi đen, sống trên cây cao.",
+    "image": "/images/cu_xanh_duoi_den.jpg"
+  },
+  "Cu xanh đầu xám": {
+    "name": "Cu xanh đầu xám",
+    "scientific": "Treron vernans",
+    "category": "Bồ câu",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Trái cây",
+    "description": "Bồ câu xanh với đầu xám, chuyên ăn trái cây.",
+    "image": "/images/cu_xanh_dau_xam.jpg"
+  },
+  "Cu xanh khoang cổ": {
+    "name": "Cu xanh khoang cổ",
+    "scientific": "Treron bicinctus",
+    "category": "Bồ câu",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Trái cây",
+    "description": "Bồ câu xanh với khoang cổ đặc trưng, sống trong rừng.",
+    "image": "/images/cu_xanh_khoang_co.jpg"
+  },
+  "Sả rừng": {
+    "name": "Sả rừng",
+    "scientific": "Coracias benghalensis",
+    "category": "Sả",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Chim sặc sỡ với lông xanh và nâu, thường săn côn trùng khi bay.",
+    "image": "/images/sa_rung.jpg"
+  },
+  "Chim nghệ ngực vàng": {
+    "name": "Chim nghệ ngực vàng",
+    "scientific": "Aegithina tiphia",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với ngực vàng, lông xanh, thường săn côn trùng trên cây.",
+    "image": "/images/chim_nghe_nguc_vang.jpg"
+  },
+  "Chim khách": {
+    "name": "Chim khách",
+    "scientific": "Crypsirina temia",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng, trái cây",
+    "description": "Chim đen với đuôi dài, sống theo đàn, có tiếng kêu đặc trưng.",
+    "image": "/images/chim_khach.jpg"
+  },
+  "Chèo bẻo cờ đuôi bằng": {
+    "name": "Chèo bẻo cờ đuôi bằng",
+    "scientific": "Dicrurus remifer",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chèo bẻo đen với đuôi bằng, thường đuổi theo chim khác để cướp mồi.",
+    "image": "/images/cheo_beo_co_duoi_bang.jpg"
+  },
+  "Chèo bẻo": {
+    "name": "Chèo bẻo",
+    "scientific": "Dicrurus macrocercus",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Côn trùng",
+    "description": "Chèo bẻo đen với đuôi chẻ, thường bay lượn săn côn trùng.",
+    "image": "/images/cheo_beo.jpg"
+  },
+  "Chèo bẻo đuôi chẻ": {
+    "name": "Chèo bẻo đuôi chẻ",
+    "scientific": "Dicrurus paradiseus",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chèo bẻo với đuôi chẻ dài, lông đen bóng, sống trong rừng.",
+    "image": "/images/cheo_beo_duoi_che.jpg"
+  },
+  "Chèo bẻo xám": {
+    "name": "Chèo bẻo xám",
+    "scientific": "Dicrurus leucophaeus",
+    "category": "Sẻ",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Chèo bẻo xám với đuôi chẻ, thường săn côn trùng trên không.",
+    "image": "/images/cheo_beo_xam.jpg"
+  },
+  "Rẻ quạt Java": {
+    "name": "Rẻ quạt Java",
+    "scientific": "Rhipidura javanica",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với đuôi quạt, thường phe phẩy đuôi khi đậu.",
+    "image": "/images/re_quat_java.jpg"
+  },
+  "Tìm vịt": {
+    "name": "Tìm vịt",
+    "scientific": "Cacomantis merulinus",
+    "category": "Cu cu",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng",
+    "description": "Chim cu nhỏ, thường đẻ nhờ vào tổ chim khác, có tiếng kêu đặc trưng.",
+    "image": "/images/tim_vit.jpg"
+  },
+  "Tìm vịt vằn": {
+    "name": "Tìm vịt vằn",
+    "scientific": "Cacomantis sonneratii",
+    "category": "Cu cu",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Chim cu nhỏ với lông vằn, thường đẻ nhờ tổ chim khác.",
+    "image": "/images/tim_vit_van.jpg"
+  },
+  "Tu hú": {
+    "name": "Tu hú",
+    "scientific": "Eudynamys scolopacea",
+    "category": "Cu cu",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Trái cây, côn trùng",
+    "description": "Chim cu lớn với tiếng kêu lớn, thường đẻ nhờ tổ quạ.",
+    "image": "/images/tu_hu.jpg"
+  },
+  "Phướn": {
+    "name": "Phướn",
+    "scientific": "Phaenicophaeus tristis",
+    "category": "Cu cu",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Côn trùng, thằn lằn",
+    "description": "Chim cu lớn với lông xanh, mỏ đỏ, sống trong rừng rậm.",
+    "image": "/images/phuon.jpg"
+  },
+  "Bìm bịp lớn": {
+    "name": "Bìm bịp lớn",
+    "scientific": "Centropus sinensis",
+    "category": "Cu cu",
+    "habitat": "Đồng cỏ, bụi rậm",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Chim lớn với lông đen, mắt đỏ, thường đi bộ trên mặt đất.",
+    "image": "/images/bim_bip_lon.jpg"
+  },
+  "Bìm bịp nhỏ": {
+    "name": "Bìm bịp nhỏ",
+    "scientific": "Centropus bengalensis",
+    "category": "Cu cu",
+    "habitat": "Đồng cỏ, đầm lầy",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Phiên bản nhỏ hơn của bìm bịp lớn, lông đen, mắt đỏ.",
+    "image": "/images/bim_bip_nho.jpg"
+  },
+  "Dô nách nâu": {
+    "name": "Dô nách nâu",
+    "scientific": "Glareola maldivarum",
+    "category": "Choi choi",
+    "habitat": "Đồng cỏ, bãi bùn",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với cánh dài, bay nhanh, săn côn trùng trên không.",
+    "image": "/images/do_nach_nau.jpg"
+  },
+  "Sả đầu nâu": {
+    "name": "Sả đầu nâu",
+    "scientific": "Halcyon smyrnensis",
+    "category": "Sả",
+    "habitat": "Sông, hồ, đồng ruộng",
+    "diet": "Cá, côn trùng",
+    "description": "Chim bói cá lớn với đầu nâu, lông xanh lam, săn mồi gần nước.",
+    "image": "/images/sa_dau_nau.jpg"
+  },
+  "Sả mỏ rộng": {
+    "name": "Sả mỏ rộng",
+    "scientific": "Pelargopsis capensis",
+    "category": "Sả",
+    "habitat": "Sông, rừng ngập mặn",
+    "diet": "Cá, động vật giáp xác",
+    "description": "Bói cá lớn với mỏ rộng, lông xanh nâu, sống gần nước.",
+    "image": "/images/sa_mo_rong.jpg"
+  },
+  "Nhạn bụng trắng": {
+    "name": "Nhạn bụng trắng",
+    "scientific": "Hirundo rustica",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Côn trùng",
+    "description": "Chim nhạn với bụng trắng, đuôi chẻ, bay lượn bắt côn trùng.",
+    "image": "/images/nhan_bung_trang.jpg"
+  },
+  "Nhạn nâu xám": {
+    "name": "Nhạn nâu xám",
+    "scientific": "Riparia riparia",
+    "category": "Sẻ",
+    "habitat": "Bờ sông, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Nhạn nhỏ với lông nâu xám, thường làm tổ trong hang đất.",
+    "image": "/images/nhan_nau_xam.jpg"
+  },
+  "Gà lôi nước Ấn độ": {
+    "name": "Gà lôi nước Ấn độ",
+    "scientific": "Metopidius indicus",
+    "category": "Choi choi",
+    "habitat": "Đầm lầy, hồ nước",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Chim nước với chân dài, có thể đi trên lá sen.",
+    "image": "/images/ga_loi_nuoc_an_do.jpg"
+  },
+  "Bách thanh mày trắng": {
+    "name": "Bách thanh mày trắng",
+    "scientific": "Lanius cristatus",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, bụi rậm",
+    "diet": "Côn trùng, chim nhỏ",
+    "description": "Chim săn mồi nhỏ với mày trắng, thường xiên con mồi lên gai.",
+    "image": "/images/bach_thanh_may_trang.jpg"
+  },
+  "Trảu ngực nâu": {
+    "name": "Trảu ngực nâu",
+    "scientific": "Merops philippinus",
+    "category": "Sả",
+    "habitat": "Đồng cỏ, bờ sông",
+    "diet": "Côn trùng",
+    "description": "Chim sặc sỡ với ngực nâu, chuyên săn côn trùng khi bay.",
+    "image": "/images/trau_nguc_nau.jpg"
+  },
+  "Chích chòe than": {
+    "name": "Chích chòe than",
+    "scientific": "Copsychus saularis",
+    "category": "Sẻ",
+    "habitat": "Vườn, bụi rậm",
+    "diet": "Côn trùng, trái cây",
+    "description": "Chim nhỏ với lông đen trắng, có tiếng hót líu lo.",
+    "image": "/images/chich_choe_than.jpg"
+  },
+  "Chim sâu lưng đỏ": {
+    "name": "Chim sâu lưng đỏ",
+    "scientific": "Dicaeum cruentatum",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Mật hoa, côn trùng",
+    "description": "Chim nhỏ với lông đỏ đen, chuyên hút mật hoa.",
+    "image": "/images/chim_sau_lung_do.jpg"
+  },
+  "Hút mật họng tím": {
+    "name": "Hút mật họng tím",
+    "scientific": "Nectarinia jugularis",
+    "category": "Sẻ",
+    "habitat": "Vườn, rừng",
+    "diet": "Mật hoa, côn trùng",
+    "description": "Chim nhỏ với họng tím lấp lánh, chuyên hút mật hoa.",
+    "image": "/images/hut_mat_hong_tim.jpg"
+  },
+  "Hút mật họng hồng": {
+    "name": "Hút mật họng hồng",
+    "scientific": "Leptocoma brasiliana",
+    "category": "Sẻ",
+    "habitat": "Vườn, rừng",
+    "diet": "Mật hoa, côn trùng",
+    "description": "Chim nhỏ với họng hồng, thường bay lượn gần hoa.",
+    "image": "/images/hut_mat_hong_hong.jpg"
+  },
+  "Ó cá": {
+    "name": "Ó cá",
+    "scientific": "Pandion haliaetus",
+    "category": "Ưng",
+    "habitat": "Bờ biển, sông, hồ",
+    "diet": "Cá",
+    "description": "Chim săn cá lớn với lông trắng nâu, bay lượn trên mặt nước.",
+    "image": "/images/o_ca.jpg"
+  },
+  "Chích bụng vàng": {
+    "name": "Chích bụng vàng",
+    "scientific": "Phylloscopus griseolus",
+    "category": "Sẻ",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với bụng vàng, thường di cư theo mùa.",
+    "image": "/images/chich_bung_vang.jpg"
+  },
+  "Sẻ bụi vàng": {
+    "name": "Sẻ bụi vàng",
+    "scientific": "Passer flaveolus",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Hạt, côn trùng",
+    "description": "Chim sẻ nhỏ với lông vàng, sống gần khu dân cư.",
+    "image": "/images/se_bui_vang.jpg"
+  },
+  "Sẻ": {
+    "name": "Sẻ",
+    "scientific": "Passer montanus",
+    "category": "Sẻ",
+    "habitat": "Đô thị, đồng ruộng",
+    "diet": "Hạt, côn trùng",
+    "description": "Chim sẻ phổ biến với lông nâu, sống gần con người.",
+    "image": "/images/se.jpg"
+  },
+  "Di đá": {
+    "name": "Di đá",
+    "scientific": "Lonchura punctulata",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, đồng lúa",
+    "diet": "Hạt, côn trùng",
+    "description": "Chim nhỏ với lông nâu và đốm trắng, thường sống theo đàn.",
+    "image": "/images/di_da.jpg"
+  },
+  "Di cam": {
+    "name": "Di cam",
+    "scientific": "Lonchura striata",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, bụi rậm",
+    "diet": "Hạt, côn trùng",
+    "description": "Chim nhỏ với lông nâu, thường làm tổ trong bụi rậm.",
+    "image": "/images/di_cam.jpg"
+  },
+  "Chuối tiêu ngực đốm": {
+    "name": "Chuối tiêu ngực đốm",
+    "scientific": "Pellorneum ruficeps",
+    "category": "Sẻ",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với ngực đốm, thường tìm mồi dưới đất.",
+    "image": "/images/chuoi_tieu_nguc_dom.jpg"
+  },
+  "Còng cọc": {
+    "name": "Còng cọc",
+    "scientific": "Microcarbo niger",
+    "category": "Bồ nông",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá",
+    "description": "Chim lặn nhỏ với lông đen, thường phơi cánh sau khi lặn.",
+    "image": "/images/cong_coc.jpg"
+  },
+  "Gõ kiến nhỏ đầu xám": {
+    "name": "Gõ kiến nhỏ đầu xám",
+    "scientific": "Dendrocopos canicapillus",
+    "category": "Gõ kiến",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng, nhựa cây",
+    "description": "Chim gõ kiến nhỏ với đầu xám, thường gõ cây tìm mồi.",
+    "image": "/images/go_kien_nho_dau_xam.jpg"
+  },
+  "Le hôi": {
+    "name": "Le hôi",
+    "scientific": "Tachybaptus ruficollis",
+    "category": "Chim lặn",
+    "habitat": "Hồ, ao, đầm lầy",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Chim lặn nhỏ với lông nâu, thường lặn tìm mồi dưới nước.",
+    "image": "/images/le_hoi.jpg"
+  },
+  "Bông lau tai vằn": {
+    "name": "Bông lau tai vằn",
+    "scientific": "Pycnonotus blanfordi",
+    "category": "Sẻ",
+    "habitat": "Vườn, bụi rậm",
+    "diet": "Trái cây, côn trùng",
+    "description": "Chim nhỏ với lông nâu, tai có vằn, có tiếng hót líu lo.",
+    "image": "/images/bong_lau_tai_van.jpg"
+  },
+  "Bông lau mày trắng": {
+    "name": "Bông lau mày trắng",
+    "scientific": "Pycnonotus goiavier",
+    "category": "Sẻ",
+    "habitat": "Vườn, đồng cỏ",
+    "diet": "Trái cây, côn trùng",
+    "description": "Chim nhỏ với mày trắng, lông nâu, thường sống gần khu dân cư.",
+    "image": "/images/bong_lau_may_trang.jpg"
+  },
+  "Cuốc ngực trắng": {
+    "name": "Cuốc ngực trắng",
+    "scientific": "Amaurornis phoenicurus",
+    "category": "Sếu",
+    "habitat": "Đầm lầy, đồng lúa",
+    "diet": "Côn trùng, thực vật thủy sinh",
+    "description": "Chim nước với ngực trắng, thường ẩn trong lau sậy.",
+    "image": "/images/cuoc_nguc_trang.jpg"
+  },
+  "Cúm núm": {
+    "name": "Cúm núm",
+    "scientific": "Gallicrex cinerea",
+    "category": "Sếu",
+    "habitat": "Đầm lầy, vùng đất ngập nước",
+    "diet": "Thực vật, côn trùng",
+    "description": "Chim nước lớn với mỏ ngắn, lông xám, sống ở vùng đầm lầy.",
+    "image": "/images/cum_num.jpg"
+  },
+  "Trích ré": {
+    "name": "Trích ré",
+    "scientific": "Gallinula chloropus",
+    "category": "Sếu",
+    "habitat": "Hồ, đầm lầy",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Chim nước với lông đen, mỏ đỏ, thường bơi trên mặt nước.",
+    "image": "/images/trich_re.jpg"
+  },
+  "Trích cồ": {
+    "name": "Trích cồ",
+    "scientific": "Porphyrio porphyrio",
+    "category": "Sếu",
+    "habitat": "Đầm lầy, hồ nước",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Chim nước lớn với lông tím xanh, mỏ đỏ, sống ở vùng nước nông.",
+    "image": "/images/trich_co.jpg"
+  },
+  "Cuốc ngực nâu": {
+    "name": "Cuốc ngực nâu",
+    "scientific": "Porzana fusca",
+    "category": "Sếu",
+    "habitat": "Đầm lầy, đồng lúa",
+    "diet": "Côn trùng, thực vật",
+    "description": "Chim nước nhỏ với ngực nâu, thường ẩn trong lau sậy.",
+    "image": "/images/cuoc_nguc_nau.jpg"
+  },
+  "Dù dì hung": {
+    "name": "Dù dì hung",
+    "scientific": "Ketupa flavipes",
+    "category": "Cú",
+    "habitat": "Rừng, gần sông",
+    "diet": "Cá, động vật nhỏ",
+    "description": "Cú lớn với lông nâu hung, săn mồi gần nước vào ban đêm.",
+    "image": "/images/du_di_hung.jpg"
+  },
+  "Cú mèo nhỏ": {
+    "name": "Cú mèo nhỏ",
+    "scientific": "Otus sunia",
+    "category": "Cú",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Côn trùng, chim nhỏ",
+    "description": "Cú nhỏ với lông nâu, có tiếng kêu đặc trưng vào ban đêm.",
+    "image": "/images/cu_meo_nho.jpg"
+  },
+  "Sáo nâu": {
+    "name": "Sáo nâu",
+    "scientific": "Acridotheres tristis",
+    "category": "Sẻ",
+    "habitat": "Đô thị, đồng ruộng",
+    "diet": "Côn trùng, trái cây, thức ăn thừa",
+    "description": "Chim sáo phổ biến với lông nâu, sống gần con người.",
+    "image": "/images/sao_nau.jpg"
+  },
+  "Sáo đá đuôi hung": {
+    "name": "Sáo đá đuôi hung",
+    "scientific": "Sturnia malabarica",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, vườn cây",
+    "diet": "Côn trùng, trái cây",
+    "description": "Sáo nhỏ với đuôi hung, thường sống theo đàn.",
+    "image": "/images/sao_da_duoi_hung.jpg"
+  },
+  "Sáo đá Trung Quốc": {
+    "name": "Sáo đá Trung Quốc",
+    "scientific": "Sturnia sinensis",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Côn trùng, trái cây",
+    "description": "Sáo nhỏ với lông xám, thường di cư theo mùa.",
+    "image": "/images/sao_da_trung_quoc.jpg"
+  },
+  "Sáo sậu": {
+    "name": "Sáo sậu",
+    "scientific": "Sturnus nigricollis",
+    "category": "Sẻ",
+    "habitat": "Đồng cỏ, vườn cây",
+    "diet": "Côn trùng, trái cây",
+    "description": "Sáo lớn với cổ đen, lông bóng, sống theo đàn.",
+    "image": "/images/sao_sau.jpg"
+  },
+  "Chích đầu nhọn mày đen": {
+    "name": "Chích đầu nhọn mày đen",
+    "scientific": "Acrocephalus bistrigiceps",
+    "category": "Sẻ",
+    "habitat": "Đầm lầy, lau sậy",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với mày đen, sống trong lau sậy, có tiếng hót líu lo.",
+    "image": "/images/chich_dau_nhon_may_den.jpg"
+  },
+  "Chích đầu nhọn phương đông": {
+    "name": "Chích đầu nhọn phương đông",
+    "scientific": "Acrocephalus orientalis",
+    "category": "Sẻ",
+    "habitat": "Đầm lầy, vùng đất ngập nước",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ sống trong lau sậy, có tiếng hót đặc trưng.",
+    "image": "/images/chich_dau_nhon_phuong_dong.jpg"
+  },
+  "Chích chạch má vàng": {
+    "name": "Chích chạch má vàng",
+    "scientific": "Mixornis gularis",
+    "category": "Sẻ",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ với má vàng, thường tìm mồi trong bụi rậm.",
+    "image": "/images/chich_chach_ma_vang.jpg"
+  },
+  "Họa mi nhỏ": {
+    "name": "Họa mi nhỏ",
+    "scientific": "Timalia pileata",
+    "category": "Sẻ",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Côn trùng, trái cây",
+    "description": "Chim nhỏ với lông nâu, có tiếng hót du dương.",
+    "image": "/images/hoa_mi_nho.jpg"
+  },
+  "Chiền chiện lớn": {
+    "name": "Chiền chiện lớn",
+    "scientific": "Megalurus palustris",
+    "category": "Sẻ",
+    "habitat": "Đầm lầy, lau sậy",
+    "diet": "Côn trùng",
+    "description": "Chim lớn hơn chiền chiện khác, sống trong lau sậy, có tiếng hót vang.",
+    "image": "/images/chien_chien_lon.jpg"
+  },
+  "Chích đầm lầy lớn": {
+    "name": "Chích đầm lầy lớn",
+    "scientific": "Locustella certhiola",
+    "category": "Sẻ",
+    "habitat": "Đầm lầy, vùng đất ngập nước",
+    "diet": "Côn trùng",
+    "description": "Chim nhỏ sống trong lau sậy, lông nâu, khó phát hiện.",
+    "image": "/images/chich_dam_lay_lon.jpg"
+  },
+  "Cú lợn lưng xám": {
+    "name": "Cú lợn lưng xám",
+    "scientific": "Tyto alba",
+    "category": "Cú",
+    "habitat": "Đồng cỏ, khu dân cư",
+    "diet": "Động vật gặm nhấm, chim nhỏ",
+    "description": "Cú lớn với lông trắng và xám, săn mồi vào ban đêm.",
+    "image": "/images/cu_lon_lung_xam.jpg"
+  },
+  "Cú lợn rừng": {
+    "name": "Cú lợn rừng",
+    "scientific": "Phodilus badius",
+    "category": "Cú",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Cú nhỏ với lông nâu, sống trong rừng, săn mồi ban đêm.",
+    "image": "/images/cu_lon_rung.jpg"
+  },
+  "Vành khuyên": {
+    "name": "Vành khuyên",
+    "scientific": "Zosterops palpebrosus",
+    "category": "Sẻ",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Mật hoa, côn trùng, trái cây",
+    "description": "Chim nhỏ với vòng trắng quanh mắt, lông xanh vàng.",
+    "image": "/images/vanh_khuyen.jpg"
+  },
+  "Nhông xám": {
+    "name": "Nhông xám",
+    "scientific": "Calotes mystaceus",
+    "category": "Có vảy",
+    "habitat": "Rừng, vườn cây, bụi rậm",
+    "diet": "Côn trùng, thực vật",
+    "description": "Thằn lằn nhỏ với lông màu xám, thường thay đổi màu sắc để ngụy trang.",
+    "image": "/images/nhong_xam.jpg"
+  },
+  "Nhông hàng rào": {
+    "name": "Nhông hàng rào",
+    "scientific": "Calotes versicolor",
+    "category": "Có vảy",
+    "habitat": "Vườn, đồng cỏ, khu dân cư",
+    "diet": "Côn trùng, thực vật",
+    "description": "Thằn lằn phổ biến, thay đổi màu sắc, con đực có mào đỏ vào mùa sinh sản.",
+    "image": "/images/nhong_hang_rao.jpg"
+  },
+  "Rùa hộp lưng đen": {
+    "name": "Rùa hộp lưng đen",
+    "scientific": "Cuora amboinensis",
+    "category": "Rùa",
+    "habitat": "Đầm lầy, ao hồ, rừng ngập nước",
+    "diet": "Thực vật, côn trùng, cá nhỏ",
+    "description": "Rùa có mai đen, có thể đóng kín mai để bảo vệ bản thân.",
+    "image": "/images/rua_hop_lung_den.jpg"
+  },
+  "Rùa răng": {
+    "name": "Rùa răng",
+    "scientific": "Heosemys annandalii",
+    "category": "Rùa",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Thực vật thủy sinh, côn trùng",
+    "description": "Rùa lớn với mai phẳng, thích nghi với môi trường nước ngọt.",
+    "image": "/images/rua_rang.jpg"
+  },
+  "Rùa đất lớn": {
+    "name": "Rùa đất lớn",
+    "scientific": "Heosemys grandis",
+    "category": "Rùa",
+    "habitat": "Rừng ngập nước, đầm lầy",
+    "diet": "Thực vật, trái cây, côn trùng",
+    "description": "Rùa lớn với mai nâu, sống cả trên cạn và dưới nước.",
+    "image": "/images/rua_dat_lon.jpg"
+  },
+  "Rùa ba gờ": {
+    "name": "Rùa ba gờ",
+    "scientific": "Malayemys subtrijuga",
+    "category": "Rùa",
+    "habitat": "Sông, kênh rạch, ao hồ",
+    "diet": "Thực vật thủy sinh, động vật nhỏ",
+    "description": "Rùa nhỏ với mai có ba gờ nổi, sống ở vùng nước ngọt.",
+    "image": "/images/rua_ba_go.jpg"
+  },
+  "Rùa câm": {
+    "name": "Rùa câm",
+    "scientific": "Mauremys mutica",
+    "category": "Rùa",
+    "habitat": "Sông, hồ, ao",
+    "diet": "Thực vật, côn trùng, cá nhỏ",
+    "description": "Rùa nước ngọt với mai mịn, đầu có vạch vàng.",
+    "image": "/images/rua_cam.jpg"
+  },
+  "Rắn khô rào đốm": {
+    "name": "Rắn khô rào đốm",
+    "scientific": "Boiga multomaculata",
+    "category": "Có vảy",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Chim nhỏ, thằn lằn",
+    "description": "Rắn không độc, có đốm trên thân, thường sống trên cây.",
+    "image": "/images/ran_kho_rao_dom.jpg"
+  },
+  "Rắn cườm": {
+    "name": "Rắn cườm",
+    "scientific": "Chrysopelea ornata",
+    "category": "Có vảy",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Thằn lằn, chim nhỏ",
+    "description": "Rắn có khả năng lướt trên không, lông vàng xanh với hoa văn đẹp.",
+    "image": "/images/ran_cuom.jpg"
+  },
+  "Rắn sọc dưa": {
+    "name": "Rắn sọc dưa",
+    "scientific": "Coelognathus radiatus",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Động vật gặm nhấm, chim",
+    "description": "Rắn không độc với vạch vàng trên thân, thường săn mồi ban ngày.",
+    "image": "/images/ran_soc_dua.jpg"
+  },
+  "Rắn nước": {
+    "name": "Rắn nước",
+    "scientific": "Fowlea piscator",
+    "category": "Có vảy",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá, ếch",
+    "description": "Rắn không độc, sống gần nước, có vạch vàng trên thân.",
+    "image": "/images/ran_nuoc.jpg"
+  },
+  "Rắn ri cá": {
+    "name": "Rắn ri cá",
+    "scientific": "Homalopsis mereljcoxi",
+    "category": "Có vảy",
+    "habitat": "Sông, đầm lầy",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước không độc, thích nghi với môi trường thủy sinh.",
+    "image": "/images/ran_ri_ca.jpg"
+  },
+  "Rắn khiếm vạch": {
+    "name": "Rắn khiếm vạch",
+    "scientific": "Oligodon taeniatus",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Trứng bò sát, côn trùng",
+    "description": "Rắn nhỏ không độc, có vạch trên thân, thường đào hang.",
+    "image": "/images/ran_khiem_vach.jpg"
+  },
+  "Rắn ráo thường": {
+    "name": "Rắn ráo thường",
+    "scientific": "Ptyas korros",
+    "category": "Có vảy",
+    "habitat": "Đồng ruộng, rừng",
+    "diet": "Động vật gặm nhấm, chim",
+    "description": "Rắn không độc, thân dài, di chuyển nhanh, thường săn mồi ban ngày.",
+    "image": "/images/ran_rao_thuong.jpg"
+  },
+  "Rắn hổ hèo": {
+    "name": "Rắn hổ hèo",
+    "scientific": "Ptyas mucosa",
+    "category": "Có vảy",
+    "habitat": "Đồng cỏ, rừng, khu dân cư",
+    "diet": "Động vật gặm nhấm, chim, ếch",
+    "description": "Rắn lớn không độc, di chuyển nhanh, phổ biến ở nhiều môi trường.",
+    "image": "/images/ran_ho_heo.jpg"
+  },
+  "Rắn hoa cỏ nhỏ": {
+    "name": "Rắn hoa cỏ nhỏ",
+    "scientific": "Rhabdophis subminiatus",
+    "category": "Có vảy",
+    "habitat": "Đầm lầy, đồng cỏ",
+    "diet": "Ếch, cá",
+    "description": "Rắn có độc nhẹ, thân có vạch đỏ và đen, sống gần nước.",
+    "image": "/images/ran_hoa_co_nho.jpg"
+  },
+  "Rắn trun": {
+    "name": "Rắn trun",
+    "scientific": "Cylindrophis ruffus",
+    "category": "Có vảy",
+    "habitat": "Rừng, đất ẩm",
+    "diet": "Rắn nhỏ, côn trùng",
+    "description": "Rắn không độc, thân hình tròn, thường đào hang dưới đất.",
+    "image": "/images/ran_trun.jpg"
+  },
+  "Rắn cạp nong": {
+    "name": "Rắn cạp nong",
+    "scientific": "Bungarus fasciatus",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Rắn khác, thằn lằn",
+    "description": "Rắn độc với vạch vàng đen xen kẽ, hoạt động về đêm.",
+    "image": "/images/ran_cap_nong.jpg"
+  },
+  "Rắn lá khô đốm": {
+    "name": "Rắn lá khô đốm",
+    "scientific": "Calliophis maculiceps",
+    "category": "Có vảy",
+    "habitat": "Rừng, đất ẩm",
+    "diet": "Côn trùng, rắn nhỏ",
+    "description": "Rắn độc nhỏ, thân màu nâu với đốm, ngụy trang như lá khô.",
+    "image": "/images/ran_la_kho_dom.jpg"
+  },
+  "Rắn hổ mang Ấn Độ": {
+    "name": "Rắn hổ mang Ấn Độ",
+    "scientific": "Naja naja",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ, khu dân cư",
+    "diet": "Động vật gặm nhấm, chim, ếch",
+    "description": "Rắn độc với mào đặc trưng, có dấu hình kính trên cổ.",
+    "image": "/images/ran_ho_mang_an_do.jpg"
+  },
+  "Rắn hổ mèo": {
+    "name": "Rắn hổ mèo",
+    "scientific": "Naja siamensis",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Động vật gặm nhấm, chim",
+    "description": "Rắn độc với mào nhỏ, thân màu nâu hoặc đen, có thể phun nọc.",
+    "image": "/images/ran_ho_meo.jpg"
+  },
+  "Rắn hổ chúa": {
+    "name": "Rắn hổ chúa",
+    "scientific": "Ophiophagus hannah",
+    "category": "Có vảy",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Rắn khác, thằn lằn",
+    "description": "Rắn độc lớn nhất thế giới, thân dài với vạch vàng đen.",
+    "image": "/images/ran_ho_chua.jpg"
+  },
+  "Tắc kè": {
+    "name": "Tắc kè",
+    "scientific": "Gekko gecko",
+    "category": "Có vảy",
+    "habitat": "Rừng, khu dân cư",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Thằn lằn lớn với tiếng kêu đặc trưng, có khả năng leo trèo tốt.",
+    "image": "/images/tac_ke.jpg"
+  },
+  "Thạch sùng đuôi sần": {
+    "name": "Thạch sùng đuôi sần",
+    "scientific": "Hemidactylus frenatus",
+    "category": "Có vảy",
+    "habitat": "Đô thị, nhà ở",
+    "diet": "Côn trùng",
+    "description": "Thạch sùng nhỏ, phổ biến trong nhà, có đuôi sần và tiếng kêu nhỏ.",
+    "image": "/images/thach_sung_duoi_san.jpg"
+  },
+  "Rắn bông súng": {
+    "name": "Rắn bông súng",
+    "scientific": "Enhydris enhydris",
+    "category": "Có vảy",
+    "habitat": "Sông, đầm lầy",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước không độc, thân có hoa văn, sống ở vùng nước ngọt.",
+    "image": "/images/ran_bong_sung.jpg"
+  },
+  "Rắn hổ sậy": {
+    "name": "Rắn hổ sậy",
+    "scientific": "Enhydris innominata",
+    "category": "Có vảy",
+    "habitat": "Đầm lầy, kênh rạch",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước không độc, thích nghi với môi trường thủy sinh.",
+    "image": "/images/ran_ho_say.jpg"
+  },
+  "Rắn râu": {
+    "name": "Rắn râu",
+    "scientific": "Erpeton tentaculatum",
+    "category": "Có vảy",
+    "habitat": "Sông, đầm lầy",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước với xúc tu ở đầu, giúp phát hiện con mồi dưới nước.",
+    "image": "/images/ran_rau.jpg"
+  },
+  "Rắn bồng chì": {
+    "name": "Rắn bồng chì",
+    "scientific": "Hypsiscopus plumbea",
+    "category": "Có vảy",
+    "habitat": "Sông, đầm lầy",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước không độc, thân màu xám, sống ở vùng nước nông.",
+    "image": "/images/ran_bong_chi.jpg"
+  },
+  "Rắn ri tượng": {
+    "name": "Rắn ri tượng",
+    "scientific": "Subsessor bocourti",
+    "category": "Có vảy",
+    "habitat": "Sông, hồ",
+    "diet": "Cá, ếch",
+    "description": "Rắn nước không độc, thân mũm mĩm, thích nghi với môi trường nước.",
+    "image": "/images/ran_ri_tuong.jpg"
+  },
+  "Liu điu chỉ": {
+    "name": "Liu điu chỉ",
+    "scientific": "Takydromus sexlineatus",
+    "category": "Có vảy",
+    "habitat": "Đồng cỏ, bụi rậm",
+    "diet": "Côn trùng",
+    "description": "Thằn lằn nhỏ, di chuyển nhanh, có đuôi dài gấp đôi thân.",
+    "image": "/images/liu_diu_chi.jpg"
+  },
+  "Trăn gấm": {
+    "name": "Trăn gấm",
+    "scientific": "Malayopython reticulatus",
+    "category": "Có vảy",
+    "habitat": "Rừng nhiệt đới, đầm lầy",
+    "diet": "Động vật có vú, chim",
+    "description": "Trăn lớn với hoa văn lưới đẹp, siết mồi để săn.",
+    "image": "/images/tran_gam.jpg"
+  },
+  "Trăn đất": {
+    "name": "Trăn đất",
+    "scientific": "Python bivittatus",
+    "category": "Có vảy",
+    "habitat": "Rừng, đầm lầy",
+    "diet": "Động vật có vú, chim",
+    "description": "Trăn lớn với hoa văn nâu, siết mồi, sống gần nước.",
+    "image": "/images/tran_dat.jpg"
+  },
+  "Thằn lằn bóng hoa": {
+    "name": "Thằn lằn bóng hoa",
+    "scientific": "Eutropis multifasciata",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Thằn lằn nhỏ với vạch sáng trên thân, di chuyển nhanh.",
+    "image": "/images/than_lan_bong_hoa.jpg"
+  },
+  "Rắn giun": {
+    "name": "Rắn giun",
+    "scientific": "Ramphotyphlops braminus",
+    "category": "Có vảy",
+    "habitat": "Đất ẩm, vườn",
+    "diet": "Kiến, mối",
+    "description": "Rắn nhỏ không độc, giống giun, sống dưới đất.",
+    "image": "/images/ran_giun.jpg"
+  },
+  "Kỳ đà vân": {
+    "name": "Kỳ đà vân",
+    "scientific": "Varanus bengalensis",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Động vật nhỏ, trứng, côn trùng",
+    "description": "Kỳ đà lớn với hoa văn đốm, di chuyển nhanh, săn mồi đa dạng.",
+    "image": "/images/ky_da_van.jpg"
+  },
+  "Kỳ đà hoa": {
+    "name": "Kỳ đà hoa",
+    "scientific": "Varanus salvator",
+    "category": "Có vảy",
+    "habitat": "Rừng, sông, đầm lầy",
+    "diet": "Động vật nhỏ, cá, chim",
+    "description": "Kỳ đà lớn, giỏi bơi lội, thân có vạch vàng đen.",
+    "image": "/images/ky_da_hoa.jpg"
+  },
+  "Rắn lục xanh đuôi đỏ": {
+    "name": "Rắn lục xanh đuôi đỏ",
+    "scientific": "Trimeresurus albolabris",
+    "category": "Có vảy",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Chim nhỏ, thằn lằn",
+    "description": "Rắn độc với thân xanh và đuôi đỏ, sống trên cây.",
+    "image": "/images/ran_luc_xanh_duoi_do.jpg"
+  },
+  "Rắn lục xanh": {
+    "name": "Rắn lục xanh",
+    "scientific": "Trimeresurus stejnegeri",
+    "category": "Có vảy",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Chim nhỏ, thằn lằn",
+    "description": "Rắn độc với thân xanh, thường phục kích trên cây.",
+    "image": "/images/ran_luc_xanh.jpg"
+  },
+  "Rắn hổ hành": {
+    "name": "Rắn hổ hành",
+    "scientific": "Xenopeltis unicolor",
+    "category": "Có vảy",
+    "habitat": "Rừng, đất ẩm",
+    "diet": "Động vật gặm nhấm, thằn lằn",
+    "description": "Rắn không độc với thân bóng như cầu vồng, sống dưới đất.",
+    "image": "/images/ran_ho_hanh.jpg"
+  },
+  "Nai": {
+    "name": "Nai",
+    "scientific": "Rusa unicolor",
+    "category": "Guốc chẵn",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Cỏ, lá cây, chồi non",
+    "description": "Loài nai lớn với lông nâu, con đực có sừng phân nhánh, sống theo đàn.",
+    "image": "/images/nai.jpg"
+  },
+  "Heo rừng": {
+    "name": "Heo rừng",
+    "scientific": "Sus scrofa",
+    "category": "Guốc chẵn",
+    "habitat": "Rừng, đồng cỏ, đầm lầy",
+    "diet": "Cỏ, rễ cây, côn trùng, động vật nhỏ",
+    "description": "Lợn rừng với lông cứng, nanh dài, thích nghi với nhiều môi trường.",
+    "image": "/images/heo_rung.jpg"
+  },
+  "Mèo rừng": {
+    "name": "Mèo rừng",
+    "scientific": "Prionailurus bengalensis",
+    "category": "Ăn thịt",
+    "habitat": "Rừng, đồng cỏ, đầm lầy",
+    "diet": "Chim nhỏ, động vật gặm nhấm, côn trùng",
+    "description": "Mèo hoang nhỏ với lông đốm, săn mồi linh hoạt, hoạt động về đêm.",
+    "image": "/images/meo_rung.jpg"
+  },
+  "Mèo cá": {
+    "name": "Mèo cá",
+    "scientific": "Prionailurus viverrinus",
+    "category": "Ăn thịt",
+    "habitat": "Đầm lầy, vùng đất ngập nước",
+    "diet": "Cá, chim, động vật gặm nhấm",
+    "description": "Mèo lớn hơn mèo rừng, giỏi bơi, săn mồi gần nước.",
+    "image": "/images/meo_ca.jpg"
+  },
+  "Cầy lỏn tranh": {
+    "name": "Cầy lỏn tranh",
+    "scientific": "Herpestes javanicus",
+    "category": "Ăn thịt",
+    "habitat": "Đồng cỏ, bụi rậm, khu dân cư",
+    "diet": "Côn trùng, rắn, động vật gặm nhấm",
+    "description": "Cầy nhỏ, di chuyển nhanh, nổi tiếng với khả năng săn rắn.",
+    "image": "/images/cay_lon_tranh.jpg"
+  },
+  "Cầy móc cua": {
+    "name": "Cầy móc cua",
+    "scientific": "Herpestes urva",
+    "category": "Ăn thịt",
+    "habitat": "Rừng, vùng đất ngập nước",
+    "diet": "Cua, côn trùng, động vật nhỏ",
+    "description": "Cầy lớn hơn cầy lỏn tranh, thích nghi với môi trường gần nước.",
+    "image": "/images/cay_moc_cua.jpg"
+  },
+  "Rái cá vuốt bé": {
+    "name": "Rái cá vuốt bé",
+    "scientific": "Aonyx cinerea",
+    "category": "Ăn thịt",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá, cua, động vật giáp xác",
+    "description": "Rái cá nhỏ nhất, lông nâu, giỏi bơi lội, sống theo đàn.",
+    "image": "/images/rai_ca_vuot_be.jpg"
+  },
+  "Rái cá lông mượt": {
+    "name": "Rái cá lông mượt",
+    "scientific": "Lutrogale perspicillata",
+    "category": "Ăn thịt",
+    "habitat": "Sông, hồ, rừng ngập mặn",
+    "diet": "Cá, động vật giáp xác",
+    "description": "Rái cá lớn với lông mượt, sống theo nhóm, giỏi săn cá.",
+    "image": "/images/rai_ca_long_muot.jpg"
+  },
+  "Rái cá lông mũi": {
+    "name": "Rái cá lông mũi",
+    "scientific": "Lutra sumatrana",
+    "category": "Ăn thịt",
+    "habitat": "Sông, đầm lầy",
+    "diet": "Cá, động vật giáp xác",
+    "description": "Rái cá với lông mũi đặc trưng, sống gần nước, hiếm gặp.",
+    "image": "/images/rai_ca_long_mui.jpg"
+  },
+  "Rái cá thường": {
+    "name": "Rái cá thường",
+    "scientific": "Lutra lutra",
+    "category": "Ăn thịt",
+    "habitat": "Sông, hồ, bờ biển",
+    "diet": "Cá, ếch, động vật giáp xác",
+    "description": "Rái cá phổ biến, lông nâu, giỏi bơi, sống đơn độc hoặc theo nhóm.",
+    "image": "/images/rai_ca_thuong.jpg"
+  },
+  "Cầy vòi hương": {
+    "name": "Cầy vòi hương",
+    "scientific": "Paradoxurus hermaphroditus",
+    "category": "Ăn thịt",
+    "habitat": "Rừng, vườn cây, khu dân cư",
+    "diet": "Trái cây, côn trùng, động vật nhỏ",
+    "description": "Cầy nhỏ với lông đốm, thường leo cây, có mùi hương đặc trưng.",
+    "image": "/images/cay_voi_huong.jpg"
+  },
+  "Cầy hương": {
+    "name": "Cầy hương",
+    "scientific": "Viverricula indica",
+    "category": "Ăn thịt",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Côn trùng, trái cây, động vật nhỏ",
+    "description": "Cầy nhỏ với lông xám, sống đơn độc, hoạt động về đêm.",
+    "image": "/images/cay_huong.jpg"
+  },
+  "Cầy giông": {
+    "name": "Cầy giông",
+    "scientific": "Viverra zibetha",
+    "category": "Ăn thịt",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Động vật nhỏ, trái cây, côn trùng",
+    "description": "Cầy lớn với lông đốm, có mùi hôi, săn mồi ban đêm.",
+    "image": "/images/cay_giong.jpg"
+  },
+  "Dơi chó tai ngắn": {
+    "name": "Dơi chó tai ngắn",
+    "scientific": "Cynopterus brachyotis",
+    "category": "Dơi",
+    "habitat": "Rừng, vườn cây, khu dân cư",
+    "diet": "Trái cây, mật hoa",
+    "description": "Dơi quả nhỏ với tai ngắn, thường sống gần khu dân cư.",
+    "image": "/images/doi_cho_tai_ngan.jpg"
+  },
+  "Dơi ngựa lớn": {
+    "name": "Dơi ngựa lớn",
+    "scientific": "Pteropus vampyrus",
+    "category": "Dơi",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Trái cây, mật hoa",
+    "description": "Dơi quả lớn nhất, cánh rộng, sống theo đàn trong rừng.",
+    "image": "/images/doi_ngua_lon.jpg"
+  },
+  "Dơi ngựa ly-lê": {
+    "name": "Dơi ngựa ly-lê",
+    "scientific": "Pteropus lylei",
+    "category": "Dơi",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Trái cây, mật hoa",
+    "description": "Dơi quả lớn với lông vàng nâu, sống theo đàn, ăn trái cây.",
+    "image": "/images/doi_ngua_ly_le.jpg"
+  },
+  "Dơi nâu": {
+    "name": "Dơi nâu",
+    "scientific": "Scotophilus kuhlii",
+    "category": "Dơi",
+    "habitat": "Đô thị, đồng cỏ",
+    "diet": "Côn trùng",
+    "description": "Dơi nhỏ, lông nâu, săn côn trùng vào ban đêm.",
+    "image": "/images/doi_nau.jpg"
+  },
+  "Dơi mũi nhẵn đốm vàng": {
+    "name": "Dơi mũi nhẵn đốm vàng",
+    "scientific": "Kerivoula picta",
+    "category": "Dơi",
+    "habitat": "Rừng nhiệt đới",
+    "diet": "Côn trùng",
+    "description": "Dơi nhỏ với cánh có đốm vàng, sống trong rừng, hiếm gặp.",
+    "image": "/images/doi_mui_nhan_dom_vang.jpg"
+  },
+  "Tê tê Java": {
+    "name": "Tê tê Java",
+    "scientific": "Manis javanica",
+    "category": "Có vảy",
+    "habitat": "Rừng, đồng cỏ",
+    "diet": "Kiến, mối",
+    "description": "Tê tê với lớp vảy cứng, cuộn tròn khi bị đe dọa, ăn côn trùng.",
+    "image": "/images/te_te_java.jpg"
+  },
+  "Khỉ đuôi dài": {
+    "name": "Khỉ đuôi dài",
+    "scientific": "Macaca fascicularis",
+    "category": "Linh trưởng",
+    "habitat": "Rừng, rừng ngập mặn, khu dân cư",
+    "diet": "Trái cây, lá, côn trùng",
+    "description": "Khỉ nhỏ với đuôi dài, lông xám, sống theo đàn, leo trèo giỏi.",
+    "image": "/images/khi_duoi_dai.jpg"
+  },
+  "Chuột nhà": {
+    "name": "Chuột nhà",
+    "scientific": "Rattus tanezumi",
+    "category": "Gặm nhấm",
+    "habitat": "Đô thị, khu dân cư",
+    "diet": "Hạt, thức ăn thừa, côn trùng",
+    "description": "Chuột nhỏ, lông xám, sống gần con người, sinh sản nhanh.",
+    "image": "/images/chuot_nha.jpg"
+  },
+  "Chuột cống": {
+    "name": "Chuột cống",
+    "scientific": "Rattus norvegicus",
+    "category": "Gặm nhấm",
+    "habitat": "Đô thị, cống rãnh",
+    "diet": "Thức ăn thừa, hạt, côn trùng",
+    "description": "Chuột lớn hơn chuột nhà, lông nâu, sống ở môi trường bẩn.",
+    "image": "/images/chuot_cong.jpg"
+  },
+  "Sóc đỏ": {
+    "name": "Sóc đỏ",
+    "scientific": "Callosciurus finlaysonii",
+    "category": "Gặm nhấm",
+    "habitat": "Rừng, vườn cây",
+    "diet": "Hạt, trái cây, côn trùng",
+    "description": "Sóc với lông đỏ, đuôi dài, sống trên cây, tích trữ thức ăn.",
+    "image": "/images/soc_do.jpg"
+  },
+  "Đồi": {
+    "name": "Đồi",
+    "scientific": "Tupaia belangeri",
+    "category": "Nhiều răng",
+    "habitat": "Rừng, bụi rậm",
+    "diet": "Côn trùng, trái cây",
+    "description": "Động vật nhỏ giống chuột, mũi dài, hoạt động ban ngày.",
+    "image": "/images/doi.jpg"
+  },
+  "Cóc nhà": {
+    "name": "Cóc nhà",
+    "scientific": "Duttaphrynus melanostictus",
+    "category": "Không đuôi",
+    "habitat": "Đô thị, đồng cỏ, vườn nhà",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Cóc phổ biến với da sần sùi, màu nâu xám, thường xuất hiện gần khu dân cư.",
+    "image": "/images/coc_nha.jpg"
+  },
+  "Cóc rừng": {
+    "name": "Cóc rừng",
+    "scientific": "Bufo galeatus",
+    "category": "Không đuôi",
+    "habitat": "Rừng nhiệt đới, vùng đất ẩm",
+    "diet": "Côn trùng, giun",
+    "description": "Cóc lớn hơn cóc nhà, da sần, sống trong rừng, hoạt động về đêm.",
+    "image": "/images/coc_rung.jpg"
+  },
+  "Ếch cây mép trắng": {
+    "name": "Ếch cây mép trắng",
+    "scientific": "Polypedates leucomystax",
+    "category": "Không đuôi",
+    "habitat": "Rừng, vườn cây, khu dân cư",
+    "diet": "Côn trùng",
+    "description": "Ếch cây với mép trắng trên miệng, da mịn, có khả năng leo trèo tốt.",
+    "image": "/images/ech_cay_mep_trang.jpg"
+  },
+  "Chàng hiu": {
+    "name": "Chàng hiu",
+    "scientific": "Hylarana macrodactyla",
+    "category": "Không đuôi",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Ếch nhái với chân dài, da nâu, sống gần nước, có tiếng kêu đặc trưng.",
+    "image": "/images/chang_hiu.jpg"
+  },
+  "Chẫu": {
+    "name": "Chẫu",
+    "scientific": "Sylvirana guentheri",
+    "category": "Không đuôi",
+    "habitat": "Sông, đầm lầy, đồng lúa",
+    "diet": "Côn trùng, giun",
+    "description": "Ếch nhái lớn, da nâu xám, sống ở vùng nước ngọt, hoạt động ban đêm.",
+    "image": "/images/chau.jpg"
+  },
+  "Ếch đồng": {
+    "name": "Ếch đồng",
+    "scientific": "Hoplobatrachus rugulosus",
+    "category": "Không đuôi",
+    "habitat": "Đồng lúa, đầm lầy, ao hồ",
+    "diet": "Côn trùng, ếch nhỏ, cá",
+    "description": "Ếch lớn với da sần, màu nâu, thường thấy ở đồng ruộng, có tiếng kêu lớn.",
+    "image": "/images/ech_dong.jpg"
+  },
+  "Ngóe": {
+    "name": "Ngóe",
+    "scientific": "Fejervarya limnocharis",
+    "category": "Không đuôi",
+    "habitat": "Đồng lúa, đầm lầy, ao",
+    "diet": "Côn trùng, giun",
+    "description": "Ếch nhỏ với da nâu, sống ở vùng nước nông, phổ biến ở đồng bằng.",
+    "image": "/images/ngoe.jpg"
+  },
+  "Ếch cua": {
+    "name": "Ếch cua",
+    "scientific": "Fejervarya cancrivora",
+    "category": "Không đuôi",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "diet": "Côn trùng, cua nhỏ",
+    "description": "Ếch nhỏ thích nghi với nước mặn, da nâu, thường ăn cua và côn trùng.",
+    "image": "/images/ech_cua.jpg"
+  },
+  "Ếch poilani": {
+    "name": "Ếch poilani",
+    "scientific": "Limnonectes poilani",
+    "category": "Không đuôi",
+    "habitat": "Rừng, suối, vùng đất ẩm",
+    "diet": "Côn trùng, động vật nhỏ",
+    "description": "Ếch lớn với da sần, sống ở rừng, hiếm gặp, có tiếng kêu trầm.",
+    "image": "/images/ech_poilani.jpg"
+  },
+  "Cóc nước sần": {
+    "name": "Cóc nước sần",
+    "scientific": "Occidozyga lima",
+    "category": "Không đuôi",
+    "habitat": "Đầm lầy, ao hồ, đồng lúa",
+    "diet": "Côn trùng, giun",
+    "description": "Cóc nhỏ với da sần, sống gần nước, thường ẩn dưới bùn.",
+    "image": "/images/coc_nuoc_san.jpg"
+  },
+  "Ếch giun Koh Tao": {
+    "name": "Ếch giun Koh Tao",
+    "scientific": "Ichthyophis kohtaoensis",
+    "category": "Không chân",
+    "habitat": "Đất ẩm, rừng nhiệt đới",
+    "diet": "Giun, côn trùng",
+    "description": "Ếch giun không chân, thân dài như rắn, sống dưới đất, hiếm gặp.",
+    "image": "/images/ech_giun_koh_tao.jpg"
+  },
+  "Cá Rô đồng": {
+    "name": "Cá Rô đồng",
+    "scientific": "Anabas testudineus",
+    "category": "Cá rô đồng",
+    "habitat": "Đồng lúa, kênh rạch, ao hồ",
+    "diet": "Côn trùng, thực vật, cá nhỏ",
+    "description": "Cá có khả năng leo cây, thân dẹp, vảy cứng, sống ở vùng nước ngọt.",
+    "image": "/images/ca_ro_dong.jpg"
+  },
+  "Cá Trê trắng": {
+    "name": "Cá Trê trắng",
+    "scientific": "Clarias batrachus",
+    "category": "Cá da trơn",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Côn trùng, cá nhỏ, thực vật",
+    "description": "Cá da trơn màu trắng xám, có râu, sống ở vùng nước đục.",
+    "image": "/images/ca_tre_trang.jpg"
+  },
+  "Cá Trê phi": {
+    "name": "Cá Trê phi",
+    "scientific": "Clarias gariepinus",
+    "category": "Cá da trơn",
+    "habitat": "Ao, hồ, sông",
+    "diet": "Cá nhỏ, côn trùng, thực vật",
+    "description": "Cá trê lớn, thân dài, thích nghi với nhiều môi trường nước ngọt.",
+    "image": "/images/ca_tre_phi.jpg"
+  },
+  "Cá Trê vàng": {
+    "name": "Cá Trê vàng",
+    "scientific": "Clarias macrocephalus",
+    "category": "Cá da trơn",
+    "habitat": "Đầm lầy, ao hồ",
+    "diet": "Côn trùng, cá nhỏ, thực vật",
+    "description": "Cá trê nhỏ hơn, màu vàng nâu, sống ở vùng nước nông.",
+    "image": "/images/ca_tre_vang.jpg"
+  },
+  "Cá Trâm": {
+    "name": "Cá Trâm",
+    "scientific": "Boraras urophthalmoides",
+    "category": "Cá chép",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng nhỏ",
+    "description": "Cá nhỏ, thân trong suốt, vây đỏ, sống theo đàn.",
+    "image": "/images/ca_tram.jpg"
+  },
+  "Cá Lòng tong dài": {
+    "name": "Cá Lòng tong dài",
+    "scientific": "Esomus longimanus",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, đồng lúa",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ, thân dài, vây dài, sống ở vùng nước ngọt.",
+    "image": "/images/ca_long_tong_dai.jpg"
+  },
+  "Cá Lòng tong sắt": {
+    "name": "Cá Lòng tong sắt",
+    "scientific": "Esomus metallicus",
+    "category": "Cá chép",
+    "habitat": "Sông, ao, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với thân ánh kim, sống theo đàn ở nước ngọt.",
+    "image": "/images/ca_long_tong_sat.jpg"
+  },
+  "Cá Lòng tong đuôi vàng": {
+    "name": "Cá Lòng tong đuôi vàng",
+    "scientific": "Rasbora aurotaenia",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với đuôi vàng, thân ánh bạc, sống theo đàn.",
+    "image": "/images/ca_long_tong_duoi_vang.jpg"
+  },
+  "Cá Lòng tong": {
+    "name": "Cá Lòng tong",
+    "scientific": "Rasbora dusonensis",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, rừng ngập nước",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ, thân mảnh, sống theo đàn ở vùng nước ngọt.",
+    "image": "/images/ca_long_tong.jpg"
+  },
+  "Cá Lòng tong kẻ": {
+    "name": "Cá Lòng tong kẻ",
+    "scientific": "Rasbora lateristriata",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với vạch đen dọc thân, sống ở nước ngọt.",
+    "image": "/images/ca_long_tong_ke.jpg"
+  },
+  "Cá Lòng tong lưng thấp": {
+    "name": "Cá Lòng tong lưng thấp",
+    "scientific": "Rasbora myersi",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, ao",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với lưng thấp, thân ánh bạc, sống theo đàn.",
+    "image": "/images/ca_long_tong_lung_thap.jpg"
+  },
+  "Cá Lòng tong vạch": {
+    "name": "Cá Lòng tong vạch",
+    "scientific": "Rasbora paviana",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với vạch ngang trên thân, sống ở vùng nước ngọt.",
+    "image": "/images/ca_long_tong_vach.jpg"
+  },
+  "Cá Lòng tong he": {
+    "name": "Cá Lòng tong he",
+    "scientific": "Rasbora sumatrana",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, rừng ngập nước",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với thân mảnh, sống theo đàn ở vùng nước ngọt.",
+    "image": "/images/ca_long_tong_he.jpg"
+  },
+  "Cá Lòng tong đuôi kéo": {
+    "name": "Cá Lòng tong đuôi kéo",
+    "scientific": "Rasbora trilineata",
+    "category": "Cá chép",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Sinh vật phù du, côn trùng",
+    "description": "Cá nhỏ với đuôi chẻ, thân ánh bạc, sống theo đàn.",
+    "image": "/images/ca_long_tong_duoi_keo.jpg"
+  },
+  "Cá Chạch bông": {
+    "name": "Cá Chạch bông",
+    "scientific": "Mastacembelus circumcinctus",
+    "category": "Lươn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Côn trùng, cá nhỏ, giun",
+    "description": "Cá chạch với hoa văn bông, thân dài, sống ở đáy nước.",
+    "image": "/images/ca_chach_bong.jpg"
+  },
+  "Cá Chạch lửa": {
+    "name": "Cá Chạch lửa",
+    "scientific": "Mastacembelus erythrotaenia",
+    "category": "Lươn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Côn trùng, cá nhỏ, giun",
+    "description": "Cá chạch với vạch đỏ, thân dài, sống ở vùng nước ngọt.",
+    "image": "/images/ca_chach_lua.jpg"
+  },
+  "Cá Chạch lấu": {
+    "name": "Cá Chạch lấu",
+    "scientific": "Mastacembelus favus",
+    "category": "Lươn",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Côn trùng, cá nhỏ, giun",
+    "description": "Cá chạch lớn, thân dài, sống ở đáy nước, có hoa văn lưới.",
+    "image": "/images/ca_chach_lau.jpg"
+  },
+  "Cá Chạch bông": {
+    "name": "Cá Chạch bông",
+    "scientific": "Mastacembelus taeniagaster",
+    "category": "Lươn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Côn trùng, cá nhỏ, giun",
+    "description": "Cá chạch với hoa văn bông, sống ở đáy nước ngọt.",
+    "image": "/images/ca_chach_bong_2.jpg"
+  },
+  "Cá Còm": {
+    "name": "Cá Còm",
+    "scientific": "Chitala ornata",
+    "category": "Cá thát lát",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cá lớn với thân dẹp, vây hậu môn dài, có đốm trên thân.",
+    "image": "/images/ca_com.jpg"
+  },
+  "Cá Thát lát": {
+    "name": "Cá Thát lát",
+    "scientific": "Notopterus notopterus",
+    "category": "Cá thát lát",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cá thân dẹp, vây hậu môn dài, sống ở vùng nước ngọt.",
+    "image": "/images/ca_that_lat.jpg"
+  },
+  "Cá Dầy": {
+    "name": "Cá Dầy",
+    "scientific": "Channa lucius",
+    "category": "Cá rô đồng",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá nhỏ, côn trùng, ếch",
+    "description": "Cá lóc lớn, thân dài, săn mồi hung dữ, sống ở nước ngọt.",
+    "image": "/images/ca_day.jpg"
+  },
+  "Cá Lóc": {
+    "name": "Cá Lóc",
+    "scientific": "Channa striata",
+    "category": "Cá rô đồng",
+    "habitat": "Đồng lúa, kênh rạch, ao hồ",
+    "diet": "Cá nhỏ, côn trùng, ếch",
+    "description": "Cá lóc phổ biến, thân dài, màu nâu, có khả năng sống trên cạn ngắn hạn.",
+    "image": "/images/ca_loc.jpg"
+  },
+  "Cá Lóc bông": {
+    "name": "Cá Lóc bông",
+    "scientific": "Ophicephalus micropeltes",
+    "category": "Cá rô đồng",
+    "habitat": "Sông, hồ, đầm lầy",
+    "diet": "Cá nhỏ, ếch, côn trùng",
+    "description": "Cá lóc lớn với hoa văn đẹp, săn mồi hung dữ, sống ở nước ngọt.",
+    "image": "/images/ca_loc_bong.jpg"
+  },
+  "Cá Lia thia xiêm": {
+    "name": "Cá Lia thia xiêm",
+    "scientific": "Betta splendens",
+    "category": "Cá rô đồng",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với vây sặc sỡ, con đực hung dữ, thường nuôi làm cảnh.",
+    "image": "/images/ca_lia_thia_xiem.jpg"
+  },
+  "Cá Lia thia": {
+    "name": "Cá Lia thia",
+    "scientific": "Betta taeniata",
+    "category": "Cá rô đồng",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với vây dài, màu sắc đẹp, sống ở vùng nước nông.",
+    "image": "/images/ca_lia_thia.jpg"
+  },
+  "Cá Sặc điệp": {
+    "name": "Cá Sặc điệp",
+    "scientific": "Trichopodus microlepis",
+    "category": "Cá rô đồng",
+    "habitat": "Ao, hồ, đồng lúa",
+    "diet": "Côn trùng, thực vật, sinh vật phù du",
+    "description": "Cá có vây dài, thân ánh bạc, sống ở vùng nước ngọt.",
+    "image": "/images/ca_sac_diep.jpg"
+  },
+  "Cá Sặc rằn": {
+    "name": "Cá Sặc rằn",
+    "scientific": "Trichopodus pectoralis",
+    "category": "Cá rô đồng",
+    "habitat": "Đồng lúa, ao hồ, kênh rạch",
+    "diet": "Côn trùng, thực vật, sinh vật phù du",
+    "description": "Cá lớn với vạch đen trên thân, sống ở vùng nước ngọt.",
+    "image": "/images/ca_sac_ran.jpg"
+  },
+  "Cá Sặc bướm": {
+    "name": "Cá Sặc bướm",
+    "scientific": "Trichopodus trichopterus",
+    "category": "Cá rô đồng",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Côn trùng, thực vật, sinh vật phù du",
+    "description": "Cá nhỏ với đốm đen trên thân, vây sặc sỡ, sống ở nước ngọt.",
+    "image": "/images/ca_sac_buom.jpg"
+  },
+  "Cá Bã trầu": {
+    "name": "Cá Bã trầu",
+    "scientific": "Trichopsis vittata",
+    "category": "Cá rô đồng",
+    "habitat": "Ao, hồ, đầm lầy",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với tiếng kêu đặc trưng, thân có vạch ngang, sống ở nước ngọt.",
+    "image": "/images/ca_ba_trau.jpg"
+  },
+  "Cá Rô biển": {
+    "name": "Cá Rô biển",
+    "scientific": "Pristolepis fasciata",
+    "category": "Cá rô đồng",
+    "habitat": "Sông, hồ, rừng ngập nước",
+    "diet": "Côn trùng, cá nhỏ, thực vật",
+    "description": "Cá có vạch đen trên thân, sống ở vùng nước ngọt và lợ.",
+    "image": "/images/ca_ro_bien.jpg"
+  },
+  "Cá Trèn mỡ": {
+    "name": "Cá Trèn mỡ",
+    "scientific": "Micronema moorei",
+    "category": "Cá da trơn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Cá nhỏ, côn trùng, sinh vật phù du",
+    "description": "Cá da trơn lớn, thân dài, sống ở vùng nước ngọt.",
+    "image": "/images/ca_tren_mo.jpg"
+  },
+  "Cá Trèn lá": {
+    "name": "Cá Trèn lá",
+    "scientific": "Kryptopterus sp.",
+    "category": "Cá da trơn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá da trơn trong suốt, thân mỏng như lá, sống theo đàn.",
+    "image": "/images/ca_tren_la.jpg"
+  },
+  "Cá Trèn bầu": {
+    "name": "Cá Trèn bầu",
+    "scientific": "Ompok bimaculatus",
+    "category": "Cá da trơn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cá da trơn với hai đốm đen, sống ở vùng nước ngọt.",
+    "image": "/images/ca_tren_bau.jpg"
+  },
+  "Cá Trèn ống": {
+    "name": "Cá Trèn ống",
+    "scientific": "Ompok hypophthalmus",
+    "category": "Cá da trơn",
+    "habitat": "Sông, hồ, kênh rạch",
+    "diet": "Cá nhỏ, côn trùng",
+    "description": "Cá da trơn với thân thon, sống ở vùng nước ngọt.",
+    "image": "/images/ca_tren_ong.jpg"
+  },
+  "Lươn đồng": {
+    "name": "Lươn đồng",
+    "scientific": "Monopterus albus",
+    "category": "Lươn",
+    "habitat": "Đồng lúa, đầm lầy, kênh rạch",
+    "diet": "Cá nhỏ, côn trùng, giun",
+    "description": "Lươn thân dài, không vảy, có thể sống trong bùn, nước ngọt.",
+    "image": "/images/luon_dong.jpg"
+  },
+  "Lìm kìm ao": {
+    "name": "Lìm kìm ao",
+    "scientific": "Dermogenys pusillus",
+    "category": "Cá kìm",
+    "habitat": "Ao, hồ, kênh rạch",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với mồm nhọn, sống gần mặt nước, đẻ con.",
+    "image": "/images/lim_kim_ao.jpg"
+  },
+  "Lìm kìm": {
+    "name": "Lìm kìm",
+    "scientific": "Zenarchopterus clarus",
+    "category": "Cá kìm",
+    "habitat": "Sông, kênh rạch, vùng nước lợ",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với mồm nhọn, sống gần mặt nước, đẻ con.",
+    "image": "/images/lim_kim.jpg"
+  },
+  "Lìm kìm sông": {
+    "name": "Lìm kìm sông",
+    "scientific": "Zenarchopterus ectuntio",
+    "category": "Cá kìm",
+    "habitat": "Sông, vùng nước lợ",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ sống gần mặt nước, mồm nhọn, thích nghi với nước lợ.",
+    "image": "/images/lim_kim_song.jpg"
+  },
+  "Lìm kìm": {
+    "name": "Lìm kìm",
+    "scientific": "Zenarchopterus pappenheimi",
+    "category": "Cá kìm",
+    "habitat": "Sông, kênh rạch, vùng nước lợ",
+    "diet": "Côn trùng, sinh vật phù du",
+    "description": "Cá nhỏ với mồm nhọn, sống gần mặt nước, đẻ con.",
+    "image": "/images/lim_kim_2.jpg"
+  },
+  "Đình lịch": {
+    "name": "Đình lịch",
+    "scientific": "Hygrophila ringens",
+    "category": "Hoa môi",
+    "habitat": "Đầm lầy, kênh rạch, vùng đất ngập nước",
+    "description": "Cây thủy sinh, thân mảnh, lá dài, hoa tím, thường mọc ở vùng nước nông.",
+    "image": "/images/dinh_lich.jpg"
+  },
+  "Trái nổ": {
+    "name": "Trái nổ",
+    "scientific": "Ruellia tuberosa",
+    "category": "Hoa môi",
+    "habitat": "Đồng cỏ, vườn, đất hoang",
+    "description": "Cây thân thảo, hoa tím, quả nổ khi chín, mọc phổ biến ở vùng nhiệt đới.",
+    "image": "/images/trai_no.jpg"
+  },
+  "Rau mác": {
+    "name": "Rau mác",
+    "scientific": "Sagittaria sagittifolia",
+    "category": "Trạch tả",
+    "habitat": "Đầm lầy, ao hồ, kênh rạch",
+    "description": "Cây thủy sinh, lá hình mũi tên, hoa trắng, rễ ăn được.",
+    "image": "/images/rau_mac.jpg"
+  },
+  "Cỏ xước": {
+    "name": "Cỏ xước",
+    "scientific": "Achyranthes aspera",
+    "category": "Cẩm chướng",
+    "habitat": "Đất hoang, đồng cỏ, ven đường",
+    "description": "Cây thân thảo, hoa nhỏ màu tím, thường dùng làm thuốc dân gian.",
+    "image": "/images/co_xuoc.jpg"
+  },
+  "Rau diệu": {
+    "name": "Rau diệu",
+    "scientific": "Alternanthera sessilis",
+    "category": "Cẩm chướng",
+    "habitat": "Đầm lầy, đồng lúa, kênh rạch",
+    "description": "Cây thân thảo, lá mọc đối, thường dùng làm rau ăn hoặc thuốc.",
+    "image": "/images/rau_dieu.jpg"
+  },
+  "Mào gà trắng": {
+    "name": "Mào gà trắng",
+    "scientific": "Celosia argentea",
+    "category": "Cẩm chướng",
+    "habitat": "Vườn, đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa trắng hoặc hồng, thường trồng làm cảnh.",
+    "image": "/images/mao_ga_trang.jpg"
+  },
+  "Mào gà tía": {
+    "name": "Mào gà tía",
+    "scientific": "Celosia palmeri",
+    "category": "Cẩm chướng",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây thân thảo, hoa tím sẫm, dùng làm cảnh hoặc thuốc dân gian.",
+    "image": "/images/mao_ga_tia.jpg"
+  },
+  "Bình bát": {
+    "name": "Bình bát",
+    "scientific": "Annona glabra",
+    "category": "Mộc lan",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây gỗ nhỏ, quả hình cầu, dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/binh_bat.jpg"
+  },
+  "Mãng cầu": {
+    "name": "Mãng cầu",
+    "scientific": "Annona muricata",
+    "category": "Mộc lan",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây gỗ, quả lớn gai mềm, thịt quả ăn được, dùng trong y học.",
+    "image": "/images/mang_cau.jpg"
+  },
+  "Mốp": {
+    "name": "Mốp",
+    "scientific": "Alstonia spathulata",
+    "category": "Long đởm",
+    "habitat": "Rừng ngập mặn, vùng đất ẩm",
+    "description": "Cây gỗ, lá mọc vòng, hoa trắng nhỏ, dùng làm thuốc.",
+    "image": "/images/mop.jpg"
+  },
+  "Bùi": {
+    "name": "Bùi",
+    "scientific": "Ilex cymosa",
+    "category": "Nhựa ruồi",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây gỗ nhỏ, lá bóng, hoa nhỏ, quả đỏ, thường mọc ở rừng nhiệt đới.",
+    "image": "/images/bui.jpg"
+  },
+  "Môn nước": {
+    "name": "Môn nước",
+    "scientific": "Colocasia esculenta",
+    "category": "Trạch tả",
+    "habitat": "Đầm lầy, ao hồ, kênh rạch",
+    "description": "Cây thân thảo, lá lớn, củ ăn được, dùng làm thực phẩm.",
+    "image": "/images/mon_nuoc.jpg"
+  },
+  "Bèo tai tượng": {
+    "name": "Bèo tai tượng",
+    "scientific": "Pistia stratiotes",
+    "category": "Trạch tả",
+    "habitat": "Ao, hồ, kênh rạch",
+    "description": "Cây thủy sinh nổi, lá hình quạt, mọc thành cụm trên mặt nước.",
+    "image": "/images/beo_tai_tuong.jpg"
+  },
+  "Mật cật gai": {
+    "name": "Mật cật gai",
+    "scientific": "Licuala spinosa",
+    "category": "Cau",
+    "habitat": "Rừng ngập mặn, vùng đất ẩm",
+    "description": "Cây cọ nhỏ, lá hình quạt, thân có gai, mọc ở vùng nhiệt đới.",
+    "image": "/images/mat_cat_gai.jpg"
+  },
+  "Mỏ quạ": {
+    "name": "Mỏ quạ",
+    "scientific": "Dischidia major",
+    "category": "Long đởm",
+    "habitat": "Rừng, cây ký sinh",
+    "description": "Cây dây leo ký sinh, lá nhỏ, hoa trắng, mọc trên cây khác.",
+    "image": "/images/mo_qua.jpg"
+  },
+  "Cẩm cù": {
+    "name": "Cẩm cù",
+    "scientific": "Hoya carnosa",
+    "category": "Long đởm",
+    "habitat": "Rừng, vườn, cây ký sinh",
+    "description": "Cây dây leo, lá dày, hoa hình sao, thường trồng làm cảnh.",
+    "image": "/images/cam_cu_carnosa.jpg"
+  },
+  "Cẩm cù": {
+    "name": "Cẩm cù",
+    "scientific": "Hoya pottsii",
+    "category": "Long đởm",
+    "habitat": "Rừng, cây ký sinh",
+    "description": "Cây dây leo, lá mọng, hoa trắng, mọc trên cây khác.",
+    "image": "/images/cam_cu_pottsii.jpg"
+  },
+  "Đầu đài mảnh": {
+    "name": "Đầu đài mảnh",
+    "scientific": "Tylophora flexuosa",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá mỏng, hoa nhỏ, dùng trong y học dân gian.",
+    "image": "/images/dau_dai_manh.jpg"
+  },
+  "Cúc áo hoa vàng": {
+    "name": "Cúc áo hoa vàng",
+    "scientific": "Acmella oleracea",
+    "category": "Cúc",
+    "habitat": "Đất hoang, vườn, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, dùng làm thuốc giảm đau.",
+    "image": "/images/cuc_ao_hoa_vang.jpg"
+  },
+  "Cỏ cức heo": {
+    "name": "Cỏ cức heo",
+    "scientific": "Ageratum conyzoides",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ, ven đường",
+    "description": "Cây thân thảo, hoa tím, thường mọc ở vùng nhiệt đới, dùng làm thuốc.",
+    "image": "/images/co_cuc_heo.jpg"
+  },
+  "Hoa xuyến chi": {
+    "name": "Hoa xuyến chi",
+    "scientific": "Bidens pilosa",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ, ven đường",
+    "description": "Cây thân thảo, hoa vàng, quả có gai, dùng trong y học dân gian.",
+    "image": "/images/hoa_xuyen_chi.jpg"
+  },
+  "Cỏ lào": {
+    "name": "Cỏ lào",
+    "scientific": "Chromolaena odorata",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ, ven rừng",
+    "description": "Cây thân thảo, hoa tím, mọc nhanh, dùng làm thuốc cầm máu.",
+    "image": "/images/co_lao.jpg"
+  },
+  "Tàu bay": {
+    "name": "Tàu bay",
+    "scientific": "Crassocephalum crepidioides",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, lá ăn được, dùng trong y học dân gian.",
+    "image": "/images/tau_bay.jpg"
+  },
+  "Bạch đầu ông": {
+    "name": "Bạch đầu ông",
+    "scientific": "Cyanthillium cinereum",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ, ven đường",
+    "description": "Cây thân thảo, hoa tím nhỏ, dùng làm thuốc dân gian.",
+    "image": "/images/bach_dau_ong.jpg"
+  },
+  "Cỏ mực": {
+    "name": "Cỏ mực",
+    "scientific": "Eclipta prostrata",
+    "category": "Cúc",
+    "habitat": "Đầm lầy, đồng lúa, ven đường",
+    "description": "Cây thân thảo, hoa trắng, dùng làm thuốc chữa bệnh gan.",
+    "image": "/images/co_muc.jpg"
+  },
+  "Cỏ lào bông tím": {
+    "name": "Cỏ lào bông tím",
+    "scientific": "Eupatorium coelestinum",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa tím, mọc ở vùng nhiệt đới, dùng làm cảnh.",
+    "image": "/images/co_lao_bong_tim.jpg"
+  },
+  "Lức": {
+    "name": "Lức",
+    "scientific": "Pluchea indica",
+    "category": "Cúc",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây bụi, hoa tím, lá dùng làm thuốc chữa đau bụng.",
+    "image": "/images/luc.jpg"
+  },
+  "Chân vịt": {
+    "name": "Chân vịt",
+    "scientific": "Sphaeranthus africanus",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa tím, dùng làm thuốc dân gian.",
+    "image": "/images/chan_vit.jpg"
+  },
+  "Cốc đồng": {
+    "name": "Cốc đồng",
+    "scientific": "Struchium sparganophorum",
+    "category": "Cúc",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây thân thảo, hoa trắng, lá dùng làm rau hoặc thuốc.",
+    "image": "/images/coc_dong.jpg"
+  },
+  "Bọ xít": {
+    "name": "Bọ xít",
+    "scientific": "Synedrella nodiflora",
+    "category": "Cúc",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, mọc nhanh, dùng làm thuốc dân gian.",
+    "image": "/images/bo_xit.jpg"
+  },
+  "Ké đầu ngựa": {
+    "name": "Ké đầu ngựa",
+    "scientific": "Xanthium strumarium",
+    "category": "Cúc",
+    "habitat": "Đất hoang, ven đường",
+    "description": "Cây thân thảo, quả có gai, dùng làm thuốc chữa viêm mũi.",
+    "image": "/images/ke_dau_ngua.jpg"
+  },
+  "Mồng tơi": {
+    "name": "Mồng tơi",
+    "scientific": "Basella alba",
+    "category": "Cẩm chướng",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây dây leo, lá xanh, dùng làm rau ăn, phổ biến ở vùng nhiệt đới.",
+    "image": "/images/mong_toi.jpg"
+  },
+  "Mồng tơi tía": {
+    "name": "Mồng tơi tía",
+    "scientific": "Basella alba var. rubra",
+    "category": "Cẩm chướng",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây dây leo, lá tím, dùng làm rau ăn hoặc cây cảnh.",
+    "image": "/images/mong_toi_tia.jpg"
+  },
+  "Choại": {
+    "name": "Choại",
+    "scientific": "Stenochlaena palustris",
+    "category": "Dương xỉ",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây dương xỉ, lá dài, dùng làm rau hoặc thuốc dân gian.",
+    "image": "/images/choai.jpg"
+  },
+  "Dớn": {
+    "name": "Dớn",
+    "scientific": "Telmatoblechnum serrulatum",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây dương xỉ, lá xẻ, mọc ở vùng đất ngập nước.",
+    "image": "/images/don.jpg"
+  },
+  "Vòi voi": {
+    "name": "Vòi voi",
+    "scientific": "Heliotropium indicum",
+    "category": "Vòi voi",
+    "habitat": "Đất hoang, ven đường",
+    "description": "Cây thân thảo, hoa tím, dùng làm thuốc chữa viêm da.",
+    "image": "/images/voi_voi.jpg"
+  },
+  "Màn ri": {
+    "name": "Màn ri",
+    "scientific": "Cleome chelidonii",
+    "category": "Cải",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa tím, dùng làm thuốc hoặc rau ăn.",
+    "image": "/images/man_ri.jpg"
+  },
+  "Trâm bầu": {
+    "name": "Trâm bầu",
+    "scientific": "Combretum quadrangulare",
+    "category": "Sim",
+    "habitat": "Rừng, đồng cỏ",
+    "description": "Cây bụi, hoa vàng, dùng làm thuốc hoặc cây cảnh.",
+    "image": "/images/tram_bau.jpg"
+  },
+  "Rau trai": {
+    "name": "Rau trai",
+    "scientific": "Commelina diffusa",
+    "category": "Thài lài",
+    "habitat": "Đất hoang, đồng lúa, kênh rạch",
+    "description": "Cây thân thảo, hoa xanh, lá dùng làm rau hoặc thuốc.",
+    "image": "/images/rau_trai.jpg"
+  },
+  "Rau muống": {
+    "name": "Rau muống",
+    "scientific": "Ipomoea aquatica",
+    "category": "Cà",
+    "habitat": "Đầm lầy, ao hồ, kênh rạch",
+    "description": "Cây dây leo, lá xanh, dùng làm rau ăn phổ biến.",
+    "image": "/images/rau_muong.jpg"
+  },
+  "Bìm mờ": {
+    "name": "Bìm mờ",
+    "scientific": "Ipomoea obscura",
+    "category": "Cà",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây dây leo, hoa trắng, mọc ở vùng nhiệt đới.",
+    "image": "/images/bim_mo.jpg"
+  },
+  "Bìm": {
+    "name": "Bìm",
+    "scientific": "Merremia umbellata",
+    "category": "Cà",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây dây leo, hoa vàng, mọc nhanh ở vùng nhiệt đới.",
+    "image": "/images/bim.jpg"
+  },
+  "Mảnh bát": {
+    "name": "Mảnh bát",
+    "scientific": "Coccinia grandis",
+    "category": "Bầu bí",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây dây leo, quả đỏ, lá và quả dùng làm rau hoặc thuốc.",
+    "image": "/images/manh_bat.jpg"
+  },
+  "Cứt quạ trái nhỏ": {
+    "name": "Cứt quạ trái nhỏ",
+    "scientific": "Gymnopetalum integrifolium",
+    "category": "Bầu bí",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, quả nhỏ, dùng trong y học dân gian.",
+    "image": "/images/cut_qua_trai_nho.jpg"
+  },
+  "Mướp rừng": {
+    "name": "Mướp rừng",
+    "scientific": "Luffa operculata",
+    "category": "Bầu bí",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, quả nhỏ, dùng làm thuốc hoặc thực phẩm.",
+    "image": "/images/muop_rung.jpg"
+  },
+  "Cứt quạ trái lớn": {
+    "name": "Cứt quạ trái lớn",
+    "scientific": "Trichosanthes tricuspidata",
+    "category": "Bầu bí",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, quả lớn, dùng trong y học dân gian.",
+    "image": "/images/cut_qua_trai_lon.jpg"
+  },
+  "Chùm thẳng": {
+    "name": "Chùm thẳng",
+    "scientific": "Zehneria indica",
+    "category": "Bầu bí",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, hoa nhỏ, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/chum_thang.jpg"
+  },
+  "Dây tơ hồng": {
+    "name": "Dây tơ hồng",
+    "scientific": "Cuscuta australis",
+    "category": "Cà",
+    "habitat": "Ký sinh trên cây khác",
+    "description": "Cây dây leo ký sinh, không lá, sống nhờ cây chủ.",
+    "image": "/images/day_to_hong.jpg"
+  },
+  "U du tía": {
+    "name": "U du tía",
+    "scientific": "Cyperus digitatus",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, kênh rạch",
+    "description": "Cây thân thảo, lá dài, hoa tím, mọc ở vùng đất ngập nước.",
+    "image": "/images/u_du_tia.jpg"
+  },
+  "Cói thưa": {
+    "name": "Cói thưa",
+    "scientific": "Cyperus distans",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây thân thảo, hoa nhỏ, mọc ở vùng đất ẩm.",
+    "image": "/images/coi_thua.jpg"
+  },
+  "Cú cơm": {
+    "name": "Cú cơm",
+    "scientific": "Cyperus haspan",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, kênh rạch",
+    "description": "Cây thân thảo, hoa nhỏ, mọc ở vùng đất ngập nước.",
+    "image": "/images/cu_com.jpg"
+  },
+  "Năng cong": {
+    "name": "Năng cong",
+    "scientific": "Eleocharis retroflexa",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, ao hồ",
+    "description": "Cây thân thảo, thân mảnh, mọc ở vùng đất ngập nước.",
+    "image": "/images/nang_cong.jpg"
+  },
+  "Năng ống": {
+    "name": "Năng ống",
+    "scientific": "Eleocharis dulcis",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, ao hồ",
+    "description": "Cây thân thảo, củ ăn được, mọc ở vùng đất ngập nước.",
+    "image": "/images/nang_ong.jpg"
+  },
+  "Cỏ chác": {
+    "name": "Cỏ chác",
+    "scientific": "Fimbristylis miliacea",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây thân thảo, hoa nhỏ, mọc ở vùng đất ẩm.",
+    "image": "/images/co_chac.jpg"
+  },
+  "Cói rừng": {
+    "name": "Cói rừng",
+    "scientific": "Mapania bancana",
+    "category": "Hòa thảo",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây thân thảo, mọc ở rừng nhiệt đới, lá dài.",
+    "image": "/images/coi_rung.jpg"
+  },
+  "Mây khía": {
+    "name": "Mây khía",
+    "scientific": "Scleria sumatrensis",
+    "category": "Hòa thảo",
+    "habitat": "Rừng, đồng cỏ",
+    "description": "Cây thân thảo, lá dài, mọc ở vùng đất ẩm.",
+    "image": "/images/may_khia.jpg"
+  },
+  "Khoai rạng": {
+    "name": "Khoai rạng",
+    "scientific": "Dioscorea glabra",
+    "category": "Củ nâu",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, củ ăn được, dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/khoai_rang.jpg"
+  },
+  "Côm tầng": {
+    "name": "Côm tầng",
+    "scientific": "Elaeocarpus griffithii",
+    "category": "Chua me đất",
+    "habitat": "Rừng nhiệt đới",
+    "description": "Cây gỗ, quả nhỏ, mọc ở rừng, dùng trong y học dân gian.",
+    "image": "/images/com_tang.jpg"
+  },
+  "Chòi mòi": {
+    "name": "Chòi mòi",
+    "scientific": "Antidesma ghaesembilla",
+    "category": "Sơ ri",
+    "habitat": "Rừng, đồng cỏ",
+    "description": "Cây bụi, quả nhỏ ăn được, dùng trong y học dân gian.",
+    "image": "/images/choi_moi.jpg"
+  },
+  "Cỏ sửa lông": {
+    "name": "Cỏ sửa lông",
+    "scientific": "Euphorbia hirta",
+    "category": "Sơ ri",
+    "habitat": "Đất hoang, đồng cỏ, ven đường",
+    "description": "Cây thân thảo, hoa nhỏ, dùng làm thuốc chữa viêm da.",
+    "image": "/images/co_sua_long.jpg"
+  },
+  "Múi": {
+    "name": "Múi",
+    "scientific": "Glochidion littorale",
+    "category": "Sơ ri",
+    "habitat": "Rừng ngập mặn, bờ biển",
+    "description": "Cây bụi, quả nhỏ, mọc ở vùng đất ngập mặn.",
+    "image": "/images/mui.jpg"
+  },
+  "Diệp hạ châu Ấn": {
+    "name": "Diệp hạ châu Ấn",
+    "scientific": "Margaritaria indica",
+    "category": "Sơ ri",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây bụi, quả nhỏ, dùng trong y học dân gian.",
+    "image": "/images/diep_ha_chau_an.jpg"
+  },
+  "Diệp hạ châu đắng": {
+    "name": "Diệp hạ châu đắng",
+    "scientific": "Phyllanthus amarus",
+    "category": "Sơ ri",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, dùng làm thuốc chữa bệnh gan.",
+    "image": "/images/diep_ha_chau_dang.jpg"
+  },
+  "Phèn đen": {
+    "name": "Phèn đen",
+    "scientific": "Phyllanthus reticulatus",
+    "category": "Sơ ri",
+    "habitat": "Rừng, đồng cỏ",
+    "description": "Cây bụi, quả đen, dùng trong y học dân gian.",
+    "image": "/images/phen_den.jpg"
+  },
+  "Thầu dầu": {
+    "name": "Thầu dầu",
+    "scientific": "Ricinus communis",
+    "category": "Sơ ri",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hạt có độc, dùng làm thuốc hoặc dầu.",
+    "image": "/images/thau_dau.jpg"
+  },
+  "Keo lá tràm": {
+    "name": "Keo lá tràm",
+    "scientific": "Acacia auriculiformis",
+    "category": "Đậu",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, lá giống lá tràm, hoa vàng, dùng làm gỗ hoặc cây cảnh.",
+    "image": "/images/keo_la_tram.jpg"
+  },
+  "Lục lạc ba lá tròn": {
+    "name": "Lục lạc ba lá tròn",
+    "scientific": "Crotalaria pallida",
+    "category": "Đậu",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, quả dạng đậu, mọc ở vùng nhiệt đới.",
+    "image": "/images/luc_lac_ba_la_tron.jpg"
+  },
+  "Tràng quả ba hoa": {
+    "name": "Tràng quả ba hoa",
+    "scientific": "Desmodium triflorum",
+    "category": "Đậu",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây thân thảo, hoa tím, mọc sát đất, dùng làm thuốc.",
+    "image": "/images/trang_qua_ba_hoa.jpg"
+  },
+  "Mai dương": {
+    "name": "Mai dương",
+    "scientific": "Mimosa pigra",
+    "category": "Đậu",
+    "habitat": "Đất hoang, đồng lúa, kênh rạch",
+    "description": "Cây bụi, hoa tím, mọc nhanh, được coi là cây xâm lấn.",
+    "image": "/images/mai_duong.jpg"
+  },
+  "Trinh nữ": {
+    "name": "Trinh nữ",
+    "scientific": "Mimosa pudica",
+    "category": "Đậu",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, lá cụp khi chạm, hoa tím, dùng làm thuốc.",
+    "image": "/images/trinh_nu.jpg"
+  },
+  "Muồng trâu": {
+    "name": "Muồng trâu",
+    "scientific": "Senna alata",
+    "category": "Đậu",
+    "habitat": "Đất hoang, vườn",
+    "description": "Cây bụi, hoa vàng, lá dùng làm thuốc chữa bệnh da.",
+    "image": "/images/muong_trau.jpg"
+  },
+  "Muồng lạc": {
+    "name": "Muồng lạc",
+    "scientific": "Senna tora",
+    "category": "Đậu",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, dùng làm thuốc hoặc thực phẩm.",
+    "image": "/images/muong_lac.jpg"
+  },
+  "Đậu hoa tuyến": {
+    "name": "Đậu hoa tuyến",
+    "scientific": "Vigna adenantha",
+    "category": "Đậu",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, hoa tím, quả dạng đậu, mọc ở vùng nhiệt đới.",
+    "image": "/images/dau_hoa_tuyen.jpg"
+  },
+  "Đậu ma": {
+    "name": "Đậu ma",
+    "scientific": "Vigna luteola",
+    "category": "Đậu",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây dây leo, hoa vàng, quả dạng đậu, mọc ở vùng nhiệt đới.",
+    "image": "/images/dau_ma.jpg"
+  },
+  "Mây nước": {
+    "name": "Mây nước",
+    "scientific": "Flagellaria indica",
+    "category": "Hòa thảo",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây dây leo, lá dài, mọc ở vùng đất ngập nước.",
+    "image": "/images/may_nuoc.jpg"
+  },
+  "É lớn đầu": {
+    "name": "É lớn đầu",
+    "scientific": "Hyptis capitata",
+    "category": "Hoa môi",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa trắng, dùng làm thuốc dân gian.",
+    "image": "/images/e_lon_dau.jpg"
+  },
+  "Củ rối": {
+    "name": "Củ rối",
+    "scientific": "Leea rubra",
+    "category": "Nho",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây bụi, lá đỏ khi non, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/cu_roi.jpg"
+  },
+  "Bèo cám": {
+    "name": "Bèo cám",
+    "scientific": "Lemna minor",
+    "category": "Trạch tả",
+    "habitat": "Ao, hồ, kênh rạch",
+    "description": "Cây thủy sinh nổi, nhỏ, mọc thành cụm trên mặt nước.",
+    "image": "/images/beo_cam.jpg"
+  },
+  "Tầm gửi": {
+    "name": "Tầm gửi",
+    "scientific": "Dendrophthoe pentandra",
+    "category": "Đàn hương",
+    "habitat": "Ký sinh trên cây",
+    "description": "Cây ký sinh, lá xanh, quả nhỏ, sống trên cây chủ.",
+    "image": "/images/tam_gui.jpg"
+  },
+  "Bằng lăng": {
+    "name": "Bằng lăng",
+    "scientific": "Lagerstroemia speciosa",
+    "category": "Sim",
+    "habitat": "Vườn, rừng, đất hoang",
+    "description": "Cây gỗ, hoa tím, thường trồng làm cây cảnh.",
+    "image": "/images/bang_lang.jpg"
+  },
+  "Bụp vang": {
+    "name": "Bụp vang",
+    "scientific": "Abelmoschus moschatus",
+    "category": "Bông",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, dùng làm thuốc hoặc cây cảnh.",
+    "image": "/images/bup_vang.jpg"
+  },
+  "Gòn": {
+    "name": "Gòn",
+    "scientific": "Ceiba pentandra",
+    "category": "Bông",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ lớn, quả chứa bông, dùng làm vật liệu hoặc thuốc.",
+    "image": "/images/gon.jpg"
+  },
+  "Dấm": {
+    "name": "Dấm",
+    "scientific": "Hibiscus sabdariffa",
+    "category": "Bông",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây thân thảo, hoa đỏ, đài quả dùng làm nước uống.",
+    "image": "/images/dam.jpg"
+  },
+  "Ké hoa vàng": {
+    "name": "Ké hoa vàng",
+    "scientific": "Sida rhombifolia",
+    "category": "Bông",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa vàng, dùng làm thuốc dân gian.",
+    "image": "/images/ke_hoa_vang.jpg"
+  },
+  "Sương sâm": {
+    "name": "Sương sâm",
+    "scientific": "Tiliacora triandra",
+    "category": "Mao lương",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/suong_sam.jpg"
+  },
+  "Dây cóc": {
+    "name": "Dây cóc",
+    "scientific": "Tinospora crispa",
+    "category": "Mao lương",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, dùng làm thuốc chữa sốt rét.",
+    "image": "/images/day_coc.jpg"
+  },
+  "Rau đắng đất": {
+    "name": "Rau đắng đất",
+    "scientific": "Glinus oppositifolius",
+    "category": "Cẩm chướng",
+    "habitat": "Đồng lúa, đất hoang",
+    "description": "Cây thân thảo, lá dùng làm rau hoặc thuốc.",
+    "image": "/images/rau_dang_dat.jpg"
+  },
+  "Sanh": {
+    "name": "Sanh",
+    "scientific": "Ficus benjamina",
+    "category": "Hoa hồng",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây gỗ, lá nhỏ, thường trồng làm cây cảnh.",
+    "image": "/images/sanh.jpg"
+  },
+  "Sung dại": {
+    "name": "Sung dại",
+    "scientific": "Ficus hispida",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/sung_dai.jpg"
+  },
+  "Gừa": {
+    "name": "Gừa",
+    "scientific": "Ficus microcarpa",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, vườn",
+    "description": "Cây gỗ, lá nhỏ, thường trồng làm cây cảnh.",
+    "image": "/images/gua.jpg"
+  },
+  "Sộp": {
+    "name": "Sộp",
+    "scientific": "Ficus pisocarpa",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/sop.jpg"
+  },
+  "Sung": {
+    "name": "Sung",
+    "scientific": "Ficus racemosa",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ lớn, quả đỏ, dùng trong y học dân gian.",
+    "image": "/images/sung.jpg"
+  },
+  "Sung sundai": {
+    "name": "Sung sundai",
+    "scientific": "Ficus sundaica",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/sung_sundai.jpg"
+  },
+  "Tràm": {
+    "name": "Tràm",
+    "scientific": "Melaleuca cajuputi",
+    "category": "Sim",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây gỗ, lá thơm, dùng làm tinh dầu hoặc thuốc.",
+    "image": "/images/tram.jpg"
+  },
+  "Mua": {
+    "name": "Mua",
+    "scientific": "Melastoma affine",
+    "category": "Sim",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây bụi, hoa tím, mọc ở vùng nhiệt đới.",
+    "image": "/images/mua.jpg"
+  },
+  "Trâm khế": {
+    "name": "Trâm khế",
+    "scientific": "Syzygium lineatum",
+    "category": "Sim",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/tram_khe.jpg"
+  },
+  "Trâm rộng": {
+    "name": "Trâm rộng",
+    "scientific": "Syzygium oblata",
+    "category": "Sim",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, lá rộng, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/tram_rong.jpg"
+  },
+  "Nắp ấm": {
+    "name": "Nắp ấm",
+    "scientific": "Nepenthes mirabilis",
+    "category": "Cẩm chướng",
+    "habitat": "Rừng, đầm lầy",
+    "description": "Cây ăn côn trùng, lá hình bình chứa, mọc ở vùng nhiệt đới.",
+    "image": "/images/nap_am.jpg"
+  },
+  "Ráng thận lân có lông": {
+    "name": "Ráng thận lân có lông",
+    "scientific": "Nephrolepis hirsutula",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây dương xỉ, lá có lông, mọc ở vùng nhiệt đới.",
+    "image": "/images/rang_than_lan_co_long.jpg"
+  },
+  "Ráng thận lân đâm rễ": {
+    "name": "Ráng thận lân đâm rễ",
+    "scientific": "Nephrolepis radicans",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây dương xỉ, lá dài, mọc ở vùng đất ngập nước.",
+    "image": "/images/rang_than_lan_dam_re.jpg"
+  },
+  "Rau dừa nước": {
+    "name": "Rau dừa nước",
+    "scientific": "Ludwigia adscendens",
+    "category": "Sim",
+    "habitat": "Đầm lầy, ao hồ",
+    "description": "Cây thủy sinh, hoa vàng, mọc ở vùng nước nông.",
+    "image": "/images/rau_dua_nuoc.jpg"
+  },
+  "Rau mương": {
+    "name": "Rau mương",
+    "scientific": "Ludwigia octovalvis",
+    "category": "Sim",
+    "habitat": "Đầm lầy, kênh rạch",
+    "description": "Cây thân thảo, hoa vàng, dùng làm rau hoặc thuốc.",
+    "image": "/images/rau_muong_ludwigia.jpg"
+  },
+  "Ráng Gạc nai": {
+    "name": "Ráng Gạc nai",
+    "scientific": "Ceratopteris thalictroides",
+    "category": "Dương xỉ",
+    "habitat": "Ao, hồ, kênh rạch",
+    "description": "Cây dương xỉ thủy sinh, lá xẻ, dùng làm rau hoặc cây cảnh.",
+    "image": "/images/rang_gac_nai.jpg"
+  },
+  "Nhãn lồng": {
+    "name": "Nhãn lồng",
+    "scientific": "Passiflora foetida",
+    "category": "Sơ ri",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây dây leo, quả nhỏ, hoa trắng, dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/nhan_long.jpg"
+  },
+  "Thương lục": {
+    "name": "Thương lục",
+    "scientific": "Phytolacca acinosa",
+    "category": "Cẩm chướng",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, quả tím, dùng làm thuốc nhưng có độc.",
+    "image": "/images/thuong_luc.jpg"
+  },
+  "Càng cua": {
+    "name": "Càng cua",
+    "scientific": "Peperomia pellucida",
+    "category": "Hồ tiêu",
+    "habitat": "Đất hoang, vườn",
+    "description": "Cây thân thảo, lá mọng, dùng làm rau hoặc thuốc.",
+    "image": "/images/cang_cua.jpg"
+  },
+  "Tre gai": {
+    "name": "Tre gai",
+    "scientific": "Bambusa blumeana",
+    "category": "Hòa thảo",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây tre, thân có gai, dùng làm vật liệu xây dựng.",
+    "image": "/images/tre_gai.jpg"
+  },
+  "Cỏ lông tây": {
+    "name": "Cỏ lông tây",
+    "scientific": "Brachiaria mutica",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây cỏ, mọc nhanh, dùng làm thức ăn gia súc.",
+    "image": "/images/co_long_tay.jpg"
+  },
+  "Cước lông": {
+    "name": "Cước lông",
+    "scientific": "Cenchrus ciliaris",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ, hoa dạng bông, dùng làm thức ăn gia súc.",
+    "image": "/images/cuoc_long.jpg"
+  },
+  "Bo bo": {
+    "name": "Bo bo",
+    "scientific": "Coix lacryma-jobi",
+    "category": "Hòa thảo",
+    "habitat": "Đất hoang, đồng lúa",
+    "description": "Cây thân thảo, hạt dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/bo_bo.jpg"
+  },
+  "Cỏ chỉ": {
+    "name": "Cỏ chỉ",
+    "scientific": "Cynodon dactylon",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ, mọc sát đất, dùng làm cỏ phủ hoặc thuốc.",
+    "image": "/images/co_chi.jpg"
+  },
+  "Túc hình rễ": {
+    "name": "Túc hình rễ",
+    "scientific": "Digitaria radicosa",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ, mọc nhanh, dùng làm thức ăn gia súc.",
+    "image": "/images/tuc_hinh_re.jpg"
+  },
+  "Lồng vực cạn": {
+    "name": "Lồng vực cạn",
+    "scientific": "Echinochloa colonum",
+    "category": "Hòa thảo",
+    "habitat": "Đồng lúa, đất hoang",
+    "description": "Cây cỏ, hạt nhỏ, mọc ở vùng đất ẩm.",
+    "image": "/images/long_vuc_can.jpg"
+  },
+  "Cỏ lồng vực": {
+    "name": "Cỏ lồng vực",
+    "scientific": "Echinochloa crus-galli",
+    "category": "Hòa thảo",
+    "habitat": "Đồng lúa, đất hoang",
+    "description": "Cây cỏ, mọc nhanh, được coi là cỏ dại trong nông nghiệp.",
+    "image": "/images/co_long_vuc.jpg"
+  },
+  "Mồm mỡ": {
+    "name": "Mồm mỡ",
+    "scientific": "Hymenachne acutigluma",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây cỏ, mọc ở vùng đất ngập nước, dùng làm thức ăn gia súc.",
+    "image": "/images/mom_mo.jpg"
+  },
+  "Cỏ bắc": {
+    "name": "Cỏ bắc",
+    "scientific": "Leersia hexandra",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây cỏ, mọc ở vùng đất ngập nước, dùng làm thức ăn gia súc.",
+    "image": "/images/co_bac.jpg"
+  },
+  "Cỏ ống": {
+    "name": "Cỏ ống",
+    "scientific": "Panicum repens",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, đồng cỏ",
+    "description": "Cây cỏ, thân rỗng, mọc ở vùng đất ẩm.",
+    "image": "/images/co_ong.jpg"
+  },
+  "San cặp": {
+    "name": "San cặp",
+    "scientific": "Paspalum conjugatum",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ, mọc sát đất, dùng làm thức ăn gia súc.",
+    "image": "/images/san_cap.jpg"
+  },
+  "Sậy": {
+    "name": "Sậy",
+    "scientific": "Phragmites australis",
+    "category": "Hòa thảo",
+    "habitat": "Đầm lầy, kênh rạch",
+    "description": "Cây cỏ cao, thân cứng, mọc ở vùng đất ngập nước.",
+    "image": "/images/say.jpg"
+  },
+  "Cỏ bông lau": {
+    "name": "Cỏ bông lau",
+    "scientific": "Saccharum spontaneum",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ cao, hoa dạng bông, mọc ở vùng nhiệt đới.",
+    "image": "/images/co_bong_lau.jpg"
+  },
+  "Xạ tử rất nhỏ": {
+    "name": "Xạ tử rất nhỏ",
+    "scientific": "Sporobolus tenuissimus",
+    "category": "Hòa thảo",
+    "habitat": "Đồng cỏ, đất hoang",
+    "description": "Cây cỏ nhỏ, hoa nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/xa_tu_rat_nho.jpg"
+  },
+  "Nghể": {
+    "name": "Nghể",
+    "scientific": "Persicaria pulchra",
+    "category": "Cẩm chướng",
+    "habitat": "Đầm lầy, đồng lúa",
+    "description": "Cây thân thảo, hoa hồng, mọc ở vùng đất ngập nước.",
+    "image": "/images/nghe.jpg"
+  },
+  "Ráng hỏa mạc lá dài": {
+    "name": "Ráng hỏa mạc lá dài",
+    "scientific": "Pyrrosia longifolia",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, cây ký sinh",
+    "description": "Cây dương xỉ, lá dài, mọc trên cây hoặc đá.",
+    "image": "/images/rang_hoa_mac_la_dai.jpg"
+  },
+  "Ráng hỏa mạc đực xỉ": {
+    "name": "Ráng hỏa mạc đực xỉ",
+    "scientific": "Pyrrosia piloselloides",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, cây ký sinh",
+    "description": "Cây dương xỉ, lá nhỏ, mọc trên cây hoặc đá.",
+    "image": "/images/rang_hoa_mac_duc_xi.jpg"
+  },
+  "Lục bình": {
+    "name": "Lục bình",
+    "scientific": "Pontederia crassipes",
+    "category": "Thài lài",
+    "habitat": "Ao, hồ, kênh rạch",
+    "description": "Cây thủy sinh nổi, hoa tím, mọc nhanh, được coi là cây xâm lấn.",
+    "image": "/images/luc_binh.jpg"
+  },
+  "Ráng đại": {
+    "name": "Ráng đại",
+    "scientific": "Acrostichum aureum",
+    "category": "Dương xỉ",
+    "habitat": "Rừng ngập mặn, đầm lầy",
+    "description": "Cây dương xỉ lớn, lá dài, mọc ở vùng đất ngập mặn.",
+    "image": "/images/rang_dai.jpg"
+  },
+  "Dây vỏ voi": {
+    "name": "Dây vỏ voi",
+    "scientific": "Gynochthodes coriacea",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá dày, dùng trong y học dân gian.",
+    "image": "/images/day_vo_voi.jpg"
+  },
+  "Bí kỳ nam": {
+    "name": "Bí kỳ nam",
+    "scientific": "Hydnophytum formicarum",
+    "category": "Long đởm",
+    "habitat": "Rừng, cây ký sinh",
+    "description": "Cây ký sinh, thân phình to, sống cộng sinh với kiến.",
+    "image": "/images/bi_ky_nam.jpg"
+  },
+  "Nhàu": {
+    "name": "Nhàu",
+    "scientific": "Morinda citrifolia",
+    "category": "Long đởm",
+    "habitat": "Rừng, bờ biển",
+    "description": "Cây gỗ nhỏ, quả xanh, dùng làm thuốc hoặc thực phẩm.",
+    "image": "/images/nhau.jpg"
+  },
+  "Gáo vàng": {
+    "name": "Gáo vàng",
+    "scientific": "Nauclea orientalis",
+    "category": "Long đởm",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ, hoa vàng, dùng làm gỗ hoặc thuốc.",
+    "image": "/images/gao_vang.jpg"
+  },
+  "Cóc mẵn": {
+    "name": "Cóc mẵn",
+    "scientific": "Oldenlandia corymbosa",
+    "category": "Long đởm",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa trắng, dùng làm thuốc dân gian.",
+    "image": "/images/coc_man.jpg"
+  },
+  "Mơ lông": {
+    "name": "Mơ lông",
+    "scientific": "Paederia lanuginosa",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá có lông, dùng làm thuốc chữa đau bụng.",
+    "image": "/images/mo_long.jpg"
+  },
+  "Mơ": {
+    "name": "Mơ",
+    "scientific": "Paederia linearis",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá mỏng, dùng làm thuốc dân gian.",
+    "image": "/images/mo.jpg"
+  },
+  "Lấu bò": {
+    "name": "Lấu bò",
+    "scientific": "Psychotria serpens",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, hoa nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/lau_bo.jpg"
+  },
+  "Câu đằng": {
+    "name": "Câu đằng",
+    "scientific": "Uncaria acida",
+    "category": "Long đởm",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, móc gai, dùng làm thuốc chữa cao huyết áp.",
+    "image": "/images/cau_dang.jpg"
+  },
+  "Bí bái": {
+    "name": "Bí bái",
+    "scientific": "Melicope pteleifolia",
+    "category": "Bồ hòn",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ nhỏ, lá thơm, dùng trong y học dân gian.",
+    "image": "/images/bi_bai.jpg"
+  },
+  "Bèo tai chuột": {
+    "name": "Bèo tai chuột",
+    "scientific": "Salvinia cucullata",
+    "category": "Bèo ong",
+    "habitat": "Ao, hồ, kênh rạch",
+    "description": "Cây thủy sinh nổi, lá nhỏ, mọc ở vùng nước ngọt.",
+    "image": "/images/beo_tai_chuot.jpg"
+  },
+  "Diếp cá": {
+    "name": "Diếp cá",
+    "scientific": "Houttuynia cordata",
+    "category": "Hồ tiêu",
+    "habitat": "Đầm lầy, đất ẩm",
+    "description": "Cây thân thảo, lá thơm, dùng làm rau hoặc thuốc.",
+    "image": "/images/diep_ca.jpg"
+  },
+  "Bòng bong": {
+    "name": "Bòng bong",
+    "scientific": "Lygodium japonicum",
+    "category": "Ráng ngón",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dương xỉ dây leo, lá mảnh, dùng làm thuốc.",
+    "image": "/images/bong_bong.jpg"
+  },
+  "Cam thảo nam": {
+    "name": "Cam thảo nam",
+    "scientific": "Scoparia dulcis",
+    "category": "Hoa môi",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa trắng, dùng làm thuốc chữa tiểu đường.",
+    "image": "/images/cam_thao_nam.jpg"
+  },
+  "Dây lưỡi đồng": {
+    "name": "Dây lưỡi đồng",
+    "scientific": "Torenia crustacea",
+    "category": "Hoa môi",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, hoa tím, mọc ở vùng nhiệt đới.",
+    "image": "/images/day_luoi_dong.jpg"
+  },
+  "Ớt": {
+    "name": "Ớt",
+    "scientific": "Capsicum frutescens",
+    "category": "Cà",
+    "habitat": "Vườn, đất hoang",
+    "description": "Cây thân thảo, quả cay, dùng làm gia vị hoặc thuốc.",
+    "image": "/images/ot.jpg"
+  },
+  "Thù lù": {
+    "name": "Thù lù",
+    "scientific": "Physalis angulata",
+    "category": "Cà",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, quả nhỏ có vỏ, dùng làm thuốc.",
+    "image": "/images/thu_lu.jpg"
+  },
+  "Nụ áo": {
+    "name": "Nụ áo",
+    "scientific": "Solanum nigrum",
+    "category": "Cà",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, quả đen, dùng làm thuốc nhưng có độc.",
+    "image": "/images/nu_ao.jpg"
+  },
+  "Cà dại hoa trắng": {
+    "name": "Cà dại hoa trắng",
+    "scientific": "Solanum torvum",
+    "category": "Cà",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây bụi, hoa trắng, quả nhỏ, dùng làm thực phẩm hoặc thuốc.",
+    "image": "/images/ca_dai_hoa_trang.jpg"
+  },
+  "Ráng cù lần": {
+    "name": "Ráng cù lần",
+    "scientific": "Christella parasitica",
+    "category": "Dương xỉ",
+    "habitat": "Rừng, vùng đất ẩm",
+    "description": "Cây dương xỉ, lá xẻ, mọc ở vùng nhiệt đới.",
+    "image": "/images/rang_cu_lan.jpg"
+  },
+  "Rau đay rừng": {
+    "name": "Rau đay rừng",
+    "scientific": "Corchorus aestuans",
+    "category": "Bông",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây thân thảo, lá dùng làm rau, mọc ở vùng nhiệt đới.",
+    "image": "/images/rau_day_rung.jpg"
+  },
+  "Trứng cá": {
+    "name": "Trứng cá",
+    "scientific": "Muntingia calabura",
+    "category": "Bông",
+    "habitat": "Đất hoang, vườn",
+    "description": "Cây gỗ nhỏ, quả đỏ, ăn được, mọc ở vùng nhiệt đới.",
+    "image": "/images/trung_ca.jpg"
+  },
+  "Bố rừng": {
+    "name": "Bố rừng",
+    "scientific": "Trema politoria",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây gỗ nhỏ, lá nhỏ, mọc nhanh ở vùng nhiệt đới.",
+    "image": "/images/bo_rung.jpg"
+  },
+  "Rum thơm": {
+    "name": "Rum thơm",
+    "scientific": "Poikilospermum suaveolens",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá thơm, mọc ở vùng nhiệt đới.",
+    "image": "/images/rum_thom.jpg"
+  },
+  "Thuốc dòi cây": {
+    "name": "Thuốc dòi cây",
+    "scientific": "Pouzolzia sanguinea",
+    "category": "Hoa hồng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây thân thảo, lá dùng làm thuốc dân gian.",
+    "image": "/images/thuoc_doi_cay.jpg"
+  },
+  "Trâm ổi": {
+    "name": "Trâm ổi",
+    "scientific": "Lantana camara",
+    "category": "Hoa môi",
+    "habitat": "Đất hoang, đồng cỏ",
+    "description": "Cây bụi, hoa nhiều màu, được coi là cây xâm lấn.",
+    "image": "/images/tram_oi.jpg"
+  },
+  "Cách": {
+    "name": "Cách",
+    "scientific": "Premna serratifolia",
+    "category": "Hoa môi",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây bụi, lá thơm, dùng làm thuốc dân gian.",
+    "image": "/images/cach.jpg"
+  },
+  "Vác": {
+    "name": "Vác",
+    "scientific": "Causonis trifolia",
+    "category": "Nho",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, quả nhỏ, mọc ở vùng nhiệt đới.",
+    "image": "/images/vac.jpg"
+  },
+  "Chìa vôi": {
+    "name": "Chìa vôi",
+    "scientific": "Cissus modeccoides",
+    "category": "Nho",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, dùng làm thuốc chữa đau xương khớp.",
+    "image": "/images/chia_voi.jpg"
+  },
+  "Hồ đằng bốn cạnh": {
+    "name": "Hồ đằng bốn cạnh",
+    "scientific": "Cissus quadrangularis",
+    "category": "Nho",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây dây leo, thân vuông, dùng làm thuốc chữa xương.",
+    "image": "/images/ho_dang_bon_canh.jpg"
+  },
+  "Hồ đằng rễ mành": {
+    "name": "Hồ đằng rễ mành",
+    "scientific": "Cissus verticillata",
+    "category": "Nho",
+    "habitat": "Rừng, bụi rậm",
+    "description": "Cây dây leo, lá mọc vòng, dùng làm thuốc dân gian.",
+    "image": "/images/ho_dang_re_manh.jpg"
+  },
+  "Cát lồi": {
+    "name": "Cát lồi",
+    "scientific": "Cheilocostus speciosus",
+    "category": "Gừng",
+    "habitat": "Rừng, đất hoang",
+    "description": "Cây thân thảo, hoa trắng, dùng làm thuốc hoặc cây cảnh.",
+    "image": "/images/cat_loi.jpg"
+  }
+}
