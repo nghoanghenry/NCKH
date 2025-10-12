@@ -3,8 +3,8 @@
   "name": "example",
   "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32648" } },
   "features": [
-    { "type": "Feature", "properties": { "Species": "Líu díu chuối", "ORIG_FID": 0 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
-    { "type": "Feature", "properties": { "Species": "Nhông hàng rào", "ORIG_FID": 1 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
+    { "type": "Feature", "properties": { "Species": "Líu díu chuối", "path": "liu_diu_chuoi.jpeg", "ORIG_FID": 0 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
+    { "type": "Feature", "properties": { "Species": "Nhông hàng rào","path": "nhong_hang_rao.jpeg", "ORIG_FID": 1 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
     { "type": "Feature", "properties": { "Species": "Nhông hàng rào", "ORIG_FID": 2 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
     { "type": "Feature", "properties": { "Species": "Nhông hàng rào", "ORIG_FID": 3 }, "geometry": { "type": "Point", "coordinates": [494810.0008, 1021305.5] } },
     { "type": "Feature", "properties": { "Species": "Nhông xám", "ORIG_FID": 4 }, "geometry": { "type": "Point", "coordinates": [495498.9997, 1019043.5] } },
