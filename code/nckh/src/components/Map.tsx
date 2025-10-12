@@ -95,8 +95,30 @@ const MapNavigator = ({
         width: "280px",
         display: "flex",
         flexDirection: "column",
+        overflowY: "auto", // ✅ cuộn toàn bộ panel
+        scrollbarWidth: "thin", // Firefox
       }}
     >
+      {/* ✅ Tùy chỉnh thanh cuộn nhỏ, màu trắng */}
+      <style>
+        {`
+          ::-webkit-scrollbar {
+            width: 6px;
+          }
+          ::-webkit-scrollbar-track {
+            background: #ddd;
+            border-radius: 10px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: #fff;
+            border-radius: 10px;
+          }
+          ::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+          }
+        `}
+      </style>
+
       <h3 style={{ fontSize: "15px", fontWeight: "bold", marginBottom: "10px" }}>
         Bộ chọn hiển thị
       </h3>
@@ -153,7 +175,9 @@ const MapNavigator = ({
       ))}
 
       {/* --- Chọn nhóm loài --- */}
-      <h4 style={{ marginBottom: "6px", fontSize: "14px", color: "#000" }}>Chọn nhóm loài:</h4>
+      <h4 style={{ marginBottom: "6px", fontSize: "14px", color: "#000" }}>
+        Chọn nhóm loài:
+      </h4>
       <div
         style={{
           display: "flex",
@@ -184,15 +208,13 @@ const MapNavigator = ({
         ))}
       </div>
 
-      {/* --- Danh sách loài có thể cuộn --- */}
+      {/* --- Danh sách loài --- */}
       {selectedCategory && (
         <div
           style={{
-            flexGrow: 1,
-            overflowY: "auto",
-            paddingRight: "6px",
             borderTop: "1px solid #ccc",
             marginTop: "8px",
+            paddingTop: "8px",
           }}
         >
           <h4
@@ -200,8 +222,6 @@ const MapNavigator = ({
               margin: "10px 0 8px 0",
               fontSize: "14px",
               color: "#000",
-              position: "sticky",
-              top: 0,
               background: "#e9e7e7ff",
               paddingBottom: "4px",
             }}
@@ -239,6 +259,7 @@ const MapNavigator = ({
     </div>
   );
 };
+
 
 // --- Component chính ---
 export default function Map() {
