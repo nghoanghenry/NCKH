@@ -54,12 +54,16 @@ const SpeciesInfoPanel = ({
   selectedSpecies,
   selectedCategory,
   speciesInfo,
+  isVisible,
+  onToggleVisibility,
 }: {
   selectedSpecies: string | null;
   selectedCategory: string | null;
   speciesInfo: Record<string, any>;
+  isVisible: boolean;
+  onToggleVisibility: () => void;
 }) => {
-  if (!selectedSpecies) return null;
+  if (!selectedSpecies || !isVisible) return null;
 
   console.log("Selected Species:", selectedSpecies);
   console.log("Normalized name:", normalizeName(selectedSpecies));
@@ -87,8 +91,35 @@ const SpeciesInfoPanel = ({
         zIndex: 1000,
         width: "300px",
         overflowY: "auto",
-      }}
+        "@media (max-width: 768px)": {
+          width: "calc(100% - 40px)",
+          maxWidth: "100%",
+          maxHeight: "55vh",
+          padding: "12px",
+          borderRadius: "8px",
+        },
+      } as any}
     >
+      <button
+        onClick={onToggleVisibility}
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          background: "none",
+          border: "none",
+          fontSize: "20px",
+          cursor: "pointer",
+          color: "#000",
+          "@media (max-width: 768px)": {
+            fontSize: "18px",
+            top: "8px",
+            right: "8px",
+          },
+        } as any}
+      >
+        ✕
+      </button>
       <h3 style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>
         Thông tin loài
       </h3>
@@ -145,6 +176,8 @@ const MapNavigator = ({
   onToggleRung,
   onCategorySelect,
   onSpeciesSelect,
+  isVisible,
+  onToggleVisibility,
 }: {
   groupedSpecies: Record<string, string[]>;
   selectedCategory: string | null;
@@ -159,6 +192,8 @@ const MapNavigator = ({
   onToggleRung: () => void;
   onCategorySelect: (c: string) => void;
   onSpeciesSelect: (s: string) => void;
+  isVisible: boolean;
+  onToggleVisibility: () => void;
 }) => {
   const toggleSwitch = (checked: boolean) => ({
     width: "40px",
@@ -187,14 +222,39 @@ const MapNavigator = ({
         boxShadow: "0 2px 10px rgba(0,0,0,0.4)",
         zIndex: 1000,
         width: "280px",
-        display: "flex",
+        display: isVisible ? "flex" : "none",
         flexDirection: "column",
         overflowY: "auto",
-      }}
+        "@media (max-width: 768px)": {
+          position: "absolute",
+          bottom: "20px",
+          right: "20px",
+          left: "20px",
+          top: "auto",
+          width: "calc(100% - 40px)",
+          maxHeight: "45vh",
+          padding: "12px",
+          borderRadius: "8px",
+        },
+      } as any}
     >
-      <h3 style={{ fontSize: "15px", fontWeight: "bold", marginBottom: "10px" }}>
-        Bộ chọn hiển thị
-      </h3>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+        <h3 style={{ fontSize: "15px", fontWeight: "bold", margin: 0 }}>
+          Bộ chọn hiển thị
+        </h3>
+        <button
+          onClick={onToggleVisibility}
+          style={{
+            background: "none",
+            border: "none",
+            fontSize: "20px",
+            cursor: "pointer",
+            color: "#000",
+          }}
+        >
+          ✕
+        </button>
+      </div>
 
       {[ 
         { label: "Môi trường (Thực vật)", checked: showEnvironment, onToggle: onToggleEnvironment },
@@ -320,8 +380,27 @@ export default function Map() {
   const [showKenh, setShowKenh] = useState(false);
   const [showKiemke, setShowKiemke] = useState(false);
   const [showRung, setShowRung] = useState(false);
+  const [showSpeciesPanel, setShowSpeciesPanel] = useState(true);
+  const [showNavigatorPanel, setShowNavigatorPanel] = useState(true);
 
   const mapRef = useRef<L.Map>(null!);
+
+  // --- Tự động ẩn panel trên điện thoại ---
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setShowSpeciesPanel(false);
+        setShowNavigatorPanel(false);
+      } else {
+        setShowSpeciesPanel(true);
+        setShowNavigatorPanel(true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // --- Load thông tin chi tiết các loài ---
   useEffect(() => {
@@ -450,7 +529,67 @@ export default function Map() {
         selectedSpecies={selectedSpecies}
         selectedCategory={selectedCategory}
         speciesInfo={speciesInfo}
+        isVisible={showSpeciesPanel}
+        onToggleVisibility={() => setShowSpeciesPanel(!showSpeciesPanel)}
       />
+
+      {/* Nút mở panel Thông tin loài */}
+      {!showSpeciesPanel && selectedSpecies && (
+        <button
+          onClick={() => setShowSpeciesPanel(true)}
+          style={{
+            position: "absolute",
+            top: "20px",
+            left: "20px",
+            background: "#4CAF50",
+            color: "#fff",
+            border: "none",
+            borderRadius: "8px",
+            padding: "10px 15px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "bold",
+            zIndex: 999,
+            boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            "@media (max-width: 768px)": {
+              padding: "8px 12px",
+              fontSize: "12px",
+              borderRadius: "6px",
+            },
+          } as any}
+        >
+          📋 Thông tin
+        </button>
+      )}
+
+      {/* Nút mở panel Bộ chọn hiển thị */}
+      {!showNavigatorPanel && (
+        <button
+          onClick={() => setShowNavigatorPanel(true)}
+          style={{
+            position: "absolute",
+            top: "20px",
+            right: "20px",
+            background: "#2196F3",
+            color: "#fff",
+            border: "none",
+            borderRadius: "8px",
+            padding: "10px 15px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "bold",
+            zIndex: 999,
+            boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            "@media (max-width: 768px)": {
+              padding: "8px 12px",
+              fontSize: "12px",
+              borderRadius: "6px",
+            },
+          } as any}
+        >
+          ⚙️ Bộ chọn
+        </button>
+      )}
 
       <MapContainer
         ref={mapRef}
@@ -506,6 +645,8 @@ export default function Map() {
           onSpeciesSelect={(s) =>
             setSelectedSpecies(s === selectedSpecies ? null : s)
           }
+          isVisible={showNavigatorPanel}
+          onToggleVisibility={() => setShowNavigatorPanel(!showNavigatorPanel)}
         />
       </MapContainer>
     </div>
