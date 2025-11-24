@@ -92,6 +92,7 @@ const SpeciesInfoPanel = ({
         width: "300px",
         overflowY: "auto",
         touchAction: "pan-y",
+        pointerEvents: "auto",
         "@media (max-width: 768px)": {
           width: "calc(100% - 40px)",
           maxWidth: "100%",
@@ -209,8 +210,28 @@ const MapNavigator = ({
     transition: "background-color 0.2s",
   });
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.stopPropagation();
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    e.stopPropagation();
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    e.stopPropagation();
+  };
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <div
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onWheel={handleWheel}
+      onPointerDown={handlePointerDown}
       style={{
         position: "absolute",
         top: "20px",
@@ -227,6 +248,7 @@ const MapNavigator = ({
         flexDirection: "column",
         overflowY: "auto",
         touchAction: "pan-y",
+        pointerEvents: "auto",
         "@media (max-width: 768px)": {
           position: "absolute",
           bottom: "20px",
@@ -560,7 +582,7 @@ export default function Map() {
             },
           } as any}
         >
-          📋 Thông tin
+          Thông tin
         </button>
       )}
 
@@ -589,7 +611,7 @@ export default function Map() {
             },
           } as any}
         >
-          ⚙️ Bộ chọn
+          Bộ chọn
         </button>
       )}
 
