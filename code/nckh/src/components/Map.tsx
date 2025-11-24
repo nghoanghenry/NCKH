@@ -227,8 +227,9 @@ const MapNavigator = ({
             <span
               style={{
                 position: "absolute",
-                top: "2px",
-                left: layer.checked ? "22px" : "2px",
+                top: "40%",
+                transform: "translateY(-50%)",
+                left: layer.checked ? "26px" : "5px",
                 width: "16px",
                 height: "16px",
                 borderRadius: "50%",
