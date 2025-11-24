@@ -91,6 +91,7 @@ const SpeciesInfoPanel = ({
         zIndex: 1000,
         width: "300px",
         overflowY: "auto",
+        touchAction: "pan-y",
         "@media (max-width: 768px)": {
           width: "calc(100% - 40px)",
           maxWidth: "100%",
@@ -225,6 +226,7 @@ const MapNavigator = ({
         display: isVisible ? "flex" : "none",
         flexDirection: "column",
         overflowY: "auto",
+        touchAction: "pan-y",
         "@media (max-width: 768px)": {
           position: "absolute",
           bottom: "20px",
