@@ -109,6 +109,19 @@ const SpeciesInfoPanel = ({
       <p><b>Môi trường sống:</b> {info.habitat || "Không rõ"}</p>
       <p><b>Thức ăn:</b> {info.diet || "Không rõ"}</p>
       <p><b>Mô tả:</b> {info.description}</p>
+      {selectedSpecies === "Tê tê" && (
+        <img
+          src="/assets/tete.jpg"
+          alt="Tê tê"
+          style={{
+            width: "100%",
+            height: "180px",
+            objectFit: "contain",
+            borderRadius: "8px",
+            marginTop: "10px",
+          }}
+        />
+      )}
     </div>
   );
 };
