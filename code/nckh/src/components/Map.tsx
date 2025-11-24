@@ -93,7 +93,11 @@ const SpeciesInfoPanel = ({
         Thông tin loài
       </h3>
       <img
-        src={info.image}
+        src={
+          selectedSpecies === "Tê tê"
+            ? "/assets/te-te-java.webp"
+            : info.image
+        }
         alt={info.name}
         style={{
           width: "100%",
@@ -309,8 +313,8 @@ export default function Map() {
   const [speciesInfo, setSpeciesInfo] = useState<Record<string, any>>({});
 
   const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedSpecies, setSelectedSpecies] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>("Thú");
+  const [selectedSpecies, setSelectedSpecies] = useState<string | null>("Tê tê");
   const [showEnvironment, setShowEnvironment] = useState(false);
   const [showKenh, setShowKenh] = useState(false);
   const [showKiemke, setShowKiemke] = useState(false);
