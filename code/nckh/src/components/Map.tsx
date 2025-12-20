@@ -8,6 +8,7 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import proj4 from "proj4";
+import { QRCodeSVG } from "qrcode.react";
 import "leaflet/dist/leaflet.css";
 
 // --- Fix icon mặc định cho Marker ---
@@ -31,6 +32,11 @@ function normalizeName(name: string) {
     .replace(/\s+/g, "_")
     .replace(/[^\w]/g, "_")
     .toLowerCase();
+}
+
+// Hàm chuyển đổi tên loài sang ID cho URL
+function getSpeciesId(speciesName: string): string {
+  return normalizeName(speciesName);
 }
 
 
@@ -146,18 +152,43 @@ const SpeciesInfoPanel = ({
       <p><b>Môi trường sống:</b> {info.habitat || "Không rõ"}</p>
       <p><b>Thức ăn:</b> {info.diet || "Không rõ"}</p>
       <p><b>Mô tả:</b> {info.description}</p>
-      {selectedSpecies === "Tê tê" && (
-        <img
-          src="/assets/tete.jpg"
-          alt="Tê tê"
-          style={{
-            width: "100%",
-            height: "180px",
-            objectFit: "contain",
+      
+      {selectedSpecies && (
+        <div style={{ marginTop: "20px", textAlign: "center" }}>
+          <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            Quét mã QR để xem chi tiết:
+          </p>
+          <div style={{ 
+            background: "white", 
+            padding: "15px", 
             borderRadius: "8px",
+            display: "inline-block"
+          }}>
+            <QRCodeSVG 
+              value={`${window.location.origin}/species/${getSpeciesId(selectedSpecies)}`}
+              size={200}
+              level="H"
+              includeMargin={true}
+            />
+          </div>
+          <p style={{ 
+            fontSize: "12px", 
+            color: "#666", 
             marginTop: "10px",
-          }}
-        />
+            fontStyle: "italic"
+          }}>
+            Hoặc{" "}
+            <a 
+              href={`/species/${getSpeciesId(selectedSpecies)}`}
+              style={{ color: "#4CAF50", textDecoration: "underline" }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              nhấp vào đây
+            </a>
+            {" "}để xem ngay
+          </p>
+        </div>
       )}
     </div>
   );

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2b2b" />
+    </marker>
+    <style>
+      .box { fill:#f8f9fb; stroke:#2b2b2b; stroke-width:1.6; rx:10; }
+      .title { font: bold 14px sans-serif; fill:#0b2545; }
+      .desc { font: 12px sans-serif; fill:#111; }
+      .small { font: 11px monospace; fill:#222; }
+      .note { fill:#fff7cc; stroke:#d8b400; }
+    </style>
+  </defs>
+
+  <!-- Nodes -->
+  <g id="n1">
+    <rect class="box" x="60" y="40" width="300" height="80" />
+    <text class="title" x="80" y="64">Bước 1: Cài đặt thư viện</text>
+    <text class="small" x="80" y="88">npm install qrcode @types/qrcode</text>
+  </g>
+
+  <g id="n2">
+    <rect class="box" x="360" y="40" width="300" height="80" />
+    <text class="title" x="380" y="64">Bước 2: Tạo component</text>
+    <text class="desc" x="380" y="88">generateQR(speciesName)</text>
+  </g>
+
+  <g id="n3">
+    <rect class="box" x="660" y="40" width="300" height="80" />
+    <text class="title" x="680" y="64">Tạo URL</text>
+    <text class="small" x="680" y="88">https://yourdomain.com/species/[loai]/[ten-loai]</text>
+  </g>
+
+  <g id="n4">
+    <rect class="box" x="360" y="160" width="300" height="80" />
+    <text class="title" x="380" y="184">Sinh QR</text>
+    <text class="small" x="380" y="208">QRCode.toDataURL(url)</text>
+  </g>
+
+  <g id="n5">
+    <rect class="box" x="360" y="300" width="300" height="80" />
+    <text class="title" x="380" y="324">Hiển thị / Lưu</text>
+    <text class="desc" x="380" y="348">Hiển thị DataURL, xuất PNG/PDF</text>
+  </g>
+
+  <g id="n6">
+    <rect class="box" x="360" y="440" width="300" height="80" />
+    <text class="title" x="380" y="464">In & Gắn</text>
+    <text class="desc" x="380" y="488">In trên giấy/nhựa, gắn lên mẫu vật</text>
+  </g>
+
+  <!-- Data validation side node -->
+  <g id="data" transform="translate(60,200)">
+    <rect class="note" x="0" y="0" width="240" height="120" rx="8" />
+    <text class="title" x="12" y="22">Kiểm tra dữ liệu</text>
+    <text class="desc" x="12" y="46">species_info_normalized.json</text>
+    <text class="desc" x="12" y="66">Hình ảnh: /public/images/</text>
+    <text class="desc" x="12" y="86">Chuẩn hóa tên (normalizeName)</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="360" y1="80" x2="360" y2="120" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="660" y1="80" x2="660" y2="120" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="510" y1="120" x2="510" y2="160" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <line x1="510" y1="240" x2="510" y2="300" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="510" y1="380" x2="510" y2="440" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Horizontal connectors for top row -->
+  <line x1="360" y1="80" x2="660" y2="80" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="360" y1="80" x2="360" y2="80" stroke="none" />
+
+  <!-- Connect top row left to middle branch -->
+  <line x1="160" y1="200" x2="320" y2="200" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="320" y1="200" x2="360" y2="200" stroke="#2b2b2b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Labels for flow -->
+  <text class="desc" x="420" y="36">Luồng chính</text>
+  <text class="desc" x="72" y="196">Dữ liệu & kiểm tra</text>
+
+  <!-- Small legend -->
+  <rect x="740" y="560" width="220" height="110" rx="8" fill="#f0f4f8" stroke="#c8d5e6" />
+  <text class="title" x="754" y="584">Chú giải</text>
+  <text class="small" x="754" y="608">• normalizeName: chuẩn hóa tên loài</text>
+  <text class="small" x="754" y="628">• DataURL: base64 => xuất PNG/PDF</text>
+  <text class="small" x="754" y="648">• URL format: /species/[loai]/[ten-loai]</text>
+
+</svg>

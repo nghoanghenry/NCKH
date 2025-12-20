@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900">
+  <style>
+    .box { fill:#ffffff; stroke:#2c3e50; stroke-width:2; rx:8; }
+    .title { font: bold 14px sans-serif; fill:#0b2545; }
+    .text { font: 12px sans-serif; fill:#111; }
+    .num { font: bold 16px sans-serif; fill:#2c3e50; }
+    .shadow { filter: url(#f1); }
+  </style>
+  <defs>
+    <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Grid positions: 3 columns x 3 rows -->
+  <!-- Row 1 -->
+  <g transform="translate(60,40)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">1</text>
+    <text class="title" x="40" y="30">Cài đặt thư viện</text>
+    <text class="text" x="40" y="56">npm install qrcode</text>
+    <text class="text" x="40" y="76">@types/qrcode (tuỳ cần)</text>
+  </g>
+
+  <g transform="translate(360,40)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">2</text>
+    <text class="title" x="40" y="30">Tạo component</text>
+    <text class="text" x="40" y="56">generateQR(speciesName)</text>
+    <text class="text" x="40" y="76">QRCode.toDataURL(url)</text>
+  </g>
+
+  <g transform="translate(660,40)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">3</text>
+    <text class="title" x="40" y="30">Tạo URL mẫu</text>
+    <text class="text" x="40" y="56">/species/[category]/[species_slug]</text>
+    <text class="text" x="40" y="76">Chuẩn hoá tên: normalizeName()</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(60,200)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">4</text>
+    <text class="title" x="40" y="30">Sinh QR</text>
+    <text class="text" x="40" y="56">Tạo DataURL (base64)</text>
+    <text class="text" x="40" y="76">Hoặc tạo file PNG</text>
+  </g>
+
+  <g transform="translate(360,200)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">5</text>
+    <text class="title" x="40" y="30">Lưu & Quản lý</text>
+    <text class="text" x="40" y="56">Bảng `qr_codes` trong DB</text>
+    <text class="text" x="40" y="76">fields: id, species_slug, url, data_url, status</text>
+  </g>
+
+  <g transform="translate(660,200)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">6</text>
+    <text class="title" x="40" y="30">Export / In</text>
+    <text class="text" x="40" y="56">Xuất PNG/PDF, in hàng loạt</text>
+    <text class="text" x="40" y="76">Gắn lên mẫu vật</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(60,360)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">7</text>
+    <text class="title" x="40" y="30">Quy trình Batch</text>
+    <text class="text" x="40" y="56">CSV upload → Generate theo batch</text>
+    <text class="text" x="40" y="76">Lưu `batch_id` để quản lý</text>
+  </g>
+
+  <g transform="translate(360,360)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">8</text>
+    <text class="title" x="40" y="30">Admin & Chức năng</text>
+    <text class="text" x="40" y="56">/admin/qrs: list, filter, revoke</text>
+    <text class="text" x="40" y="76">In lại, export, xem lịch sử</text>
+  </g>
+
+  <g transform="translate(660,360)">
+    <rect class="box shadow" x="0" y="0" width="280" height="120" />
+    <text class="num" x="12" y="30">9</text>
+    <text class="title" x="40" y="30">Analytics & Bảo trì</text>
+    <text class="text" x="40" y="56">Ghi lại lượt quét, thời gian</text>
+    <text class="text" x="40" y="76">Vô hiệu hóa QR khi cần</text>
+  </g>
+
+  <!-- Connectors: draw simple arrows between primary flow boxes -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- Horizontal arrows row1 -->
+  <line x1="340" y1="100" x2="360" y2="100" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)" />
+  <line x1="640" y1="100" x2="660" y2="100" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)" />
+
+  <!-- Vertical arrows center col -->
+  <line x1="500" y1="160" x2="500" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)" />
+  <line x1="500" y1="320" x2="500" y2="360" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)" />
+
+  <!-- Legend -->
+  <rect x="60" y="520" width="880" height="140" rx="8" fill="#f7fbff" stroke="#d6e6ff"/>
+  <text class="title" x="80" y="548">Ghi chú</text>
+  <text class="text" x="80" y="574">• `species_slug`: tên chuẩn hoá dùng trong URL</text>
+  <text class="text" x="80" y="596">• `data_url`: base64 image, dùng để hiển thị nhanh / xuất PNG</text>
+  <text class="text" x="80" y="618">• Batch: tạo, in, và đánh dấu `printed_at` khi in xong</text>
+
+</svg>
