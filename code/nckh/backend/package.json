@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
+    "db:wait": "node scripts/wait-for-db.js",
     "db:schema": "node scripts/run-schema.js",
     "import:geojson": "node scripts/import-geojson-to-coordinates.js",
     "import:category-map": "node scripts/import-geojson-by-category-map.js",
