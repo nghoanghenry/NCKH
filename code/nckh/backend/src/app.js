@@ -23,7 +23,9 @@ export function createApp() {
           callback(null, true);
           return;
         }
-        callback(new Error("Not allowed by CORS"));
+        const corsError = new Error(`Not allowed by CORS: ${origin}`);
+        corsError.status = 403;
+        callback(corsError);
       },
       credentials: true,
     })
@@ -53,6 +55,11 @@ export function createApp() {
 
   app.use((err, _req, res, _next) => {
     console.error(err);
+
+    if (err?.status === 403 && String(err?.message || "").startsWith("Not allowed by CORS")) {
+      return res.status(403).json({ message: "CORS origin is not allowed" });
+    }
+
     res.status(500).json({ message: "Unhandled server error" });
   });
 
