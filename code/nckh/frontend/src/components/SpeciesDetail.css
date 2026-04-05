@@ -1,0 +1,411 @@
+.species-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100px);
+  min-height: 100vh;
+}
+
+.species-detail-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.detail-language-switch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.detail-language-switch button {
+  border: 1px solid #9ca3af;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.detail-language-switch button.active {
+  background: #111827;
+  color: #ffffff;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.species-detail-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.scientific-name {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  font-style: italic;
+  margin: 0;
+}
+
+.species-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.species-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.species-main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-image-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-image-nav {
+  border: 1px solid #9ca3af;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.species-thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+  padding: 12px;
+  background: #f9fafb;
+}
+
+.species-thumb-button {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: #ffffff;
+}
+
+.species-thumb-button.active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.species-thumb-button img {
+  width: 100%;
+  height: 68px;
+  object-fit: cover;
+  display: block;
+}
+
+.conservation-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 3px solid;
+}
+
+.conservation-badge[data-status="Cực"] {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.conservation-badge[data-status="Nguy"] {
+  border-color: #e67e22;
+  color: #e67e22;
+}
+
+.conservation-badge[data-status="Sắp"] {
+  border-color: #f39c12;
+  color: #f39c12;
+}
+
+.conservation-badge[data-status="Ít"] {
+  border-color: #27ae60;
+  color: #27ae60;
+}
+
+.species-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 4px solid #4CAF50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.info-card h3 {
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.info-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.info-card strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.info-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #4CAF50;
+}
+
+.description {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.characteristics-list,
+.threats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.characteristics-list li,
+.threats-list li {
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  margin-bottom: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  position: relative;
+  line-height: 1.6;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.characteristics-list li:hover,
+.threats-list li:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+.characteristics-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 1rem;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.threats-list li::before {
+  content: "⚠";
+  position: absolute;
+  left: 1rem;
+  font-size: 1.25rem;
+}
+
+.threats-section {
+  border-left: 4px solid #e74c3c;
+}
+
+.conservation-message {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.conservation-message h3 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.conservation-message p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.conservation-message strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.species-detail-error {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.species-detail-error h2 {
+  color: #e74c3c;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.species-detail-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.species-detail-loading h2 {
+  color: #3498db;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .species-detail-container {
+    padding: 1rem;
+  }
+
+  .species-detail-header h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .scientific-name {
+    font-size: 1.2rem;
+  }
+
+  .back-button {
+    position: static;
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .detail-language-switch {
+    position: static;
+    margin: 0 auto 1rem auto;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .species-main-image {
+    height: 300px;
+  }
+
+  .species-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section {
+    padding: 1.5rem;
+  }
+
+  .characteristics-list li,
+  .threats-list li {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .characteristics-list li::before,
+  .threats-list li::before {
+    font-size: 1rem;
+    left: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .species-detail-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .scientific-name {
+    font-size: 1rem;
+  }
+
+  .species-main-image {
+    height: 250px;
+  }
+
+  .detail-image-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-card,
+  .info-section {
+    padding: 1rem;
+  }
+}

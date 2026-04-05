@@ -1,0 +1,75 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-app-header {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.main-app-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .main-app-title {
+    font-size: 12px;
+  }
+}
+
+.map-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Leaflet popup styles */
+.leaflet-popup-content {
+  margin: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.species-marker-popup {
+  max-height: 180px;
+  overflow-y: auto;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leaflet-popup-content h3 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.leaflet-popup-content strong {
+  color: #555;
+  margin-right: 4px;
+}
+
+/* Layer control styles */
+.leaflet-control-layers {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.leaflet-control-layers-list {
+  padding: 6px 8px;
+}
+
+.leaflet-control-layers label {
+  margin-bottom: 4px;
+}
