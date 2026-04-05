@@ -13,6 +13,9 @@ import { requireAdmin, requireAuth } from "./middleware/auth.js";
 export function createApp() {
   const app = express();
 
+  // Required when app is behind nginx so middleware uses the correct client IP.
+  app.set("trust proxy", config.trustProxy);
+
   const allowAllOrigins = config.corsOrigins.includes("*");
 
   app.use(helmet());
