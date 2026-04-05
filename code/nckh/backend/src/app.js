@@ -60,6 +60,15 @@ export function createApp() {
       return res.status(403).json({ message: "CORS origin is not allowed" });
     }
 
+    // express.json() raises this when request body is malformed JSON
+    if (err?.type === "entity.parse.failed") {
+      return res.status(400).json({ message: "Invalid JSON payload" });
+    }
+
+    if (Number.isInteger(err?.status) && err.status >= 400 && err.status < 500) {
+      return res.status(err.status).json({ message: err.message || "Bad request" });
+    }
+
     res.status(500).json({ message: "Unhandled server error" });
   });
 
