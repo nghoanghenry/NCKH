@@ -105,7 +105,7 @@ export default function AdminLoginPage({
           style={{ marginTop: 24 }}
           initialValues={{
             email: "admin@nckh.local",
-            password: "Admin@123456",
+            password: "",
           }}
         >
           <Form.Item
