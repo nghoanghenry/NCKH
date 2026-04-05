@@ -203,7 +203,12 @@ WHERE
 
 DELETE FROM species_categories
 WHERE
-    LOWER(TRIM(COALESCE(name, ''))) IN ('thuc vat', 'thucvat', 'khac', 'other')
+    LOWER(TRIM(COALESCE(name, ''))) IN (
+        'thuc vat',
+        'thucvat',
+        'khac',
+        'other'
+    )
     OR LOWER(TRIM(COALESCE(name_vi, ''))) IN ('thuc vat', 'thucvat', 'khac')
     OR LOWER(TRIM(COALESCE(name_en, ''))) IN ('plant', 'plants', 'other');
 
