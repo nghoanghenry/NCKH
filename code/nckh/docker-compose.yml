@@ -69,6 +69,15 @@ services:
     networks:
       - internal
 
+  certbot:
+    image: certbot/certbot:latest
+    container_name: nckh-certbot
+    volumes:
+      - ./infra/certbot/conf:/etc/letsencrypt:rw
+      - ./infra/certbot/www:/var/www/certbot:rw
+    networks:
+      - internal
+
   nginx:
     image: nginx:1.27-alpine
     container_name: nckh-nginx
@@ -78,8 +87,11 @@ services:
       - backend
     ports:
       - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"
     volumes:
-      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${NGINX_CONF:-./infra/nginx/default.conf}:/etc/nginx/conf.d/default.conf:ro
+      - ./infra/certbot/conf:/etc/letsencrypt:ro
+      - ./infra/certbot/www:/var/www/certbot:ro
     read_only: true
     tmpfs:
       - /var/cache/nginx
