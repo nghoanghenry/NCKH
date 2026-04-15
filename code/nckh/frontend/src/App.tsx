@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useMemo, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Map from "./components/Map";
 import SpeciesDetail from "./components/SpeciesDetail";
 import RequireAdminRoute from "./admin/RequireAdminRoute";
@@ -20,6 +20,7 @@ function loadInitialLanguage(): Language {
 
 function App() {
   const [language, setLanguage] = useState<Language>(loadInitialLanguage);
+  const navigate = useNavigate();
   const t = useMemo(() => (language === "en" ? en : vn), [language]);
 
   useEffect(() => {
@@ -75,6 +76,22 @@ function App() {
                     gap: "8px",
                   }}
                 >
+                  <button
+                    type="button"
+                    onClick={() => navigate("/admin/login")}
+                    style={{
+                      border: "1px solid #9ca3af",
+                      background: "#1d4ed8",
+                      color: "#ffffff",
+                      borderRadius: "8px",
+                      padding: "6px 12px",
+                      cursor: "pointer",
+                      fontWeight: 600,
+                      fontSize: "13px",
+                    }}
+                  >
+                    Admin
+                  </button>
                   <span style={{ fontSize: "14px", color: "#4b5563" }}>
                     {t.app.languageLabel}:
                   </span>

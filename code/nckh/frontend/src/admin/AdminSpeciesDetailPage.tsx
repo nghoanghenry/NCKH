@@ -342,13 +342,11 @@ export default function AdminSpeciesDetailPage({
     }
 
     if (payload.lon < -180 || payload.lon > 180) {
-      message.error(tAdmin.validationLongitudeRange);
-      return;
+      // No range restriction for projected coordinate systems (e.g. UTM)
     }
 
     if (payload.lat < -90 || payload.lat > 90) {
-      message.error(tAdmin.validationLatitudeRange);
-      return;
+      // No range restriction for projected coordinate systems (e.g. UTM)
     }
 
     if (hasDuplicateCoordinateTuple(payload, editingCoordinate?.coordinateId)) {
@@ -711,6 +709,21 @@ export default function AdminSpeciesDetailPage({
         onOk={() => featureForm.submit()}
         okButtonProps={{ loading: featureModalSaving }}
       >
+        <div
+          style={{
+            background: "#fffbe6",
+            border: "1px solid #ffe58f",
+            borderRadius: 6,
+            padding: "8px 12px",
+            marginBottom: 16,
+            fontSize: 13,
+            color: "#7c4700",
+          }}
+        >
+          <strong>Lưu ý:</strong> Sau khi thêm feature, hãy quay lại bấm{" "}
+          <em>"Thêm tọa độ"</em> để nhập tọa độ cho feature vừa tạo. Cần có ít
+          nhất 1 tọa độ thì marker mới hiện ra trên bản đồ.
+        </div>
         <Form form={featureForm} layout="vertical" onFinish={submitFeature}>
           <Form.Item
             name="geomType"
@@ -743,6 +756,23 @@ export default function AdminSpeciesDetailPage({
         onOk={() => coordinateForm.submit()}
         okButtonProps={{ loading: coordinateModalSaving }}
       >
+        <div
+          style={{
+            background: "#e6f4ff",
+            border: "1px solid #91caff",
+            borderRadius: 6,
+            padding: "8px 12px",
+            marginBottom: 16,
+            fontSize: 13,
+            color: "#003a8c",
+          }}
+        >
+          <strong>Lưu ý:</strong> Nhập <strong>X</strong> (kinh độ hoặc tọa độ
+          chiếu ngang) và <strong>Y</strong> (vĩ độ hoặc tọa độ chiếu dọc). Hệ
+          thống hỗ trợ cả WGS 84 (≈ 104–106, 9–10) lẫn UTM có giá trị lớn (ví
+          dụ: X = 1 021 379, Y = 494 234). Sau khi lưu đủ tọa độ, marker sẽ tự
+          động hiện ra trên bản đồ trang chủ.
+        </div>
         <Form
           form={coordinateForm}
           layout="vertical"
@@ -853,27 +883,12 @@ export default function AdminSpeciesDetailPage({
               label={tAdmin.tableLongitude}
               rules={[
                 { required: true, message: tAdmin.validationLongitudeRequired },
-                {
-                  validator: (_rule, value) => {
-                    if (value === undefined || value === null) {
-                      return Promise.resolve();
-                    }
-                    const lon = Number(value);
-                    if (lon >= -180 && lon <= 180) {
-                      return Promise.resolve();
-                    }
-                    return Promise.reject(
-                      new Error(tAdmin.validationLongitudeRange),
-                    );
-                  },
-                },
               ]}
             >
               <InputNumber
                 style={{ width: "100%" }}
                 step={0.000001}
-                min={-180}
-                max={180}
+                stringMode
               />
             </Form.Item>
 
@@ -882,27 +897,12 @@ export default function AdminSpeciesDetailPage({
               label={tAdmin.tableLatitude}
               rules={[
                 { required: true, message: tAdmin.validationLatitudeRequired },
-                {
-                  validator: (_rule, value) => {
-                    if (value === undefined || value === null) {
-                      return Promise.resolve();
-                    }
-                    const lat = Number(value);
-                    if (lat >= -90 && lat <= 90) {
-                      return Promise.resolve();
-                    }
-                    return Promise.reject(
-                      new Error(tAdmin.validationLatitudeRange),
-                    );
-                  },
-                },
               ]}
             >
               <InputNumber
                 style={{ width: "100%" }}
                 step={0.000001}
-                min={-90}
-                max={90}
+                stringMode
               />
             </Form.Item>
           </div>

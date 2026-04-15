@@ -760,6 +760,7 @@ export default function Map({ language }: MapProps) {
   const [showKiemke, setShowKiemke] = useState(false);
   const [showRung, setShowRung] = useState(false);
   const [showSpeciesPanel, setShowSpeciesPanel] = useState(true);
+  const [tileLayer, setTileLayer] = useState<"street" | "satellite">("street");
   const [showNavigatorPanel, setShowNavigatorPanel] = useState(true);
   const [activeMarkerKey, setActiveMarkerKey] = useState<string | null>(null);
 
@@ -1208,7 +1209,7 @@ export default function Map({ language }: MapProps) {
 
   const uminhBounds: L.LatLngBoundsExpression = [
     [8.9, 104.7],
-    [9.5, 105.2],
+    [9.74, 105.4],
   ];
   const markerLayerKey = `${selectedSpeciesSlug || "__none"}|${selectedCategory || "__none"}|${language}`;
 
@@ -1272,20 +1273,50 @@ export default function Map({ language }: MapProps) {
         </button>
       )}
 
+      <button
+        type="button"
+        onClick={() =>
+          setTileLayer(tileLayer === "street" ? "satellite" : "street")
+        }
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "50px",
+          zIndex: 1000,
+          background: "#ffffff",
+          border: "1px solid #9ca3af",
+          borderRadius: "8px",
+          padding: "6px 10px",
+          cursor: "pointer",
+          fontSize: "13px",
+          fontWeight: 600,
+          boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
+        }}
+      >
+        {tileLayer === "street" ? "🛰 Vệ tinh" : "🗺 Bản đồ"}
+      </button>
+
       <MapContainer
         ref={mapRef}
         center={[9.25, 104.95]}
         zoom={13}
-        minZoom={12}
+        minZoom={10}
         maxZoom={16}
         maxBounds={uminhBounds}
         maxBoundsViscosity={1}
         style={{ width: "100%", height: "100%" }}
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution="© OpenStreetMap contributors"
-        />
+        {tileLayer === "street" ? (
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="© OpenStreetMap contributors"
+          />
+        ) : (
+          <TileLayer
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+            attribution="Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+          />
+        )}
 
         {showEnvironment && thucVatGeoJson && (
           <GeoJSON
