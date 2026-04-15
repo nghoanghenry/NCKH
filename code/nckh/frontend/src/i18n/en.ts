@@ -27,6 +27,8 @@ const en = {
     channelLayer: "Canals",
     inventoryLayer: "Forest inventory",
     forestLayer: "Forest",
+    satelliteLayer: "Satellite",
+    streetLayer: "Map",
     selectCategory: "Select species group:",
     speciesOfCategory: "Species ({category}):",
     popupSpecies: "Species",
