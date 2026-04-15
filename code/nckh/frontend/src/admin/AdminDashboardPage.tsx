@@ -115,7 +115,7 @@ interface AccountFormValues {
   email: string;
   password: string;
   fullName?: string;
-  isAdmin?: boolean;
+  role?: "ADMIN" | "CONTRIBUTOR" | "USER";
 }
 
 interface CategoryFormValues {
@@ -517,7 +517,7 @@ export default function AdminDashboardPage({
 
   function openCreateAccountModal() {
     accountForm.resetFields();
-    accountForm.setFieldValue("isAdmin", false);
+    accountForm.setFieldValue("role", "USER");
     setAccountModalOpen(true);
   }
 
@@ -687,13 +687,14 @@ export default function AdminDashboardPage({
     },
     {
       title: tAdmin.tableRole,
-      dataIndex: "isAdmin",
-      width: 120,
-      render: (value) => (
-        <Tag color={value ? "red" : "default"}>
-          {value ? tAdmin.roleAdmin : tAdmin.roleUser}
-        </Tag>
-      ),
+      dataIndex: "role",
+      width: 140,
+      render: (value: string) => {
+        if (value === "ADMIN") return <Tag color="red">{tAdmin.roleAdmin}</Tag>;
+        if (value === "CONTRIBUTOR")
+          return <Tag color="blue">{tAdmin.roleContributor}</Tag>;
+        return <Tag>{tAdmin.roleUser}</Tag>;
+      },
     },
     {
       title: tAdmin.tableCreatedAt,
@@ -705,16 +706,17 @@ export default function AdminDashboardPage({
       title: tAdmin.tableActions,
       key: "action",
       width: 180,
-      render: (_value, record) => (
-        <Popconfirm
-          title={tAdmin.confirmDeleteAccount}
-          onConfirm={() => removeAccount(record)}
-        >
-          <Button size="small" danger disabled={record.id === adminUser?.id}>
-            {tAdmin.tableDelete}
-          </Button>
-        </Popconfirm>
-      ),
+      render: (_value, record) =>
+        adminUser?.isAdmin ? (
+          <Popconfirm
+            title={tAdmin.confirmDeleteAccount}
+            onConfirm={() => removeAccount(record)}
+          >
+            <Button size="small" danger disabled={record.id === adminUser?.id}>
+              {tAdmin.tableDelete}
+            </Button>
+          </Popconfirm>
+        ) : null,
     },
   ];
 
@@ -883,9 +885,11 @@ export default function AdminDashboardPage({
                   onSearch={() => loadAccounts()}
                   style={{ width: 320 }}
                 />
-                <Button type="primary" onClick={openCreateAccountModal}>
-                  {tAdmin.createAccount}
-                </Button>
+                {adminUser?.isAdmin && (
+                  <Button type="primary" onClick={openCreateAccountModal}>
+                    {tAdmin.createAccount}
+                  </Button>
+                )}
               </Space>
             </Card>
 
@@ -1220,8 +1224,25 @@ export default function AdminDashboardPage({
             <Input />
           </Form.Item>
 
-          <Form.Item name="isAdmin" valuePropName="checked">
-            <Checkbox>{tAdmin.labelGrantAdmin}</Checkbox>
+          <Form.Item
+            name="isAdmin"
+            valuePropName="checked"
+            style={{ display: "none" }}
+          >
+            <input type="hidden" />
+          </Form.Item>
+          <Form.Item
+            name="role"
+            label={tAdmin.labelRole}
+            rules={[{ required: true }]}
+          >
+            <Select
+              options={[
+                { value: "ADMIN", label: tAdmin.roleAdmin },
+                { value: "CONTRIBUTOR", label: tAdmin.roleContributor },
+                { value: "USER", label: tAdmin.roleUser },
+              ]}
+            />
           </Form.Item>
         </Form>
       </Modal>

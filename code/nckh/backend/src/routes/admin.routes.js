@@ -15,6 +15,7 @@ import {
   pickLocalizedField,
   resolveLanguage,
 } from "../utils/speciesI18n.js";
+import { requireAdmin } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -129,11 +130,13 @@ function mapCategoryRow(row) {
 }
 
 function mapUserRow(row) {
+  const role = row.role || (row.is_admin ? "ADMIN" : "USER");
   return {
     id: row.id,
     email: row.email,
     fullName: row.full_name,
-    isAdmin: row.is_admin,
+    isAdmin: role === "ADMIN",
+    role,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };
@@ -201,7 +204,7 @@ function isNonNegativeInteger(value) {
 }
 
 function isValidLonLat(lon, lat) {
-  return Number.isFinite(lon) && Number.isFinite(lat) && lon >= -180 && lon <= 180 && lat >= -90 && lat <= 90;
+  return Number.isFinite(lon) && Number.isFinite(lat);
 }
 
 async function ensureCategoryRecord(categoryName) {
@@ -324,8 +327,8 @@ router.get("/categories", async (_req, res) => {
 
 router.post(
   "/categories",
+  requireAdmin,
   [
-    body("name").optional().isString(),
     body("nameVi").optional().isString(),
     body("nameEn").optional().isString(),
   ],
@@ -506,7 +509,7 @@ router.put(
   }
 );
 
-router.delete("/categories/:id", async (req, res) => {
+router.delete("/categories/:id", requireAdmin, async (req, res) => {
   const categoryId = Number(req.params.id);
   if (Number.isNaN(categoryId)) {
     return res.status(400).json({ message: "Invalid category id" });
@@ -566,13 +569,28 @@ router.delete("/categories/:id", async (req, res) => {
 router.get("/users", async (req, res) => {
   try {
     const search = String(req.query.search || "").trim();
-    const whereSql = search ? "WHERE email ILIKE $1 OR COALESCE(full_name, '') ILIKE $1" : "";
-    const values = search ? [`%${search}%`] : [];
+    const callerRole = req.user?.role || (req.user?.isAdmin ? "ADMIN" : "USER");
+
+    // Role visibility: ADMIN sees all, CONTRIBUTOR sees CONTRIBUTOR+USER, USER sees only USER
+    let roleFilter = "";
+    const values = [];
+    if (callerRole === "CONTRIBUTOR") {
+      roleFilter = search
+        ? "WHERE (email ILIKE $1 OR COALESCE(full_name, '') ILIKE $1) AND role IN ('CONTRIBUTOR','USER')"
+        : "WHERE role IN ('CONTRIBUTOR','USER')";
+    } else if (callerRole !== "ADMIN") {
+      roleFilter = search
+        ? "WHERE (email ILIKE $1 OR COALESCE(full_name, '') ILIKE $1) AND role = 'USER'"
+        : "WHERE role = 'USER'";
+    } else {
+      roleFilter = search ? "WHERE email ILIKE $1 OR COALESCE(full_name, '') ILIKE $1" : "";
+    }
+    if (search) values.push(`%${search}%`);
 
     const result = await query(
-      `SELECT id, email, full_name, is_admin, created_at, updated_at
+      `SELECT id, email, full_name, is_admin, role, created_at, updated_at
        FROM users
-       ${whereSql}
+       ${roleFilter}
        ORDER BY id DESC`,
       values
     );
@@ -586,16 +604,19 @@ router.get("/users", async (req, res) => {
 
 router.post(
   "/users",
+  requireAdmin,
   [
     body("email").isEmail().withMessage("email is invalid"),
     body("password").isLength({ min: 6 }).withMessage("password must be at least 6 chars"),
     body("fullName").optional().isString(),
-    body("isAdmin").optional().isBoolean(),
+    body("role").optional().isIn(["ADMIN", "CONTRIBUTOR", "USER"]).withMessage("role must be ADMIN, CONTRIBUTOR or USER"),
   ],
   async (req, res) => {
     if (validationError(res, req)) return;
 
-    const { email, password, fullName, isAdmin } = req.body;
+    const { email, password, fullName, role } = req.body;
+    const normalizedRole = role || "USER";
+    const isAdmin = normalizedRole === "ADMIN";
 
     try {
       const exists = await query("SELECT id FROM users WHERE email = $1", [email]);
@@ -605,10 +626,10 @@ router.post(
 
       const hash = await bcrypt.hash(password, config.bcryptSaltRounds);
       const inserted = await query(
-        `INSERT INTO users (email, password_hash, full_name, is_admin)
-         VALUES ($1, $2, $3, $4)
-         RETURNING id, email, full_name, is_admin, created_at, updated_at`,
-        [email, hash, fullName || null, !!isAdmin]
+        `INSERT INTO users (email, password_hash, full_name, is_admin, role)
+         VALUES ($1, $2, $3, $4, $5)
+         RETURNING id, email, full_name, is_admin, role, created_at, updated_at`,
+        [email, hash, fullName || null, isAdmin, normalizedRole]
       );
 
       return res.status(201).json({ data: mapUserRow(inserted.rows[0]) });
@@ -619,7 +640,7 @@ router.post(
   }
 );
 
-router.delete("/users/:id", async (req, res) => {
+router.delete("/users/:id", requireAdmin, async (req, res) => {
   const userId = Number(req.params.id);
   if (Number.isNaN(userId)) {
     return res.status(400).json({ message: "Invalid user id" });
@@ -631,16 +652,16 @@ router.delete("/users/:id", async (req, res) => {
 
   try {
     const targetResult = await query(
-      "SELECT id, email, full_name, is_admin, created_at, updated_at FROM users WHERE id = $1 LIMIT 1",
+      "SELECT id, email, full_name, is_admin, role, created_at, updated_at FROM users WHERE id = $1 LIMIT 1",
       [userId]
     );
     if (targetResult.rowCount === 0) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    if (targetResult.rows[0].is_admin) {
+    if (targetResult.rows[0].role === "ADMIN" || targetResult.rows[0].is_admin) {
       const adminCount = await query(
-        "SELECT COUNT(*)::INT AS total FROM users WHERE is_admin = TRUE"
+        "SELECT COUNT(*)::INT AS total FROM users WHERE role = 'ADMIN' OR is_admin = TRUE"
       );
 
       if (adminCount.rows[0].total <= 1) {
@@ -998,7 +1019,7 @@ router.get("/species/:id/positions", async (req, res) => {
   }
 });
 
-router.post("/species/:speciesId/features", async (req, res) => {
+router.post("/species/:speciesId/features", requireAdmin, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1153,7 +1174,7 @@ router.put("/species/:speciesId/features/:featureId", async (req, res) => {
   }
 });
 
-router.delete("/species/:speciesId/features/:featureId", async (req, res) => {
+router.delete("/species/:speciesId/features/:featureId", requireAdmin, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const featureId = Number(req.params.featureId);
 
@@ -1180,7 +1201,7 @@ router.delete("/species/:speciesId/features/:featureId", async (req, res) => {
   }
 });
 
-router.post("/species/:speciesId/coordinates", async (req, res) => {
+router.post("/species/:speciesId/coordinates", requireAdmin, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1438,7 +1459,7 @@ router.put("/species/:speciesId/coordinates/:coordinateId", async (req, res) => 
   }
 });
 
-router.delete("/species/:speciesId/coordinates/:coordinateId", async (req, res) => {
+router.delete("/species/:speciesId/coordinates/:coordinateId", requireAdmin, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const coordinateId = Number(req.params.coordinateId);
 
@@ -1468,7 +1489,7 @@ router.delete("/species/:speciesId/coordinates/:coordinateId", async (req, res) 
   }
 });
 
-router.post("/species", async (req, res) => {
+router.post("/species", requireAdmin, async (req, res) => {
   const commonNameVi = normalizeOptionalString(req.body.commonNameVi ?? req.body.commonName);
   const commonNameEn = normalizeOptionalString(req.body.commonNameEn);
 
@@ -1734,7 +1755,7 @@ router.put("/species/:id", async (req, res) => {
   }
 });
 
-router.delete("/species/:id", async (req, res) => {
+router.delete("/species/:id", requireAdmin, async (req, res) => {
   const id = Number(req.params.id);
   if (Number.isNaN(id)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1771,7 +1792,7 @@ router.get("/species/:id/images", async (req, res) => {
   }
 });
 
-router.post("/species/:id/images", imageUpload.array("images", 10), async (req, res) => {
+router.post("/species/:id/images", requireAdmin, imageUpload.array("images", 10), async (req, res) => {
   const speciesId = Number(req.params.id);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1859,7 +1880,7 @@ router.patch("/species/:speciesId/images/:imageId/primary", async (req, res) => 
   }
 });
 
-router.delete("/species/:speciesId/images/:imageId", async (req, res) => {
+router.delete("/species/:speciesId/images/:imageId", requireAdmin, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const imageId = Number(req.params.imageId);
 

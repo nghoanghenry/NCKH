@@ -66,7 +66,7 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <div className="map-page-wrapper">
               <header className="main-app-header">
                 <h1 className="main-app-title">{t.app.title}</h1>
                 <div
@@ -125,10 +125,10 @@ function App() {
                   </button>
                 </div>
               </header>
-              <main style={{ padding: "1rem" }}>
+              <main className="map-page-main">
                 <Map language={language} />
               </main>
-            </>
+            </div>
           }
         />
         <Route

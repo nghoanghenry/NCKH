@@ -510,10 +510,12 @@ const MapNavigator = ({
   showKenh,
   showKiemke,
   showRung,
+  tileLayer,
   onToggleEnvironment,
   onToggleKenh,
   onToggleKiemke,
   onToggleRung,
+  onToggleTileLayer,
   onCategorySelect,
   onSpeciesSelect,
   isVisible,
@@ -527,10 +529,12 @@ const MapNavigator = ({
   showKenh: boolean;
   showKiemke: boolean;
   showRung: boolean;
+  tileLayer: "street" | "satellite";
   onToggleEnvironment: () => void;
   onToggleKenh: () => void;
   onToggleKiemke: () => void;
   onToggleRung: () => void;
+  onToggleTileLayer: () => void;
   onCategorySelect: (c: string) => void;
   onSpeciesSelect: (slug: string) => void;
   isVisible: boolean;
@@ -610,6 +614,11 @@ const MapNavigator = ({
       </div>
 
       {[
+        {
+          label: t.satelliteLayer,
+          checked: tileLayer === "satellite",
+          onToggle: onToggleTileLayer,
+        },
         {
           label: t.environmentLayer,
           checked: showEnvironment,
@@ -1214,7 +1223,10 @@ export default function Map({ language }: MapProps) {
   const markerLayerKey = `${selectedSpeciesSlug || "__none"}|${selectedCategory || "__none"}|${language}`;
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "600px" }}>
+    <div
+      className="map-outer-container"
+      style={{ position: "relative", width: "100%", height: "600px" }}
+    >
       <SpeciesInfoPanel
         selectedPoint={selectedPoint}
         images={selectedImages}
@@ -1278,23 +1290,8 @@ export default function Map({ language }: MapProps) {
         onClick={() =>
           setTileLayer(tileLayer === "street" ? "satellite" : "street")
         }
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "50px",
-          zIndex: 1000,
-          background: "#ffffff",
-          border: "1px solid #9ca3af",
-          borderRadius: "8px",
-          padding: "6px 10px",
-          cursor: "pointer",
-          fontSize: "13px",
-          fontWeight: 600,
-          boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
-        }}
-      >
-        {tileLayer === "street" ? "🛰 Vệ tinh" : "🗺 Bản đồ"}
-      </button>
+        style={{ display: "none" }}
+      />
 
       <MapContainer
         ref={mapRef}
@@ -1398,10 +1395,14 @@ export default function Map({ language }: MapProps) {
           showKenh={showKenh}
           showKiemke={showKiemke}
           showRung={showRung}
+          tileLayer={tileLayer}
           onToggleEnvironment={() => setShowEnvironment(!showEnvironment)}
           onToggleKenh={() => setShowKenh(!showKenh)}
           onToggleKiemke={() => setShowKiemke(!showKiemke)}
           onToggleRung={() => setShowRung(!showRung)}
+          onToggleTileLayer={() =>
+            setTileLayer(tileLayer === "street" ? "satellite" : "street")
+          }
           onCategorySelect={(c) => {
             clearMarkerTransientState();
             setPoints([]);

@@ -8,11 +8,13 @@ import { config } from "../config.js";
 const router = express.Router();
 
 function issueToken(user) {
+  const role = user.role || (user.is_admin ? "ADMIN" : "USER");
   return jwt.sign(
     {
       id: user.id,
       email: user.email,
-      isAdmin: user.is_admin,
+      isAdmin: role === "ADMIN",
+      role,
     },
     config.jwtSecret,
     { expiresIn: "1d" }
@@ -83,7 +85,7 @@ router.post(
 
     try {
       const userResult = await query(
-        `SELECT id, email, password_hash, full_name, is_admin
+        `SELECT id, email, password_hash, full_name, is_admin, role
          FROM users
          WHERE email = $1`,
         [email]
@@ -99,6 +101,7 @@ router.post(
         return res.status(401).json({ message: "Invalid credentials" });
       }
 
+      const role = user.role || (user.is_admin ? "ADMIN" : "USER");
       const token = issueToken(user);
       return res.json({
         token,
@@ -106,7 +109,8 @@ router.post(
           id: user.id,
           email: user.email,
           fullName: user.full_name,
-          isAdmin: user.is_admin,
+          isAdmin: role === "ADMIN",
+          role,
         },
       });
     } catch (error) {

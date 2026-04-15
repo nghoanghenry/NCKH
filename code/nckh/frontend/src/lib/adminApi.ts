@@ -167,6 +167,7 @@ export interface AdminUserItem {
   email: string;
   fullName: string | null;
   isAdmin: boolean;
+  role: "ADMIN" | "CONTRIBUTOR" | "USER";
   createdAt: string;
   updatedAt: string;
 }
@@ -175,7 +176,7 @@ export interface AdminCreateUserPayload {
   email: string;
   password: string;
   fullName?: string;
-  isAdmin?: boolean;
+  role?: "ADMIN" | "CONTRIBUTOR" | "USER";
 }
 
 export async function adminLogin(email: string, password: string) {
@@ -184,7 +185,8 @@ export async function adminLogin(email: string, password: string) {
     body: JSON.stringify({ email, password }),
   });
 
-  if (!payload?.user?.isAdmin) {
+  const role = payload?.user?.role;
+  if (!payload?.user?.isAdmin && role !== "ADMIN" && role !== "CONTRIBUTOR") {
     throw new Error("Tài khoản không có quyền quản trị");
   }
 

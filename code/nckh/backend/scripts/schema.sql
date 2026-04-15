@@ -289,3 +289,13 @@ CREATE TABLE IF NOT EXISTS species_images (
 CREATE INDEX IF NOT EXISTS idx_species_images_species ON species_images (species_id);
 
 CREATE INDEX IF NOT EXISTS idx_species_images_sort ON species_images (species_id, sort_order, id);
+
+-- Role-based access control migration (ADMIN / CONTRIBUTOR / USER)
+ALTER TABLE users
+ADD COLUMN IF NOT EXISTS role VARCHAR(20) NOT NULL DEFAULT 'USER';
+
+UPDATE users
+SET role = 'ADMIN'
+WHERE
+    is_admin = TRUE
+    AND role = 'USER';

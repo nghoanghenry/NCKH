@@ -19,7 +19,16 @@ export function requireAuth(req, res, next) {
 }
 
 export function requireAdmin(req, res, next) {
-  if (!req.user?.isAdmin) {
+  const role = req.user?.role;
+  if (role !== "ADMIN" && !req.user?.isAdmin) {
+    return res.status(403).json({ message: "Forbidden" });
+  }
+  return next();
+}
+
+export function requireContributor(req, res, next) {
+  const role = req.user?.role;
+  if (role !== "ADMIN" && role !== "CONTRIBUTOR" && !req.user?.isAdmin) {
     return res.status(403).json({ message: "Forbidden" });
   }
   return next();

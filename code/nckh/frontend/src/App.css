@@ -34,6 +34,25 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Desktop: full-height map layout */
+@media (min-width: 769px) {
+  .map-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+  }
+  .map-page-main {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .map-outer-container {
+    height: 100% !important;
+  }
+}
+
 /* Leaflet popup styles */
 .leaflet-popup-content {
   margin: 8px;
