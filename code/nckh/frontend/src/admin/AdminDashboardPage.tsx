@@ -133,6 +133,16 @@ export default function AdminDashboardPage({
   const isContributorOrAbove =
     userRole === "ADMIN" || userRole === "CONTRIBUTOR";
 
+  const dict = useMemo(() => (language === "en" ? en : vn), [language]);
+  const tAdmin = dict.admin;
+
+  function resolveError(error: any, fallback?: string): string {
+    const msg: string = error?.message || "";
+    if (msg === "__FORBIDDEN__") return dict.adminLogin.forbidden;
+    if (msg === "__INVALID_CREDENTIALS__") return dict.adminLogin.loginFailed;
+    return msg || fallback || tAdmin.unknownError || "Error";
+  }
+
   const [activeSection, setActiveSection] =
     useState<AdminSectionKey>("species");
 
@@ -169,9 +179,6 @@ export default function AdminDashboardPage({
   const [accountModalOpen, setAccountModalOpen] = useState(false);
   const [accountModalSaving, setAccountModalSaving] = useState(false);
   const [accountForm] = Form.useForm<AccountFormValues>();
-
-  const dict = useMemo(() => (language === "en" ? en : vn), [language]);
-  const tAdmin = dict.admin;
 
   const sectionTitleMap: Record<AdminSectionKey, string> = {
     species: tAdmin.sectionSpecies,
@@ -235,7 +242,7 @@ export default function AdminDashboardPage({
       });
       setSpeciesRows(payload.data || []);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotLoadSpecies);
+      message.error(resolveError(error, tAdmin.cannotLoadSpecies));
     } finally {
       setSpeciesLoading(false);
     }
@@ -247,7 +254,7 @@ export default function AdminDashboardPage({
       const payload = await getAdminCategories();
       setCategoryRows(payload.data || []);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotLoadCategories);
+      message.error(resolveError(error, tAdmin.cannotLoadCategories));
     } finally {
       setCategoryLoading(false);
     }
@@ -263,7 +270,7 @@ export default function AdminDashboardPage({
         userRole === "USER" ? rows.filter((r) => r.role === "USER") : rows;
       setAccountRows(filtered);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotLoadAccounts);
+      message.error(resolveError(error, tAdmin.cannotLoadAccounts));
     } finally {
       setAccountLoading(false);
     }
@@ -382,7 +389,7 @@ export default function AdminDashboardPage({
       setGeoJsonFiles([]);
       await Promise.all([loadSpecies(), loadCategories()]);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotSaveSpecies);
+      message.error(resolveError(error, tAdmin.cannotSaveSpecies));
     } finally {
       setSpeciesModalSaving(false);
     }
@@ -394,7 +401,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.speciesDeleted);
       await loadSpecies();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotDeleteSpecies);
+      message.error(resolveError(error, tAdmin.cannotDeleteSpecies));
     }
   }
 
@@ -411,7 +418,7 @@ export default function AdminDashboardPage({
       const payload = await getSpeciesImages(record.id);
       setImages(payload.data || []);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotLoadImages);
+      message.error(resolveError(error, tAdmin.cannotLoadImages));
     } finally {
       setImageModalLoading(false);
     }
@@ -431,7 +438,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.imagesUploaded);
       await loadSpecies();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotUploadImages);
+      message.error(resolveError(error, tAdmin.cannotUploadImages));
     } finally {
       setImageModalLoading(false);
     }
@@ -447,7 +454,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.imageDeleted);
       await loadSpecies();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotDeleteImage);
+      message.error(resolveError(error, tAdmin.cannotDeleteImage));
     } finally {
       setImageModalLoading(false);
     }
@@ -464,7 +471,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.primaryImageSet);
       await loadSpecies();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotSetPrimaryImage);
+      message.error(resolveError(error, tAdmin.cannotSetPrimaryImage));
     } finally {
       setImageModalLoading(false);
     }
@@ -489,7 +496,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.categoryCreated);
       await loadCategories();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotCreateCategory);
+      message.error(resolveError(error, tAdmin.cannotCreateCategory));
     } finally {
       setCategorySaving(false);
     }
@@ -525,7 +532,7 @@ export default function AdminDashboardPage({
       setEditingCategory(null);
       await Promise.all([loadCategories(), loadSpecies()]);
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotUpdateCategory);
+      message.error(resolveError(error, tAdmin.cannotUpdateCategory));
     } finally {
       setCategoryModalSaving(false);
     }
@@ -541,7 +548,7 @@ export default function AdminDashboardPage({
       if (rawMessage.includes("still has species")) {
         message.error(tAdmin.cannotDeleteCategoryHasSpecies);
       } else {
-        message.error(error.message || tAdmin.cannotDeleteCategory);
+        message.error(resolveError(error, tAdmin.cannotDeleteCategory));
       }
     }
   }
@@ -560,7 +567,7 @@ export default function AdminDashboardPage({
       setAccountModalOpen(false);
       await loadAccounts();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotCreateAccount);
+      message.error(resolveError(error, tAdmin.cannotCreateAccount));
     } finally {
       setAccountModalSaving(false);
     }
@@ -572,7 +579,7 @@ export default function AdminDashboardPage({
       message.success(tAdmin.accountDeleted);
       await loadAccounts();
     } catch (error: any) {
-      message.error(error.message || tAdmin.cannotDeleteAccount);
+      message.error(resolveError(error, tAdmin.cannotDeleteAccount));
     }
   }
 

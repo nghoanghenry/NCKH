@@ -1020,7 +1020,7 @@ router.get("/species/:id/positions", async (req, res) => {
   }
 });
 
-router.post("/species/:speciesId/features", requireAdmin, async (req, res) => {
+router.post("/species/:speciesId/features", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1175,7 +1175,7 @@ router.put("/species/:speciesId/features/:featureId", requireContributor, async 
   }
 });
 
-router.delete("/species/:speciesId/features/:featureId", requireAdmin, async (req, res) => {
+router.delete("/species/:speciesId/features/:featureId", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const featureId = Number(req.params.featureId);
 
@@ -1202,7 +1202,7 @@ router.delete("/species/:speciesId/features/:featureId", requireAdmin, async (re
   }
 });
 
-router.post("/species/:speciesId/coordinates", requireAdmin, async (req, res) => {
+router.post("/species/:speciesId/coordinates", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1793,7 +1793,7 @@ router.get("/species/:id/images", async (req, res) => {
   }
 });
 
-router.post("/species/:id/images", requireAdmin, imageUpload.array("images", 10), async (req, res) => {
+router.post("/species/:id/images", requireContributor, imageUpload.array("images", 10), async (req, res) => {
   const speciesId = Number(req.params.id);
   if (Number.isNaN(speciesId)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1881,7 +1881,7 @@ router.patch("/species/:speciesId/images/:imageId/primary", requireContributor, 
   }
 });
 
-router.delete("/species/:speciesId/images/:imageId", requireAdmin, async (req, res) => {
+router.delete("/species/:speciesId/images/:imageId", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const imageId = Number(req.params.imageId);
 

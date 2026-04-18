@@ -250,7 +250,8 @@ const vn = {
     passwordPlaceholder: "Nhập mật khẩu",
     submit: "Đăng nhập",
     loginSuccess: "Đăng nhập quản trị thành công",
-    loginFailed: "Đăng nhập thất bại",
+    loginFailed: "Email hoặc mật khẩu không đúng. Vui lòng thử lại.",
+    forbidden: "Bạn không có đủ quyền để thực hiện thao tác này.",
   },
 };
 

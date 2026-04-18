@@ -32,7 +32,14 @@ export default function AdminLoginPage({
       message.success(t.loginSuccess);
       navigate(from, { replace: true });
     } catch (error: any) {
-      message.error(error.message || t.loginFailed);
+      const msg = error.message;
+      if (msg === "__INVALID_CREDENTIALS__" || msg === "Invalid credentials") {
+        message.error(t.loginFailed);
+      } else if (msg === "__FORBIDDEN__") {
+        message.error(t.forbidden);
+      } else {
+        message.error(msg || t.loginFailed);
+      }
     } finally {
       setLoading(false);
     }

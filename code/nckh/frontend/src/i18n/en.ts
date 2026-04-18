@@ -250,7 +250,8 @@ const en = {
     passwordPlaceholder: "Enter password",
     submit: "Sign in",
     loginSuccess: "Admin login successful",
-    loginFailed: "Login failed",
+    loginFailed: "Incorrect email or password. Please try again.",
+    forbidden: "You do not have sufficient permissions to perform this action.",
   },
 };
 

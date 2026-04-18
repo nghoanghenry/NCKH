@@ -43,6 +43,12 @@ async function request(path: string, options: RequestInit = {}) {
   const payload = contentType.includes("application/json") ? await response.json() : null;
 
   if (!response.ok) {
+    if (response.status === 403) {
+      throw new Error("__FORBIDDEN__");
+    }
+    if (response.status === 401) {
+      throw new Error("__INVALID_CREDENTIALS__");
+    }
     const message = payload?.message || `Request failed: ${response.status}`;
     throw new Error(message);
   }
