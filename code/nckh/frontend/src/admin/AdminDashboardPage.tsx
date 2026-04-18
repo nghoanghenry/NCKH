@@ -257,7 +257,11 @@ export default function AdminDashboardPage({
     try {
       setAccountLoading(true);
       const payload = await getAdminUsers({ search: accountSearch });
-      setAccountRows(payload.data || []);
+      const rows: AdminUserItem[] = payload.data || [];
+      // USER role only sees other USER-role accounts
+      const filtered =
+        userRole === "USER" ? rows.filter((r) => r.role === "USER") : rows;
+      setAccountRows(filtered);
     } catch (error: any) {
       message.error(error.message || tAdmin.cannotLoadAccounts);
     } finally {

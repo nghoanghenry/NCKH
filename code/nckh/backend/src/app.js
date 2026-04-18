@@ -8,7 +8,7 @@ import { config } from "./config.js";
 import authRoutes from "./routes/auth.routes.js";
 import speciesRoutes from "./routes/species.routes.js";
 import adminRoutes from "./routes/admin.routes.js";
-import { requireAdmin, requireAuth, requireContributor } from "./middleware/auth.js";
+import { requireAuth } from "./middleware/auth.js";
 
 export function createApp() {
   const app = express();
@@ -50,7 +50,7 @@ export function createApp() {
 
   app.use("/api/auth", authLimiter, authRoutes);
   app.use("/api/species", speciesRoutes);
-  app.use("/api/admin", requireAuth, requireContributor, adminRoutes);
+  app.use("/api/admin", requireAuth, adminRoutes);
 
   app.use((req, res) => {
     res.status(404).json({ message: `Route not found: ${req.method} ${req.path}` });

@@ -15,7 +15,7 @@ import {
   pickLocalizedField,
   resolveLanguage,
 } from "../utils/speciesI18n.js";
-import { requireAdmin } from "../middleware/auth.js";
+import { requireAdmin, requireContributor } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -388,6 +388,7 @@ router.post(
 
 router.put(
   "/categories/:id",
+  requireContributor,
   [
     body("name").optional().isString(),
     body("nameVi").optional().isString(),
@@ -1088,7 +1089,7 @@ router.post("/species/:speciesId/features", requireAdmin, async (req, res) => {
   }
 });
 
-router.put("/species/:speciesId/features/:featureId", async (req, res) => {
+router.put("/species/:speciesId/features/:featureId", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const featureId = Number(req.params.featureId);
 
@@ -1289,7 +1290,7 @@ router.post("/species/:speciesId/coordinates", requireAdmin, async (req, res) =>
   }
 });
 
-router.put("/species/:speciesId/coordinates/:coordinateId", async (req, res) => {
+router.put("/species/:speciesId/coordinates/:coordinateId", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const coordinateId = Number(req.params.coordinateId);
 
@@ -1588,7 +1589,7 @@ router.post("/species", requireAdmin, async (req, res) => {
   }
 });
 
-router.put("/species/:id", async (req, res) => {
+router.put("/species/:id", requireContributor, async (req, res) => {
   const id = Number(req.params.id);
   if (Number.isNaN(id)) {
     return res.status(400).json({ message: "Invalid species id" });
@@ -1854,7 +1855,7 @@ router.post("/species/:id/images", requireAdmin, imageUpload.array("images", 10)
   }
 });
 
-router.patch("/species/:speciesId/images/:imageId/primary", async (req, res) => {
+router.patch("/species/:speciesId/images/:imageId/primary", requireContributor, async (req, res) => {
   const speciesId = Number(req.params.speciesId);
   const imageId = Number(req.params.imageId);
 
