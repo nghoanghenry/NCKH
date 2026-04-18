@@ -140,7 +140,7 @@ export default function AdminDashboardPage({
     const msg: string = error?.message || "";
     if (msg === "__FORBIDDEN__") return dict.adminLogin.forbidden;
     if (msg === "__INVALID_CREDENTIALS__") return dict.adminLogin.loginFailed;
-    return msg || fallback || tAdmin.unknownError || "Error";
+    return msg || fallback || "Error";
   }
 
   const [activeSection, setActiveSection] =
