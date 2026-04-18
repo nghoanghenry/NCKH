@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Button, Card, Form, Input, Typography, message } from "antd";
+import { Alert, Button, Card, Form, Input, Typography } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { adminLogin } from "../lib/adminApi";
 import vn from "../i18n/vn";
@@ -17,6 +17,7 @@ export default function AdminLoginPage({
   onLanguageChange,
 }: AdminLoginPageProps) {
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const [form] = Form.useForm();
@@ -26,19 +27,19 @@ export default function AdminLoginPage({
   const from = (location.state as any)?.from || "/admin";
 
   async function onFinish(values: { email: string; password: string }) {
+    setErrorMsg(null);
     try {
       setLoading(true);
       await adminLogin(values.email, values.password);
-      message.success(t.loginSuccess);
       navigate(from, { replace: true });
     } catch (error: any) {
       const msg = error.message;
       if (msg === "__INVALID_CREDENTIALS__" || msg === "Invalid credentials") {
-        message.error(t.loginFailed);
+        setErrorMsg(t.loginFailed);
       } else if (msg === "__FORBIDDEN__") {
-        message.error(t.forbidden);
+        setErrorMsg(t.forbidden);
       } else {
-        message.error(msg || t.loginFailed);
+        setErrorMsg(msg || t.loginFailed);
       }
     } finally {
       setLoading(false);
@@ -129,6 +130,15 @@ export default function AdminLoginPage({
           >
             <Input.Password placeholder={t.passwordPlaceholder} />
           </Form.Item>
+
+          {errorMsg && (
+            <Alert
+              type="error"
+              message={errorMsg}
+              showIcon
+              style={{ marginBottom: 16 }}
+            />
+          )}
 
           <Button type="primary" htmlType="submit" loading={loading} block>
             {t.submit}

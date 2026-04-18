@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  Alert,
   Button,
   Card,
   Form,
@@ -133,12 +134,18 @@ export default function AdminDashboardPage({
   const isContributorOrAbove =
     userRole === "ADMIN" || userRole === "CONTRIBUTOR";
 
+  const [sectionError, setSectionError] = useState<string | null>(null);
+
   const dict = useMemo(() => (language === "en" ? en : vn), [language]);
   const tAdmin = dict.admin;
 
   function resolveError(error: any, fallback?: string): string {
     const msg: string = error?.message || "";
-    if (msg === "__FORBIDDEN__") return dict.adminLogin.forbidden;
+    if (msg === "__FORBIDDEN__") {
+      const text = dict.adminLogin.forbidden;
+      setSectionError(text);
+      return text;
+    }
     if (msg === "__INVALID_CREDENTIALS__") return dict.adminLogin.loginFailed;
     return msg || fallback || "Error";
   }
@@ -810,7 +817,10 @@ export default function AdminDashboardPage({
         <Menu
           mode="inline"
           selectedKeys={[activeSection]}
-          onClick={(event) => setActiveSection(event.key as AdminSectionKey)}
+          onClick={(event) => {
+            setActiveSection(event.key as AdminSectionKey);
+            setSectionError(null);
+          }}
           items={[
             { key: "categories", label: tAdmin.menuCategories },
             { key: "species", label: tAdmin.menuSpecies },
@@ -875,6 +885,16 @@ export default function AdminDashboardPage({
 
         {activeSection === "species" && (
           <>
+            {sectionError && (
+              <Alert
+                type="error"
+                message={sectionError}
+                showIcon
+                closable
+                onClose={() => setSectionError(null)}
+                style={{ marginBottom: 12 }}
+              />
+            )}
             <Card style={{ marginBottom: 16 }}>
               <Space wrap>
                 <Input.Search
@@ -908,6 +928,16 @@ export default function AdminDashboardPage({
 
         {activeSection === "categories" && (
           <>
+            {sectionError && (
+              <Alert
+                type="error"
+                message={sectionError}
+                showIcon
+                closable
+                onClose={() => setSectionError(null)}
+                style={{ marginBottom: 12 }}
+              />
+            )}
             {isAdmin && (
               <Card style={{ marginBottom: 16 }}>
                 <Space wrap>
@@ -950,6 +980,16 @@ export default function AdminDashboardPage({
 
         {activeSection === "accounts" && (
           <>
+            {sectionError && (
+              <Alert
+                type="error"
+                message={sectionError}
+                showIcon
+                closable
+                onClose={() => setSectionError(null)}
+                style={{ marginBottom: 12 }}
+              />
+            )}
             <Card style={{ marginBottom: 16 }}>
               <Space wrap>
                 <Input.Search
