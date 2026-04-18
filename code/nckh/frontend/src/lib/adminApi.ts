@@ -185,11 +185,6 @@ export async function adminLogin(email: string, password: string) {
     body: JSON.stringify({ email, password }),
   });
 
-  const role = payload?.user?.role;
-  if (!payload?.user?.isAdmin && role !== "ADMIN" && role !== "CONTRIBUTOR") {
-    throw new Error("Tài khoản không có quyền quản trị");
-  }
-
   saveAdminSession(payload.token, payload.user);
   return payload;
 }

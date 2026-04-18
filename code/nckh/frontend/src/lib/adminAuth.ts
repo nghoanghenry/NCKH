@@ -3,6 +3,7 @@ export interface AdminUser {
   email: string;
   fullName: string | null;
   isAdmin: boolean;
+  role?: "ADMIN" | "CONTRIBUTOR" | "USER";
 }
 
 const TOKEN_KEY = "nckh_admin_token";
@@ -36,5 +37,5 @@ export function getAdminUser(): AdminUser | null {
 export function isAdminLoggedIn() {
   const user = getAdminUser();
   const token = getAdminToken();
-  return !!token && !!user && user.isAdmin === true;
+  return !!token && !!user;
 }

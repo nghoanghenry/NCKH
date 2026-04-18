@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Button,
   Card,
@@ -128,6 +128,10 @@ export default function AdminDashboardPage({
 }: AdminDashboardPageProps) {
   const navigate = useNavigate();
   const adminUser = useMemo(() => getAdminUser(), []);
+  const userRole = adminUser?.role ?? (adminUser?.isAdmin ? "ADMIN" : "USER");
+  const isAdmin = userRole === "ADMIN";
+  const isContributorOrAbove =
+    userRole === "ADMIN" || userRole === "CONTRIBUTOR";
 
   const [activeSection, setActiveSection] =
     useState<AdminSectionKey>("species");
@@ -196,6 +200,30 @@ export default function AdminDashboardPage({
     loadCategories();
     loadAccounts();
   }, []);
+
+  const speciesSearchFirstRef = useRef(true);
+  useEffect(() => {
+    if (speciesSearchFirstRef.current) {
+      speciesSearchFirstRef.current = false;
+      return;
+    }
+    const timer = setTimeout(() => {
+      loadSpecies();
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [speciesSearch]);
+
+  const accountSearchFirstRef = useRef(true);
+  useEffect(() => {
+    if (accountSearchFirstRef.current) {
+      accountSearchFirstRef.current = false;
+      return;
+    }
+    const timer = setTimeout(() => {
+      loadAccounts();
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [accountSearch]);
 
   async function loadSpecies() {
     try {
@@ -549,10 +577,15 @@ export default function AdminDashboardPage({
       title: tAdmin.tableId,
       dataIndex: "id",
       width: 70,
+      sorter: (a, b) => a.id - b.id,
     },
     {
       title: tAdmin.tableSpecies,
       dataIndex: "commonName",
+      sorter: (a, b) =>
+        (a.commonNameVi || a.commonName).localeCompare(
+          b.commonNameVi || b.commonName,
+        ),
       render: (_value, record) => (
         <div>
           <Typography.Link strong onClick={() => openSpeciesDetailPage(record)}>
@@ -573,12 +606,14 @@ export default function AdminDashboardPage({
       title: tAdmin.tableCategory,
       dataIndex: "category",
       width: 160,
+      sorter: (a, b) => (a.category || "").localeCompare(b.category || ""),
       render: (value) => value || "-",
     },
     {
       title: tAdmin.tableImages,
       dataIndex: "imageCount",
       width: 90,
+      sorter: (a, b) => a.imageCount - b.imageCount,
       render: (value) => (
         <Tag color={value >= 10 ? "red" : "blue"}>{value}/10</Tag>
       ),
@@ -587,31 +622,39 @@ export default function AdminDashboardPage({
       title: tAdmin.tableUpdatedAt,
       dataIndex: "updatedAt",
       width: 180,
+      sorter: (a, b) =>
+        new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime(),
       render: (value) => (value ? new Date(value).toLocaleString() : "-"),
     },
     {
       title: tAdmin.tableActions,
       key: "action",
-      width: 360,
+      width: 300,
       render: (_value, record) => (
         <Space wrap>
           <Button size="small" onClick={() => openSpeciesDetailPage(record)}>
             {tAdmin.viewSpeciesDetail}
           </Button>
-          <Button size="small" onClick={() => openEditModal(record)}>
-            {tAdmin.tableEdit}
-          </Button>
-          <Button size="small" onClick={() => openImageModal(record)}>
-            {tAdmin.manageImages}
-          </Button>
-          <Popconfirm
-            title={tAdmin.confirmDeleteSpecies}
-            onConfirm={() => removeSpecies(record)}
-          >
-            <Button size="small" danger>
-              {tAdmin.tableDelete}
+          {isContributorOrAbove && (
+            <Button size="small" onClick={() => openEditModal(record)}>
+              {tAdmin.tableEdit}
             </Button>
-          </Popconfirm>
+          )}
+          {isContributorOrAbove && (
+            <Button size="small" onClick={() => openImageModal(record)}>
+              {tAdmin.manageImages}
+            </Button>
+          )}
+          {isAdmin && (
+            <Popconfirm
+              title={tAdmin.confirmDeleteSpecies}
+              onConfirm={() => removeSpecies(record)}
+            >
+              <Button size="small" danger>
+                {tAdmin.tableDelete}
+              </Button>
+            </Popconfirm>
+          )}
         </Space>
       ),
     },
@@ -622,28 +665,36 @@ export default function AdminDashboardPage({
       title: tAdmin.tableId,
       dataIndex: "id",
       width: 80,
+      sorter: (a, b) => a.id - b.id,
     },
     {
       title: tAdmin.tableCategoryNameVi,
       key: "nameVi",
+      sorter: (a, b) =>
+        (a.nameVi || a.name || "").localeCompare(b.nameVi || b.name || ""),
       render: (_value, record) =>
         record.nameVi || record.name || record.nameEn || "-",
     },
     {
       title: tAdmin.tableCategoryNameEn,
       key: "nameEn",
+      sorter: (a, b) => (a.nameEn || "").localeCompare(b.nameEn || ""),
       render: (_value, record) => record.nameEn || "-",
     },
     {
       title: tAdmin.tableSpeciesCount,
       dataIndex: "speciesCount",
       width: 120,
+      sorter: (a, b) => a.speciesCount - b.speciesCount,
       render: (value) => <Tag color="blue">{value}</Tag>,
     },
     {
       title: tAdmin.tableUpdatedAt,
       dataIndex: "updatedAt",
       width: 190,
+      sorter: (a, b) =>
+        new Date(a.updatedAt || 0).getTime() -
+        new Date(b.updatedAt || 0).getTime(),
       render: (value) => (value ? new Date(value).toLocaleString() : "-"),
     },
     {
@@ -652,18 +703,22 @@ export default function AdminDashboardPage({
       width: 240,
       render: (_value, record) => (
         <Space>
-          <Button size="small" onClick={() => openEditCategoryModal(record)}>
-            {tAdmin.tableEdit}
-          </Button>
-          <Popconfirm
-            title={tAdmin.confirmDeleteCategory}
-            description={tAdmin.confirmDeleteCategoryDescription}
-            onConfirm={() => removeCategory(record)}
-          >
-            <Button size="small" danger>
-              {tAdmin.tableDelete}
+          {isContributorOrAbove && (
+            <Button size="small" onClick={() => openEditCategoryModal(record)}>
+              {tAdmin.tableEdit}
             </Button>
-          </Popconfirm>
+          )}
+          {isAdmin && (
+            <Popconfirm
+              title={tAdmin.confirmDeleteCategory}
+              description={tAdmin.confirmDeleteCategoryDescription}
+              onConfirm={() => removeCategory(record)}
+            >
+              <Button size="small" danger>
+                {tAdmin.tableDelete}
+              </Button>
+            </Popconfirm>
+          )}
         </Space>
       ),
     },
@@ -674,10 +729,12 @@ export default function AdminDashboardPage({
       title: tAdmin.tableId,
       dataIndex: "id",
       width: 80,
+      sorter: (a, b) => a.id - b.id,
     },
     {
       title: tAdmin.tableEmail,
       dataIndex: "email",
+      sorter: (a, b) => a.email.localeCompare(b.email),
     },
     {
       title: tAdmin.tableFullName,
@@ -688,6 +745,7 @@ export default function AdminDashboardPage({
       title: tAdmin.tableRole,
       dataIndex: "role",
       width: 140,
+      sorter: (a, b) => (a.role || "").localeCompare(b.role || ""),
       render: (value: string) => {
         if (value === "ADMIN") return <Tag color="red">{tAdmin.roleAdmin}</Tag>;
         if (value === "CONTRIBUTOR")
@@ -699,6 +757,9 @@ export default function AdminDashboardPage({
       title: tAdmin.tableCreatedAt,
       dataIndex: "createdAt",
       width: 190,
+      sorter: (a, b) =>
+        new Date(a.createdAt || 0).getTime() -
+        new Date(b.createdAt || 0).getTime(),
       render: (value) => (value ? new Date(value).toLocaleString() : "-"),
     },
     {
@@ -706,7 +767,7 @@ export default function AdminDashboardPage({
       key: "action",
       width: 180,
       render: (_value, record) =>
-        adminUser?.isAdmin ? (
+        isAdmin ? (
           <Popconfirm
             title={tAdmin.confirmDeleteAccount}
             onConfirm={() => removeAccount(record)}
@@ -813,9 +874,11 @@ export default function AdminDashboardPage({
                   onSearch={() => loadSpecies()}
                   style={{ width: 340 }}
                 />
-                <Button type="primary" onClick={openCreateModal}>
-                  {tAdmin.addSpecies}
-                </Button>
+                {isAdmin && (
+                  <Button type="primary" onClick={openCreateModal}>
+                    {tAdmin.addSpecies}
+                  </Button>
+                )}
               </Space>
             </Card>
 
@@ -834,31 +897,33 @@ export default function AdminDashboardPage({
 
         {activeSection === "categories" && (
           <>
-            <Card style={{ marginBottom: 16 }}>
-              <Space wrap>
-                <Input
-                  placeholder={tAdmin.categoryPlaceholderVi}
-                  value={newCategoryNameVi}
-                  onChange={(e) => setNewCategoryNameVi(e.target.value)}
-                  style={{ width: 320 }}
-                  onPressEnter={() => createCategory()}
-                />
-                <Input
-                  placeholder={tAdmin.categoryPlaceholderEn}
-                  value={newCategoryNameEn}
-                  onChange={(e) => setNewCategoryNameEn(e.target.value)}
-                  style={{ width: 320 }}
-                  onPressEnter={() => createCategory()}
-                />
-                <Button
-                  type="primary"
-                  loading={categorySaving}
-                  onClick={() => createCategory()}
-                >
-                  {tAdmin.createCategory}
-                </Button>
-              </Space>
-            </Card>
+            {isAdmin && (
+              <Card style={{ marginBottom: 16 }}>
+                <Space wrap>
+                  <Input
+                    placeholder={tAdmin.categoryPlaceholderVi}
+                    value={newCategoryNameVi}
+                    onChange={(e) => setNewCategoryNameVi(e.target.value)}
+                    style={{ width: 320 }}
+                    onPressEnter={() => createCategory()}
+                  />
+                  <Input
+                    placeholder={tAdmin.categoryPlaceholderEn}
+                    value={newCategoryNameEn}
+                    onChange={(e) => setNewCategoryNameEn(e.target.value)}
+                    style={{ width: 320 }}
+                    onPressEnter={() => createCategory()}
+                  />
+                  <Button
+                    type="primary"
+                    loading={categorySaving}
+                    onClick={() => createCategory()}
+                  >
+                    {tAdmin.createCategory}
+                  </Button>
+                </Space>
+              </Card>
+            )}
 
             <Card>
               <Table
@@ -884,7 +949,7 @@ export default function AdminDashboardPage({
                   onSearch={() => loadAccounts()}
                   style={{ width: 320 }}
                 />
-                {adminUser?.isAdmin && (
+                {isAdmin && (
                   <Button type="primary" onClick={openCreateAccountModal}>
                     {tAdmin.createAccount}
                   </Button>
